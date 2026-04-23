@@ -1,47 +1,14 @@
 baseURL = "https://theapurva.com/"
 languageCode = "en-us"
 title = "Apurva's Tech Blog"
-theme = "PaperMod"
 paginate = 10
 enableRobotsTXT = true
 enableEmoji = true
-
-[outputs]
-  home = ["HTML", "RSS"]
 
 [params]
   description = "Technology and AI insights by Apurva"
   author = "Apurva Gupta"
   keywords = ["tech", "ai", "technology", "blog"]
-  defaultTheme = "auto"
-  ShowReadingTime = true
-  ShowShareButtons = true
-  ShowPostNavLinks = true
-  ShowBreadCrumbs = true
-  
-  [params.profileMode]
-    enabled = false
-    
-  [params.homeInfoParams]
-    Title = "Welcome to Apurva's Tech Blog"
-    Content = "Exploring technology, AI, and innovation"
-  
-[menu]
-  [[menu.main]]
-    name = "Home"
-    url = "/"
-    weight = 1
-  [[menu.main]]
-    name = "Archive"
-    url = "/archive/"
-    weight = 2
-  [[menu.main]]
-    name = "Tags"
-    url = "/tags/"
-    weight = 3
-
-[minify]
-  minifyOutput = true
 
 [taxonomies]
   category = "categories"
