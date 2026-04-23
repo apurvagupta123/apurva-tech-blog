@@ -5,10 +5,13 @@ paginate = 10
 enableRobotsTXT = true
 enableEmoji = true
 
+[outputs]
+  home = ["HTML", "RSS"]
+
 [params]
   description = "Technology and AI insights by Apurva"
   author = "Apurva Gupta"
-  keywords = ["tech", "ai", "technology", "blog"]
+  keywords = ["tech", "ai", "technology", "blog", "machine learning"]
 
 [taxonomies]
   category = "categories"
