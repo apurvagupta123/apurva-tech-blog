@@ -14,7 +14,7 @@
       line-height: 1.6;
       color: #1a1a2e;
       overflow-x: hidden;
-      background: #0a0e27;
+      background: #1a1f3a;
     }
 
     /* Animated particle background */
@@ -24,7 +24,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(135deg, #0a0e27 0%, #1a1a3e 25%, #0d1b2a 50%, #1a0a3e 75%, #0e1a2e 100%);
+      background: linear-gradient(135deg, #1a1f3a 0%, #2a2f4a 25%, #1d2844 50%, #2a1f4a 75%, #1e2a3a 100%);
       background-size: 400% 400%;
       animation: bgShift 20s ease infinite;
       z-index: 0;
@@ -48,7 +48,7 @@
     .blob1 {
       width: 300px;
       height: 300px;
-      background: linear-gradient(45deg, #00ffcc, #0096ff);
+      background: linear-gradient(45deg, #00ffff, #00ddff);
       top: -100px;
       right: -100px;
       animation: float1 20s ease-in-out infinite;
@@ -57,7 +57,7 @@
     .blob2 {
       width: 400px;
       height: 400px;
-      background: linear-gradient(45deg, #0096ff, #64ffda);
+      background: linear-gradient(45deg, #00ddff, #00ffdd);
       bottom: -150px;
       left: -150px;
       animation: float2 25s ease-in-out infinite;
@@ -66,7 +66,7 @@
     .blob3 {
       width: 350px;
       height: 350px;
-      background: linear-gradient(45deg, #64ffda, #00ffcc);
+      background: linear-gradient(45deg, #00ffdd, #00ffff);
       top: 50%;
       right: 10%;
       animation: float3 30s ease-in-out infinite;
@@ -101,12 +101,12 @@
     .tech-icon {
       position: absolute;
       font-size: 2.5rem;
-      opacity: 0.15;
+      opacity: 0.2;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #00ffcc;
-      text-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
+      color: #00ffff;
+      text-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
     }
 
     .tech-icon.icon-1 { animation: moveIcon1 25s ease-in-out infinite; }
@@ -288,8 +288,8 @@
     /* Glowing lines */
     .glow-line {
       position: absolute;
-      background: linear-gradient(90deg, transparent, #00ffcc, transparent);
-      opacity: 0.3;
+      background: linear-gradient(90deg, transparent, #00ffff, transparent);
+      opacity: 0.4;
     }
 
     .line1 {
@@ -305,7 +305,7 @@
       height: 300px;
       top: 40%;
       right: 15%;
-      background: linear-gradient(180deg, transparent, #0096ff, transparent);
+      background: linear-gradient(180deg, transparent, #00ddff, transparent);
       animation: moveLineV 10s ease-in-out infinite;
     }
 
@@ -314,7 +314,7 @@
       height: 2px;
       bottom: 30%;
       right: 5%;
-      background: linear-gradient(90deg, transparent, #64ffda, transparent);
+      background: linear-gradient(90deg, transparent, #00ffdd, transparent);
       animation: moveLineH 12s ease-in-out infinite;
     }
 
@@ -335,7 +335,7 @@
       position: absolute;
       width: 200px;
       height: 200px;
-      border: 1px solid rgba(0, 255, 204, 0.2);
+      border: 1px solid rgba(0, 255, 255, 0.3);
       border-radius: 50%;
     }
 
@@ -355,12 +355,12 @@
       position: absolute;
       width: 8px;
       height: 8px;
-      background: #00ffcc;
+      background: #00ffff;
       border-radius: 50%;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      box-shadow: 0 0 15px #00ffcc, 0 0 30px rgba(0, 255, 204, 0.5);
+      box-shadow: 0 0 20px #00ffff, 0 0 40px rgba(0, 255, 255, 0.6);
     }
 
     @keyframes rotate {
@@ -387,9 +387,9 @@
       position: absolute;
       width: 4px;
       height: 4px;
-      background: rgba(0, 255, 204, 0.8);
+      background: rgba(0, 255, 255, 0.9);
       border-radius: 50%;
-      box-shadow: 0 0 10px rgba(0, 255, 204, 0.6);
+      box-shadow: 0 0 12px rgba(0, 255, 255, 0.8);
     }
 
     /* Content */
@@ -414,7 +414,7 @@
     .header h1 {
       font-size: 3.5rem;
       margin-bottom: 20px;
-      background: linear-gradient(135deg, #00ffcc 0%, #0096ff 50%, #64ffda 100%);
+      background: linear-gradient(135deg, #00ffff 0%, #00ddff 50%, #00ffdd 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -444,7 +444,7 @@
     .post-card {
       background: rgba(255, 255, 255, 0.05);
       backdrop-filter: blur(20px);
-      border: 1px solid rgba(0, 255, 204, 0.2);
+      border: 1px solid rgba(0, 255, 255, 0.3);
       border-radius: 16px;
       padding: 30px;
       transition: all 0.3s ease;
@@ -460,14 +460,14 @@
       left: 0;
       width: 100%;
       height: 2px;
-      background: linear-gradient(90deg, transparent, #00ffcc, transparent);
+      background: linear-gradient(90deg, transparent, #00ffff, transparent);
       opacity: 0;
       transition: opacity 0.3s ease;
     }
 
     .post-card:hover {
-      border-color: rgba(0, 255, 204, 0.6);
-      box-shadow: 0 0 30px rgba(0, 255, 204, 0.15), inset 0 0 30px rgba(0, 255, 204, 0.05);
+      border-color: rgba(0, 255, 255, 0.6);
+      box-shadow: 0 0 30px rgba(0, 255, 255, 0.2), inset 0 0 30px rgba(0, 255, 255, 0.08);
       transform: translateY(-5px);
     }
 
@@ -494,7 +494,7 @@
       align-items: center;
       gap: 10px;
       font-size: 0.9rem;
-      color: rgba(0, 255, 204, 0.8);
+      color: rgba(0, 255, 255, 0.9);
       margin-bottom: 15px;
     }
 
@@ -508,8 +508,8 @@
     }
 
     .post-card:hover .post-title {
-      color: #00ffcc;
-      text-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
+      color: #00ffff;
+      text-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
     }
 
     .post-description {
@@ -527,25 +527,25 @@
 
     .tag {
       display: inline-block;
-      background: rgba(0, 255, 204, 0.1);
-      color: #00ffcc;
+      background: rgba(0, 255, 255, 0.1);
+      color: #00ffff;
       padding: 5px 12px;
       border-radius: 20px;
       font-size: 0.85rem;
-      border: 1px solid rgba(0, 255, 204, 0.3);
+      border: 1px solid rgba(0, 255, 255, 0.4);
       transition: all 0.3s ease;
     }
 
     .tag:hover {
-      background: rgba(0, 255, 204, 0.2);
-      border-color: rgba(0, 255, 204, 0.6);
-      box-shadow: 0 0 15px rgba(0, 255, 204, 0.2);
+      background: rgba(0, 255, 255, 0.2);
+      border-color: rgba(0, 255, 255, 0.7);
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
     }
 
     .read-more {
       display: inline-block;
       margin-top: 15px;
-      color: #00ffcc;
+      color: #00ffff;
       text-decoration: none;
       font-weight: 600;
       transition: all 0.3s ease;
@@ -558,8 +558,8 @@
     }
 
     .post-card:hover .read-more {
-      color: #64ffda;
-      text-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
+      color: #00ffdd;
+      text-shadow: 0 0 15px rgba(0, 255, 221, 0.4);
     }
 
     .read-more:hover::after {
