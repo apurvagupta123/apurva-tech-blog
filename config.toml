@@ -1,8 +1,8 @@
 baseURL = "https://theapurva.com/"
 languageCode = "en-us"
 title = "The Tech Lens"
-paginate = 10e
-nableRobotsTXT = true
+paginate = 10
+enableRobotsTXT = true
 enableEmoji = true
 
 [outputs]
