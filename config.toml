@@ -9,8 +9,8 @@ enableEmoji = true
   home = ["HTML", "RSS"]
 
 [params]
-  description = "Technology and AI insights by Apurva"
-  author = "Apurva Gupta"
+description = "Making sense of tomorrow's tech"
+author = "Apurva Gupta"
   keywords = ["tech", "ai", "technology", "blog", "machine learning"]
 
 [taxonomies]
