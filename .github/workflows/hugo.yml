@@ -32,5 +32,4 @@ jobs:
         accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         projectName: apurva-tech-blog
         directory: public
-        productionBranch: main
       if: github.ref == 'refs/heads/main'
