@@ -1,0 +1,14 @@
+{{- define "main" -}}
+<div class="home-container">
+    <h1 class="post-title">{{ .Site.Title }}</h1>
+  {{- if .Site.Params.description }}
+  <p class="post-description">{{ .Site.Params.description }}</p>
+    {{- end }}
+
+{{- range first 10 .Site.RegularPages }}
+  <article class="post-item">
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </article>
+    {{- end }}
+</div>
+  {{- end -}}
