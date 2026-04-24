@@ -682,7 +682,7 @@
 
     techSymbols.forEach((symbol, index) => {
       const icon = document.createElement('div');
-      icon.className = ⁠ tech-icon icon-${index + 1} ⁠;
+      icon.className = `tech-icon icon-${index + 1}`⁠;
       icon.textContent = symbol;
 
       // Random initial position
@@ -712,7 +712,7 @@
       particle.style.height = size + 'px';
       particle.style.left = x + '%';
       particle.style.top = y + '%';
-      particle.style.animation = ⁠ float ${duration}s ease-in-out ${delay}s infinite ⁠;
+      particle.style.animation = `float ${duration}s ease-in-out ${delay}s infinite`⁠;
 
       particleContainer.appendChild(particle);
     }
