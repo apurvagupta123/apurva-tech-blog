@@ -56,8 +56,6 @@
         .tag { background: #f0f0f0; color: #667eea; padding: 5px 10px; border-radius: 15px; font-size: 0.85em; }
         .read-more { color: #667eea; text-decoration: none; font-weight: 600; }
         .read-more:hover { color: #764ba2; }
-        .empty-state { background: white; padding: 60px 40px; border-radius: 8px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        .empty-state h2 { color: #667eea; margin-bottom: 10px; }
         footer { background: rgba(255,255,255,0.95); padding: 30px; border-radius: 8px; text-align: center; color: #666; margin-top: 40px; }
     </style>
 </head>
@@ -65,12 +63,13 @@
     <div class="container">
         <header>
             <h1>{{ .Site.Title }}</h1>
-            <p>{{ .Site.Params.description | default "Exploring the future of technology, one post at a time" }}</p>
+            <p>{{ .Site.Params.description }}</p>
         </header>
 
         <div class="posts-grid">
-            {{ range where .Site.RegularPages ".Section" "posts" }}
-                {{ if not .Draft }}
+            {{ $posts := .Site.RegularPages }}
+            {{ range $posts }}
+                {{ if and (not .Draft) (in .Path "posts/") }}
                     <div class="post-card">
                         {{ if .Params.image }}
                             <img src="{{ .Params.image }}" alt="{{ .Title }}" class="post-image">
@@ -80,17 +79,13 @@
                         <div class="post-content">
                             <div class="post-meta">
                                 {{ if .Params.author }}By {{ .Params.author }} • {{ end }}
-                                {{ .PublishDate.Format "Jan 2, 2006" }}
+                                {{ .Date.Format "Jan 2, 2006" }}
                             </div>
                             <a href="{{ .Permalink }}" class="post-title">{{ .Title }}</a>
-                            <p class="post-description">
-                                {{ .Description | default .Summary }}
-                            </p>
+                            <p class="post-description">{{ .Description }}</p>
                             {{ if .Params.tags }}
                                 <div class="post-tags">
-                                    {{ range .Params.tags }}
-                                        <span class="tag">{{ . }}</span>
-                                    {{ end }}
+                                    {{ range .Params.tags }}<span class="tag">{{ . }}</span>{{ end }}
                                 </div>
                             {{ end }}
                             <a href="{{ .Permalink }}" class="read-more">Read More →</a>
