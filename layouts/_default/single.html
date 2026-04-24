@@ -6,215 +6,400 @@
     <title>{{ .Title }} - {{ .Site.Title }}</title>
     <meta name="description" content="{{ .Description | default .Summary }}">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        html, body { height: 100%; }
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f5f5f5;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #1a1a2e;
+            background: #0f0f1e;
+            overflow-x: hidden;
         }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
+        
+        /* Animated particle background */
+        .particle-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            z-index: 0;
         }
-        header {
-            background-color: white;
+        
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .particle {
+            position: absolute;
+            pointer-events: none;
+            opacity: 0.5;
+        }
+        
+        .particle::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+        
+        .content {
+            position: relative;
+            z-index: 1;
+            min-height: 100vh;
             padding: 40px 20px;
+        }
+        
+        .container { 
+            max-width: 850px; 
+            margin: 0 auto;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
             margin-bottom: 40px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            font-weight: 600;
+            transition: all 0.3s ease;
+            padding: 10px 15px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
-        header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            color: #222;
+        
+        .back-link:hover {
+            color: #667eea;
+            background: rgba(102, 126, 234, 0.1);
+            border-color: rgba(102, 126, 234, 0.3);
+            gap: 12px;
         }
+        
+        header {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            padding: 60px 50px;
+            border-radius: 16px;
+            margin-bottom: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            animation: slideDown 0.8s ease-out;
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        header h1 { 
+            font-size: 2.8em; 
+            color: #ffffff;
+            margin-bottom: 25px;
+            font-weight: 800;
+            line-height: 1.2;
+            letter-spacing: -0.5px;
+        }
+        
         .meta {
-            color: #666;
-            font-size: 0.95em;
-            margin-bottom: 15px;
+            display: flex;
+            gap: 20px;
+            color: rgba(255, 255, 255, 0.7);
+            flex-wrap: wrap;
+            font-weight: 500;
         }
-        .meta span {
-            margin-right: 20px;
+        
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
+        
         .featured-image {
             width: 100%;
             height: auto;
-            margin: 30px 0;
-            border-radius: 4px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            max-height: 500px;
+            object-fit: cover;
+            margin: 50px 0;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);
+            animation: slideUp 0.8s ease-out 0.2s backwards;
         }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
         article {
-            background-color: white;
-            padding: 40px;
-            border-radius: 4px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            margin-bottom: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 60px 50px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 50px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-out 0.3s backwards;
         }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
         article h2 {
-            font-size: 1.8em;
-            margin: 30px 0 15px 0;
-            color: #222;
+            font-size: 2em;
+            margin: 40px 0 20px 0;
+            color: #ffffff;
+            font-weight: 700;
         }
+        
         article h3 {
-            font-size: 1.4em;
-            margin: 25px 0 10px 0;
-            color: #333;
+            font-size: 1.5em;
+            margin: 30px 0 15px 0;
+            color: #ffffff;
+            font-weight: 700;
         }
+        
         article p {
             margin-bottom: 20px;
-            text-align: justify;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.9;
+            font-size: 1.05em;
         }
+        
         article ul, article ol {
             margin-left: 30px;
             margin-bottom: 20px;
+            color: rgba(255, 255, 255, 0.8);
         }
+        
         article li {
-            margin-bottom: 8px;
+            margin-bottom: 12px;
         }
+        
         article a {
-            color: #0066cc;
+            color: #667eea;
             text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border-bottom: 2px solid transparent;
         }
+        
         article a:hover {
-            text-decoration: underline;
+            color: #764ba2;
+            border-bottom-color: #764ba2;
         }
+        
         article blockquote {
-            border-left: 4px solid #0066cc;
-            padding-left: 20px;
-            margin: 20px 0;
+            border-left: 4px solid #667eea;
+            padding-left: 25px;
+            margin: 30px 0;
             font-style: italic;
-            color: #666;
+            color: rgba(255, 255, 255, 0.7);
+            background: rgba(102, 126, 234, 0.1);
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
         }
+        
         article code {
-            background-color: #f4f4f4;
-            padding: 2px 6px;
-            border-radius: 3px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 3px 8px;
+            border-radius: 4px;
             font-family: 'Courier New', monospace;
+            color: #f093fb;
+            font-weight: 600;
         }
+        
         article pre {
-            background-color: #f4f4f4;
-            padding: 15px;
-            border-radius: 4px;
-            overflow-x: auto;
-            margin: 20px 0;
-        }
-        article pre code {
-            background-color: transparent;
-            padding: 0;
-        }
-        .tags {
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-        }
-        .tag {
-            display: inline-block;
-            background-color: #f0f0f0;
-            color: #333;
-            padding: 6px 12px;
-            border-radius: 20px;
-            margin-right: 10px;
-            margin-bottom: 10px;
-            font-size: 0.9em;
-        }
-        .tag:hover {
-            background-color: #e0e0e0;
-        }
-        nav.post-nav {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-        }
-        nav.post-nav a {
-            flex: 1;
-            padding: 15px;
-            text-align: center;
-            background-color: #f9f9f9;
-            border-radius: 4px;
-            margin: 0 10px;
-            text-decoration: none;
-            color: #0066cc;
-        }
-        nav.post-nav a:hover {
-            background-color: #f0f0f0;
-        }
-        footer {
-            background-color: white;
+            background: rgba(0, 0, 0, 0.4);
             padding: 20px;
-            text-align: center;
-            color: #666;
-            font-size: 0.9em;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 25px 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        article pre code {
+            background: transparent;
+            padding: 0;
+            color: #00f2fe;
+        }
+        
+        .tags {
             margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
         }
-        a.back-link {
-            display: inline-block;
-            margin-bottom: 20px;
-            color: #0066cc;
-            text-decoration: none;
+        
+        .tag {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(240, 147, 251, 0.2));
+            color: #667eea;
+            padding: 10px 18px;
+            border-radius: 50px;
+            font-size: 0.9em;
+            border: 1px solid rgba(102, 126, 234, 0.3);
+            font-weight: 600;
+            transition: all 0.3s ease;
         }
-        a.back-link:hover {
-            text-decoration: underline;
+        
+        .tag:hover {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.4), rgba(240, 147, 251, 0.4));
+            border-color: rgba(102, 126, 234, 0.6);
+            transform: translateY(-3px);
+        }
+        
+        footer { 
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            padding: 40px 30px; 
+            border-radius: 16px;
+            text-align: center; 
+            color: rgba(255, 255, 255, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        @media (max-width: 768px) {
+            header, article {
+                padding: 30px 20px;
+            }
+            header h1 { font-size: 1.8em; }
+            article h2 { font-size: 1.5em; }
+            article h3 { font-size: 1.2em; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <a href="{{ .Site.BaseURL }}" class="back-link">← Back to Home</a>
-
-        <header>
-            <h1>{{ .Title }}</h1>
-            <div class="meta">
-                {{ if ne .Params.author "" }}
-                    <span>By {{ .Params.author }}</span>
-                {{ end }}
-                <span>Published {{ .PublishDate.Format "January 2, 2006" }}</span>
-                {{ if .Params.readingtime }}
-                    <span>{{ .Params.readingtime }} min read</span>
-                {{ end }}
-            </div>
-        </header>
-
-        {{ if .Params.image }}
-            <img src="{{ .Params.image }}" alt="{{ .Title }}" class="featured-image">
-        {{ end }}
-
-        <article>
-            {{ .Content }}
-        </article>
-
-        {{ if .Params.tags }}
-            <div class="tags">
-                {{ range .Params.tags }}
-                    <span class="tag">{{ . }}</span>
-                {{ end }}
-            </div>
-        {{ end }}
-
-        <nav class="post-nav">
-            {{ with .PrevInSection }}
-                <a href="{{ .Permalink }}">← Previous: {{ .Title }}</a>
-            {{ else }}
-                <div></div>
+    <div class="particle-bg">
+        <div class="particles" id="particles"></div>
+    </div>
+    
+    <div class="content">
+        <div class="container">
+            <a href="{{ .Site.BaseURL }}" class="back-link">← Back Home</a>
+            
+            <header>
+                <h1>{{ .Title }}</h1>
+                <div class="meta">
+                    {{ if .Params.author }}
+                        <div class="meta-item">
+                            <span>👤</span>
+                            <span>{{ .Params.author }}</span>
+                        </div>
+                    {{ end }}
+                    <div class="meta-item">
+                        <span>📅</span>
+                        <span>{{ .Date.Format "January 2, 2006" }}</span>
+                    </div>
+                </div>
+            </header>
+            
+            {{ if .Params.image }}
+                <img src="{{ .Params.image }}" alt="{{ .Title }}" class="featured-image">
             {{ end }}
-
-            {{ with .NextInSection }}
-                <a href="{{ .Permalink }}">Next: {{ .Title }} →</a>
-            {{ else }}
-                <div></div>
+            
+            <article>
+                {{ .Content }}
+            </article>
+            
+            {{ if .Params.tags }}
+                <div class="tags">
+                    {{ range .Params.tags }}
+                        <span class="tag">#{{ . }}</span>
+                    {{ end }}
+                </div>
             {{ end }}
-        </nav>
+        </div>
     </div>
 
-    <footer>
-        <p>&copy; 2026 {{ .Site.Title }}. All rights reserved.</p>
-    </footer>
+    <script>
+        // Create animated particles
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 50;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                
+                const size = Math.random() * 3 + 2;
+                const x = Math.random() * 100;
+                const y = Math.random() * 100;
+                const duration = Math.random() * 20 + 10;
+                const delay = Math.random() * 5;
+                
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+                particle.style.left = x + '%';
+                particle.style.top = y + '%';
+                particle.style.animation = `float ${duration}s linear ${delay}s infinite`;
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+        
+        // Floating animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes float {
+                0% {
+                    transform: translateY(0px) translateX(0px);
+                    opacity: 0;
+                }
+                10% {
+                    opacity: 0.8;
+                }
+                90% {
+                    opacity: 0.8;
+                }
+                100% {
+                    transform: translateY(-100vh) translateX(100px);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        createParticles();
+    </script>
 </body>
 </html>
