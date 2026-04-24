@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }} - {{ .Site.Title }}</title>
+    <meta name="description" content="{{ .Description | default .Summary }}">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: white;
+            padding: 40px 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #222;
+        }
+        .meta {
+            color: #666;
+            font-size: 0.95em;
+            margin-bottom: 15px;
+        }
+        .meta span {
+            margin-right: 20px;
+        }
+        .featured-image {
+            width: 100%;
+            height: auto;
+            margin: 30px 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        article {
+            background-color: white;
+            padding: 40px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        article h2 {
+            font-size: 1.8em;
+            margin: 30px 0 15px 0;
+            color: #222;
+        }
+        article h3 {
+            font-size: 1.4em;
+            margin: 25px 0 10px 0;
+            color: #333;
+        }
+        article p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        article ul, article ol {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+        article li {
+            margin-bottom: 8px;
+        }
+        article a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        article a:hover {
+            text-decoration: underline;
+        }
+        article blockquote {
+            border-left: 4px solid #0066cc;
+            padding-left: 20px;
+            margin: 20px 0;
+            font-style: italic;
+            color: #666;
+        }
+        article code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        article pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 4px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        article pre code {
+            background-color: transparent;
+            padding: 0;
+        }
+        .tags {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        .tag {
+            display: inline-block;
+            background-color: #f0f0f0;
+            color: #333;
+            padding: 6px 12px;
+            border-radius: 20px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            font-size: 0.9em;
+        }
+        .tag:hover {
+            background-color: #e0e0e0;
+        }
+        nav.post-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        nav.post-nav a {
+            flex: 1;
+            padding: 15px;
+            text-align: center;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+            margin: 0 10px;
+            text-decoration: none;
+            color: #0066cc;
+        }
+        nav.post-nav a:hover {
+            background-color: #f0f0f0;
+        }
+        footer {
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 40px;
+        }
+        a.back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a.back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="{{ .Site.BaseURL }}" class="back-link">← Back to Home</a>
+
+        <header>
+            <h1>{{ .Title }}</h1>
+            <div class="meta">
+                {{ if ne .Params.author "" }}
+                    <span>By {{ .Params.author }}</span>
+                {{ end }}
+                <span>Published {{ .PublishDate.Format "January 2, 2006" }}</span>
+                {{ if .Params.readingtime }}
+                    <span>{{ .Params.readingtime }} min read</span>
+                {{ end }}
+            </div>
+        </header>
+
+        {{ if .Params.image }}
+            <img src="{{ .Params.image }}" alt="{{ .Title }}" class="featured-image">
+        {{ end }}
+
+        <article>
+            {{ .Content }}
+        </article>
+
+        {{ if .Params.tags }}
+            <div class="tags">
+                {{ range .Params.tags }}
+                    <span class="tag">{{ . }}</span>
+                {{ end }}
+            </div>
+        {{ end }}
+
+        <nav class="post-nav">
+            {{ with .PrevInSection }}
+                <a href="{{ .Permalink }}">← Previous: {{ .Title }}</a>
+            {{ else }}
+                <div></div>
+            {{ end }}
+
+            {{ with .NextInSection }}
+                <a href="{{ .Permalink }}">Next: {{ .Title }} →</a>
+            {{ else }}
+                <div></div>
+            {{ end }}
+        </nav>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 {{ .Site.Title }}. All rights reserved.</p>
+    </footer>
+</body>
+</html>
