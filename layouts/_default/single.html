@@ -1,406 +1,179 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ .Title }} - {{ .Site.Title }}</title>
-    <meta name="description" content="{{ .Description | default .Summary }}">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        html, body { height: 100%; }
-        
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.8;
-            color: #1a1a2e;
-            background: #1a1f3a;
-            overflow-x: hidden;
-        }
-        
-        /* Animated particle background */
-        .particle-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, #1a1f3a 0%, #2a2f4a 25%, #1d2844 50%, #2a1f4a 75%, #1e2a3a 100%);
-            background-size: 400% 400%;
-            animation: gradient 20s ease infinite;
-            z-index: 0;
-        }
-        
-        @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        
-        .particles {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-        }
-        
-        .particle {
-            position: absolute;
-            pointer-events: none;
-            opacity: 0.3;
-        }
-        
-        .particle::before {
-            content: '';
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background: rgba(0, 255, 255, 0.9);
-            border-radius: 50%;
-            box-shadow: 0 0 12px rgba(0, 255, 255, 0.8);
-        }
-        
-        .content {
-            position: relative;
-            z-index: 1;
-            min-height: 100vh;
-            padding: 40px 20px;
-        }
-        
-        .container { 
-            max-width: 850px; 
-            margin: 0 auto;
-        }
-        
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: rgba(255, 255, 255, 0.7);
-            text-decoration: none;
-            margin-bottom: 40px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            padding: 10px 15px;
-            border-radius: 8px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(0, 255, 255, 0.2);
-        }
-        
-        .back-link:hover {
-            color: #00ffff;
-            background: rgba(0, 255, 255, 0.1);
-            border-color: rgba(0, 255, 255, 0.4);
-            gap: 12px;
-        }
-        
-        header {
-            background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(10px);
-            padding: 60px 50px;
-            border-radius: 16px;
-            margin-bottom: 50px;
-            border: 1px solid rgba(0, 255, 255, 0.2);
-            animation: slideDown 0.8s ease-out;
-        }
-        
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        header h1 { 
-            font-size: 2.8em; 
-            color: #ffffff;
-            margin-bottom: 25px;
-            font-weight: 800;
-            line-height: 1.2;
-            letter-spacing: -0.5px;
-        }
-        
-        .meta {
-            display: flex;
-            gap: 20px;
-            color: rgba(0, 255, 255, 0.9);
-            flex-wrap: wrap;
-            font-weight: 500;
-        }
-        
-        .meta-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .featured-image {
-            width: 100%;
-            height: auto;
-            max-height: 500px;
-            object-fit: cover;
-            margin: 50px 0;
-            border-radius: 16px;
-            box-shadow: 0 20px 60px rgba(0, 255, 255, 0.2);
-            animation: slideUp 0.8s ease-out 0.2s backwards;
-        }
-        
-        @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        article {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            padding: 60px 50px;
-            border-radius: 16px;
-            border: 1px solid rgba(0, 255, 255, 0.2);
-            margin-bottom: 50px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-            animation: fadeIn 1s ease-out 0.3s backwards;
-        }
-        
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        article h2 {
-            font-size: 2em;
-            margin: 40px 0 20px 0;
-            color: #ffffff;
-            font-weight: 700;
-        }
-        
-        article h3 {
-            font-size: 1.5em;
-            margin: 30px 0 15px 0;
-            color: #ffffff;
-            font-weight: 700;
-        }
-        
-        article p {
-            margin-bottom: 20px;
-            color: rgba(255, 255, 255, 0.8);
-            line-height: 1.9;
-            font-size: 1.05em;
-        }
-        
-        article ul, article ol {
-            margin-left: 30px;
-            margin-bottom: 20px;
-            color: rgba(255, 255, 255, 0.8);
-        }
-        
-        article li {
-            margin-bottom: 12px;
-        }
-        
-        article a {
-            color: #00ffff;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border-bottom: 2px solid transparent;
-        }
-        
-        article a:hover {
-            color: #00ffdd;
-            border-bottom-color: #00ffdd;
-        }
-        
-        article blockquote {
-            border-left: 4px solid #00ffff;
-            padding-left: 25px;
-            margin: 30px 0;
-            font-style: italic;
-            color: rgba(255, 255, 255, 0.7);
-            background: rgba(0, 255, 255, 0.1);
-            padding: 25px;
-            border-radius: 8px;
-            border-left: 4px solid #00ffff;
-        }
-        
-        article code {
-            background: rgba(0, 0, 0, 0.3);
-            padding: 3px 8px;
-            border-radius: 4px;
-            font-family: 'Courier New', monospace;
-            color: #00ffdd;
-            font-weight: 600;
-        }
-        
-        article pre {
-            background: rgba(0, 0, 0, 0.4);
-            padding: 20px;
-            border-radius: 8px;
-            overflow-x: auto;
-            margin: 25px 0;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        article pre code {
-            background: transparent;
-            padding: 0;
-            color: #00ffff;
-        }
-        
-        .tags {
-            margin-top: 40px;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-        
-        .tag {
-            background: rgba(0, 255, 255, 0.1);
-            color: #00ffff;
-            padding: 10px 18px;
-            border-radius: 50px;
-            font-size: 0.9em;
-            border: 1px solid rgba(0, 255, 255, 0.4);
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-        
-        .tag:hover {
-            background: rgba(0, 255, 255, 0.2);
-            border-color: rgba(0, 255, 255, 0.7);
-            transform: translateY(-3px);
-            box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
-        }
-        
-        footer { 
-            background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(10px);
-            padding: 40px 30px; 
-            border-radius: 16px;
-            text-align: center; 
-            color: rgba(255, 255, 255, 0.6);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        @media (max-width: 768px) {
-            header, article {
-                padding: 30px 20px;
-            }
-            header h1 { font-size: 1.8em; }
-            article h2 { font-size: 1.5em; }
-            article h3 { font-size: 1.2em; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ .Title }} | {{ .Site.Title }}</title>
+  <meta name="description" content="{{ .Description }}">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+      color: #ffffff;
+      background: #0f0f0f;
+      overflow-x: hidden;
+    }
+
+    /* Animated particle background */
+    .particle-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #1a1f3a 0%, #0f1428 50%, #1a1f3a 100%);
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    /* Tech Icons */
+    .tech-icons-container {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .tech-icon {
+      position: absolute;
+      font-size: 2.5rem;
+      opacity: 0.2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #00ffff;
+      text-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+    }
+
+    .tech-icon.icon-1 { animation: moveIcon1 25s ease-in-out infinite; }
+    .tech-icon.icon-2 { animation: moveIcon2 30s ease-in-out infinite; }
+    .tech-icon.icon-3 { animation: moveIcon3 28s ease-in-out infinite; }
+    .tech-icon.icon-4 { animation: moveIcon4 32s ease-in-out infinite; }
+    .tech-icon.icon-5 { animation: moveIcon5 26s ease-in-out infinite; }
+    .tech-icon.icon-6 { animation: moveIcon6 29s ease-in-out infinite; }
+    .tech-icon.icon-7 { animation: moveIcon7 27s ease-in-out infinite; }
+    .tech-icon.icon-8 { animation: moveIcon8 31s ease-in-out infinite; }
+    .tech-icon.icon-9 { animation: moveIcon9 24s ease-in-out infinite; }
+    .tech-icon.icon-10 { animation: moveIcon10 33s ease-in-out infinite; }
+    .tech-icon.icon-11 { animation: moveIcon11 35s ease-in-out infinite; }
+    .tech-icon.icon-12 { animation: moveIcon12 22s ease-in-out infinite; }
+    .tech-icon.icon-13 { animation: moveIcon13 28s ease-in-out infinite; }
+    .tech-icon.icon-14 { animation: moveIcon14 34s ease-in-out infinite; }
+    .tech-icon.icon-15 { animation: moveIcon15 26s ease-in-out infinite; }
+    .tech-icon.icon-16 { animation: moveIcon16 30s ease-in-out infinite; }
+    .tech-icon.icon-17 { animation: moveIcon17 29s ease-in-out infinite; }
+    .tech-icon.icon-18 { animation: moveIcon18 32s ease-in-out infinite; }
+    .tech-icon.icon-19 { animation: moveIcon19 27s ease-in-out infinite; }
+    .tech-icon.icon-20 { animation: moveIcon20 31s ease-in-out infinite; }
+    .tech-icon.icon-21 { animation: moveIcon21 25s ease-in-out infinite; }
+    .tech-icon.icon-22 { animation: moveIcon22 33s ease-in-out infinite; }
+    .tech-icon.icon-23 { animation: moveIcon23 28s ease-in-out infinite; }
+    .tech-icon.icon-24 { animation: moveIcon24 30s ease-in-out infinite; }
+    .tech-icon.icon-25 { animation: moveIcon25 35s ease-in-out infinite; }
+
+    @keyframes moveIcon1 { 0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 0.1; } 50% { transform: translate(100px, -150px) rotate(180deg) scale(1.2); opacity: 0.25; } 100% { transform: translate(0, 0) rotate(360deg) scale(1); opacity: 0.1; } }
+    @keyframes moveIcon2 { 0% { transform: translate(0, 0) rotate(360deg) scale(1); opacity: 0.15; } 50% { transform: translate(-120px, 100px) rotate(180deg) scale(1.1); opacity: 0.3; } 100% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 0.15; } }
+    @keyframes moveIcon3 { 0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 0.12; } 50% { transform: translate(150px, 80px) rotate(180deg) scale(1.15); opacity: 0.25; } 100% { transform: translate(0, 0) rotate(360deg) scale(1); opacity: 0.12; } }
+    @keyframes moveIcon4 { 0% { transform: translate(0, 0) rotate(180deg) scale(1); opacity: 0.1; } 50% { transform: translate(-100px, -120px) rotate(0deg) scale(1.2); opacity: 0.28; } 100% { transform: translate(0, 0) rotate(180deg) scale(1); opacity: 0.1; } }
+    @keyframes moveIcon5 { 0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 0.14; } 50% { transform: translate(110px, 110px) rotate(180deg) scale(1.1); opacity: 0.26; } 100% { transform: translate(0, 0) rotate(360deg) scale(1); opacity: 0.14; } }
+    @keyframes moveIcon6 { 0% { transform: translate(0, 0) rotate(360deg) scale(1); opacity: 0.13; } 50% { transform: translate(-130px, 90px) rotate(180deg) scale(1.15); opacity: 0.27; } 100% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 0.13; } }
+    @keyframes moveIcon7 { 0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 0.11; } 50% { transform: translate(120px, -100px) rotate(180deg) scale(1.12); opacity: 0.24; } 100% { transform: translate(0, 0) rotate(360deg) scale(1); opacity: 0.11; } }
+    @keyframes moveIcon8 { 0% { transform: translate(0, 0) rotate(180deg) scale(1); opacity: 0.15; } 50% { transform: translate(-110px, -130px) rotate(0deg) scale(1.18); opacity: 0.29; } 100% { transform: translate(0, 0) rotate(180deg) scale(1); opacity: 0.15; } }
+    @keyframes moveIcon9 { 0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 0.12; } 50% { transform: translate(140px, -100px) rotate(180deg) scale(1.15); opacity: 0.26; } 100% { transform: translate(0, 0) rotate(360deg) scale(1); opacity: 0.12; } }
+    @keyframes moveIcon10 { 0% { transform: translate(0, 0) rotate(180deg) scale(1); opacity: 0.14; } 50% { transform: translate(-130px, 120px) rotate(0deg) scale(1.12); opacity: 0.27; } 100% { transform: translate(0, 0) rotate(180deg) scale(1); opacity: 0.14; } }
+    @keyframes moveIcon11 { 0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 0.13; } 50% { transform: translate(120px, 140px) rotate(180deg) scale(1.2); opacity: 0.28; } 100% { transform: translate(0, 0) rotate(360deg) scale(1); opacity: 0.13; } }
+    @keyframes moveIcon12 { 0% { transform: translate(0, 0) rotate(180deg) scale(1); opacity: 0.11; } 50% { transform: translate(-150px, -90px) rotate(0deg) scale(1.14); opacity: 0.25; } 100% { transform: translate(0, 0) rotate(180deg) scale(1); opacity: 0.11; } }
+    @keyframes moveIcon13 { 0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 0.15; } 50% { transform: translate(100px, 130px) rotate(180deg) scale(1.13); opacity: 0.29; } 100% { transform: translate(0, 0) rotate(360deg) scale(1); opacity: 0.15; } }
+    @keyframes moveIcon14 { 0% { transform: translate(0, 0) rotate(180deg) scale(1); opacity: 0.12; } 50% { transform: translate(-110px, 100px) rotate(0deg) scale(1.16); opacity: 0.26; } 100% { transform: translate(0, 0) rotate(180deg) scale(1); opacity: 0.12; } }
+    @keyframes moveIcon15 { 0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 0.14; } 50% { transform: translate(130px, -110px) rotate(180deg) scale(1.11); opacity: 0.27; } 100% { transform: translate(0, 0) rotate(360deg) scale(1); opacity: 0.14; } }
+    @keyframes moveIcon16 { 0% { transform: translate(0, 0) rotate(180deg) scale(1); opacity: 0.13; } 50% { transform: translate(-140px, -80px) rotate(0deg) scale(1.17); opacity: 0.28; } 100% { transform: translate(0, 0) rotate(180deg) scale(1); opacity: 0.13; } }
+    @keyframes moveIcon17 { 0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 0.11; } 50% { transform: translate(110px, 120px) rotate(180deg) scale(1.14); opacity: 0.25; } 100% { transform: translate(0, 0) rotate(360deg) scale(1); opacity: 0.11; } }
+    @keyframes moveIcon18 { 0% { transform: translate(0, 0) rotate(180deg) scale(1); opacity: 0.15; } 50% { transform: translate(-120px, 110px) rotate(0deg) scale(1.12); opacity: 0.29; } 100% { transform: translate(0, 0) rotate(180deg) scale(1); opacity: 0.15; } }
+    @keyframes moveIcon19 { 0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 0.12; } 50% { transform: translate(140px, -120px) rotate(180deg) scale(1.18); opacity: 0.26; } 100% { transform: translate(0, 0) rotate(360deg) scale(1); opacity: 0.12; } }
+    @keyframes moveIcon20 { 0% { transform: translate(0, 0) rotate(180deg) scale(1); opacity: 0.14; } 50% { transform: translate(-100px, 130px) rotate(0deg) scale(1.15); opacity: 0.27; } 100% { transform: translate(0, 0) rotate(180deg) scale(1); opacity: 0.14; } }
+    @keyframes moveIcon21 { 0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 0.13; } 50% { transform: translate(125px, 100px) rotate(180deg) scale(1.1); opacity: 0.28; } 100% { transform: translate(0, 0) rotate(360deg) scale(1); opacity: 0.13; } }
+    @keyframes moveIcon22 { 0% { transform: translate(0, 0) rotate(180deg) scale(1); opacity: 0.11; } 50% { transform: translate(-125px, -110px) rotate(0deg) scale(1.19); opacity: 0.25; } 100% { transform: translate(0, 0) rotate(180deg) scale(1); opacity: 0.11; } }
+    @keyframes moveIcon23 { 0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 0.15; } 50% { transform: translate(115px, 95px) rotate(180deg) scale(1.13); opacity: 0.29; } 100% { transform: translate(0, 0) rotate(360deg) scale(1); opacity: 0.15; } }
+    @keyframes moveIcon24 { 0% { transform: translate(0, 0) rotate(180deg) scale(1); opacity: 0.12; } 50% { transform: translate(-135px, 95px) rotate(0deg) scale(1.16); opacity: 0.26; } 100% { transform: translate(0, 0) rotate(180deg) scale(1); opacity: 0.12; } }
+    @keyframes moveIcon25 { 0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 0.14; } 50% { transform: translate(105px, -115px) rotate(180deg) scale(1.14); opacity: 0.27; } 100% { transform: translate(0, 0) rotate(360deg) scale(1); opacity: 0.14; } }
+
+    .content { position: relative; z-index: 1; min-height: 100vh; padding: 80px 20px; }
+    .container { max-width: 800px; margin: 0 auto; }
+    .article-header { margin-bottom: 60px; animation: fadeIn 0.8s ease-out; }
+    .article-header h1 { font-size: 2.8rem; margin-bottom: 20px; font-weight: 600; color: #ffffff; line-height: 1.2; }
+    .article-meta { display: flex; align-items: center; gap: 20px; font-size: 0.95rem; color: rgba(0, 255, 255, 0.7); margin-bottom: 30px; }
+    .article-meta span { display: flex; align-items: center; gap: 8px; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .article-content { background: rgba(15, 15, 15, 0.4); backdrop-filter: blur(20px); border: 1px solid rgba(0, 255, 255, 0.1); border-radius: 12px; padding: 50px; line-height: 1.8; animation: fadeIn 1s ease-out 0.2s both; }
+    .article-content h2 { font-size: 1.8rem; margin-top: 40px; margin-bottom: 20px; color: #00ffff; font-weight: 600; }
+    .article-content h3 { font-size: 1.4rem; margin-top: 30px; margin-bottom: 15px; color: #00dddd; font-weight: 600; }
+    .article-content p { margin-bottom: 20px; color: rgba(255, 255, 255, 0.85); }
+    .article-content ul, .article-content ol { margin-left: 20px; margin-bottom: 20px; color: rgba(255, 255, 255, 0.85); }
+    .article-content li { margin-bottom: 10px; }
+    .article-content a { color: #00ffff; text-decoration: none; border-bottom: 1px solid rgba(0, 255, 255, 0.3); transition: all 0.3s ease; }
+    .article-content a:hover { color: #00ffdd; border-bottom-color: rgba(0, 255, 221, 0.6); }
+    .article-content blockquote { border-left: 4px solid #00ffff; padding-left: 20px; margin: 30px 0; color: rgba(0, 255, 255, 0.8); font-style: italic; }
+    .article-content code { background: rgba(0, 255, 221, 0.1); color: #00ffdd; padding: 2px 6px; border-radius: 4px; font-family: 'Monaco', 'Courier New', monospace; font-size: 0.9rem; }
+    .article-content pre { background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(0, 255, 255, 0.2); border-radius: 8px; padding: 20px; margin: 20px 0; overflow-x: auto; }
+    .article-content pre code { background: none; color: #00ffdd; padding: 0; }
+    .article-content img { max-width: 100%; height: auto; border-radius: 8px; margin: 30px 0; border: 1px solid rgba(0, 255, 255, 0.2); }
+    .article-tags { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 40px; padding-top: 30px; border-top: 1px solid rgba(0, 255, 255, 0.1); }
+    .article-tag { display: inline-block; background: rgba(0, 255, 255, 0.05); color: rgba(0, 255, 255, 0.7); padding: 8px 16px; border-radius: 20px; font-size: 0.9rem; border: 1px solid rgba(0, 255, 255, 0.15); transition: all 0.3s ease; }
+    .article-tag:hover { background: rgba(0, 255, 255, 0.1); color: rgba(0, 255, 255, 0.95); border-color: rgba(0, 255, 255, 0.4); }
+    .article-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 60px; padding-top: 30px; border-top: 1px solid rgba(0, 255, 255, 0.1); animation: fadeIn 1.2s ease-out 0.4s both; }
+    .nav-link { color: #00ffff; text-decoration: none; font-weight: 500; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px; }
+    .nav-link:hover { color: #00ffdd; }
+    .nav-link.prev::before { content: '←'; }
+    .nav-link.next::after { content: '→'; }
+    @media (max-width: 768px) { .article-header h1 { font-size: 2rem; } .article-content { padding: 30px; } .content { padding: 60px 15px; } .article-header { margin-bottom: 40px; } .article-meta { flex-direction: column; align-items: flex-start; gap: 10px; } .tech-icon { font-size: 2rem; } }
+    @media (max-width: 480px) { .article-header h1 { font-size: 1.6rem; } .article-content { padding: 20px; } .article-content h2 { font-size: 1.4rem; } .article-content h3 { font-size: 1.1rem; } .content { padding: 40px 15px; } .tech-icon { font-size: 1.5rem; } }
+  </style>
 </head>
 <body>
-    <div class="particle-bg">
-        <div class="particles" id="particles"></div>
-    </div>
-    
-    <div class="content">
-        <div class="container">
-            <a href="{{ .Site.BaseURL }}" class="back-link">← Back Home</a>
-            
-            <header>
-                <h1>{{ .Title }}</h1>
-                <div class="meta">
-                    {{ if .Params.author }}
-                        <div class="meta-item">
-                            <span>👤</span>
-                            <span>{{ .Params.author }}</span>
-                        </div>
-                    {{ end }}
-                    <div class="meta-item">
-                        <span>📅</span>
-                        <span>{{ .Date.Format "January 2, 2006" }}</span>
-                    </div>
-                </div>
-            </header>
-            
-            {{ if .Params.image }}
-                <img src="{{ .Params.image }}" alt="{{ .Title }}" class="featured-image">
-            {{ end }}
-            
-            <article>
-                {{ .Content }}
-            </article>
-            
-            {{ if .Params.tags }}
-                <div class="tags">
-                    {{ range .Params.tags }}
-                        <span class="tag">#{{ . }}</span>
-                    {{ end }}
-                </div>
-            {{ end }}
+  <div class="particle-bg">
+    <div class="tech-icons-container" id="techIcons"></div>
+  </div>
+  <div class="content">
+    <div class="container">
+      <article>
+        <header class="article-header">
+          <h1>{{ .Title }}</h1>
+          <div class="article-meta">
+            {{ if .Params.Author }}<span>👤 {{ .Params.Author }}</span>{{ end }}
+            <span>📅 {{ .Date.Format "January 02, 2006" }}</span>
+            {{ if .ReadingTime }}<span>⏱️ {{ .ReadingTime }} min read</span>{{ end }}
+          </div>
+        </header>
+        <div class="article-content">
+          {{ .Content }}
         </div>
+        {{ if .Params.Tags }}
+          <div class="article-tags">
+            {{ range .Params.Tags }}<span class="article-tag">#{{ . }}</span>{{ end }}
+          </div>
+        {{ end }}
+        <nav class="article-nav">
+          <div>{{ with .PrevInSection }}<a href="{{ .Permalink }}" class="nav-link prev">{{ .Title }}</a>{{ end }}</div>
+          <a href="/" class="nav-link">← Back to Home</a>
+          <div>{{ with .NextInSection }}<a href="{{ .Permalink }}" class="nav-link next">{{ .Title }}</a>{{ end }}</div>
+        </nav>
+      </article>
     </div>
-
-    <script>
-        // Create animated particles
-        function createParticles() {
-            const particlesContainer = document.getElementById('particles');
-            const particleCount = 50;
-            
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                
-                const size = Math.random() * 3 + 2;
-                const x = Math.random() * 100;
-                const y = Math.random() * 100;
-                const duration = Math.random() * 20 + 10;
-                const delay = Math.random() * 5;
-                
-                particle.style.width = size + 'px';
-                particle.style.height = size + 'px';
-                particle.style.left = x + '%';
-                particle.style.top = y + '%';
-                particle.style.animation = `float ${duration}s linear ${delay}s infinite`;
-                
-                particlesContainer.appendChild(particle);
-            }
-        }
-        
-        // Floating animation
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes float {
-                0% {
-                    transform: translateY(0px) translateX(0px);
-                    opacity: 0;
-                }
-                10% {
-                    opacity: 0.8;
-                }
-                90% {
-                    opacity: 0.8;
-                }
-                100% {
-                    transform: translateY(-100vh) translateX(100px);
-                    opacity: 0;
-                }
-            }
-        `;
-        document.head.appendChild(style);
-        
-        createParticles();
-    </script>
+  </div>
+  <script>
+    const techSymbols = ['</>', '⚡', '⚙️', '🚀', '🗄️', '🔌', '🌐', '⭐', '💻', '🔗', '📊', '🧠', '🔐', '⚛️', '📱', '🎯', '🔍', '🛠️', '📡', '🎨', '💡', '📈', '🌀', '⏱️', '🔄'];
+    const iconContainer = document.getElementById('techIcons');
+    techSymbols.forEach((symbol, index) => {
+      const icon = document.createElement('div');
+      icon.className = `tech-icon icon-${index + 1}`;
+      icon.textContent = symbol;
+      icon.style.left = (Math.random() * 80 + 10) + '%';
+      icon.style.top = (Math.random() * 80 + 10) + '%';
+      iconContainer.appendChild(icon);
+    });
+  </script>
 </body>
 </html>
