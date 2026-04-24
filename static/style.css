@@ -317,8 +317,7 @@ footer {
     background: var(--accent-secondary);
 }
 
-/* Hide star emoji from post title */
-.post-title {
-      text-indent: -0.6em;
-      overflow: hidden;
+/* Hide star decoration from homepage title */
+h1.post-title::before {
+      display: none;
 }
