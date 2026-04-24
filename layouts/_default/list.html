@@ -153,11 +153,12 @@
             <p>{{ .Site.Params.description | default "Exploring the future of technology, one post at a time" }}</p>
         </header>
 
-        {{ if .Pages }}
+        {{ $posts := where .Site.RegularPages "Type" "posts" }}
+        {{ if $posts }}
             <div class="posts-section">
                 <div class="posts-grid">
-                    {{ range .Pages }}
-                        {{ if ne .Draft true }}
+                    {{ range $posts }}
+                        {{ if and (ne .Draft true) (ne .Type "posts" false) }}
                             <div class="post-card">
                                 {{ if .Params.image }}
                                     <img src="{{ .Params.image }}" alt="{{ .Title }}" class="post-image">
