@@ -1,0 +1,35 @@
+{{- define "main" }}
+<article class="post-single">
+    <header class="post-header">
+      <h1 class="post-title">{{ .Site.Title }}</h1>
+      <p class="post-description">{{ .Site.Params.description }}</p>
+    </header>
+  </article>
+
+  {{- range $paginator.Pages }}
+<article class="post-entry">
+    <header class="entry-header">
+      <h2 class="entry-title">
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </h2>
+    </header>
+    <section class="entry-content">
+      <p>{{ .Summary }}</p>
+    </section>
+    <footer class="entry-footer">
+      <span>{{ .Date.Format "Jan 02, 2006" }}</span>
+    </footer>
+  </article>
+  {{- end }}
+
+{{- if gt $paginator.TotalPages 1 }}
+<footer class="page-footer">
+  {{- if $paginator.HasPrev }}
+  <a href="{{ $paginator.Prev.URL }}">← Previous</a>
+{{- end }}
+{{- if $paginator.HasNext }}
+  <a href="{{ $paginator.Next.URL }}">Next →</a>
+{{- end }}
+</footer>
+  {{- end }}
+{{- end }}
