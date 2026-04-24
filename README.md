@@ -1,4 +1,4 @@
-# Apurva's Tech Blog
+# Apurva's Tech Blog:
 
 A modern, fast, and beautiful blog powered by Hugo and hosted on Cloudflare Pages.
 
