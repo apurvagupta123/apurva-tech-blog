@@ -5,11 +5,9 @@
     </header>
   {{- if .Content }}
   <div class="entry-content md-content">
-  {{ $opts := dict "display" "block" }}
-{{ .Content | $Page.RenderString $opts }}
-  </div>
-    {{- end }}
-  <footer class="entry-footer">
+          {{ .Content | markdownify }}
+  </div>div>
+        {{- end }}
     {{- partial "social_icons.html" (dict "align" site.Params.homeInfoParams.AlignSocialIconsTo) }}
   </footer>
     </article>
