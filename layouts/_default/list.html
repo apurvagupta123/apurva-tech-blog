@@ -90,6 +90,82 @@
       100% { transform: translateY(0px) rotate(360deg); }
     }
 
+    /* Tech Icons */
+    .tech-icons-container {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .tech-icon {
+      position: absolute;
+      font-size: 2.5rem;
+      opacity: 0.15;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #00ffcc;
+      text-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
+    }
+
+    .tech-icon.icon-code { animation: moveIcon1 25s ease-in-out infinite; }
+    .tech-icon.icon-ai { animation: moveIcon2 30s ease-in-out infinite; }
+    .tech-icon.icon-circuit { animation: moveIcon3 28s ease-in-out infinite; }
+    .tech-icon.icon-rocket { animation: moveIcon4 32s ease-in-out infinite; }
+    .tech-icon.icon-database { animation: moveIcon5 26s ease-in-out infinite; }
+    .tech-icon.icon-chip { animation: moveIcon6 29s ease-in-out infinite; }
+    .tech-icon.icon-network { animation: moveIcon7 27s ease-in-out infinite; }
+    .tech-icon.icon-gear { animation: moveIcon8 31s ease-in-out infinite; }
+
+    @keyframes moveIcon1 {
+      0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 0.1; }
+      50% { transform: translate(100px, -150px) rotate(180deg) scale(1.2); opacity: 0.25; }
+      100% { transform: translate(0, 0) rotate(360deg) scale(1); opacity: 0.1; }
+    }
+
+    @keyframes moveIcon2 {
+      0% { transform: translate(0, 0) rotate(360deg) scale(1); opacity: 0.15; }
+      50% { transform: translate(-120px, 100px) rotate(180deg) scale(1.1); opacity: 0.3; }
+      100% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 0.15; }
+    }
+
+    @keyframes moveIcon3 {
+      0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 0.12; }
+      50% { transform: translate(150px, 80px) rotate(180deg) scale(1.15); opacity: 0.25; }
+      100% { transform: translate(0, 0) rotate(360deg) scale(1); opacity: 0.12; }
+    }
+
+    @keyframes moveIcon4 {
+      0% { transform: translate(0, 0) rotate(180deg) scale(1); opacity: 0.1; }
+      50% { transform: translate(-100px, -120px) rotate(0deg) scale(1.2); opacity: 0.28; }
+      100% { transform: translate(0, 0) rotate(180deg) scale(1); opacity: 0.1; }
+    }
+
+    @keyframes moveIcon5 {
+      0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 0.14; }
+      50% { transform: translate(110px, 110px) rotate(180deg) scale(1.1); opacity: 0.26; }
+      100% { transform: translate(0, 0) rotate(360deg) scale(1); opacity: 0.14; }
+    }
+
+    @keyframes moveIcon6 {
+      0% { transform: translate(0, 0) rotate(360deg) scale(1); opacity: 0.13; }
+      50% { transform: translate(-130px, 90px) rotate(180deg) scale(1.15); opacity: 0.27; }
+      100% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 0.13; }
+    }
+
+    @keyframes moveIcon7 {
+      0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 0.11; }
+      50% { transform: translate(120px, -100px) rotate(180deg) scale(1.12); opacity: 0.24; }
+      100% { transform: translate(0, 0) rotate(360deg) scale(1); opacity: 0.11; }
+    }
+
+    @keyframes moveIcon8 {
+      0% { transform: translate(0, 0) rotate(180deg) scale(1); opacity: 0.15; }
+      50% { transform: translate(-110px, -130px) rotate(0deg) scale(1.18); opacity: 0.29; }
+      100% { transform: translate(0, 0) rotate(180deg) scale(1); opacity: 0.15; }
+    }
+
     /* Glowing lines */
     .glow-line {
       position: absolute;
@@ -384,6 +460,10 @@
       .particle-bg {
         animation: bgShift 15s ease infinite;
       }
+
+      .tech-icon {
+        font-size: 2rem;
+      }
     }
 
     @media (max-width: 480px) {
@@ -397,6 +477,10 @@
 
       .header p {
         font-size: 1rem;
+      }
+
+      .tech-icon {
+        font-size: 1.5rem;
       }
     }
   </style>
@@ -417,6 +501,9 @@
     <div class="orbit-container orbit2">
       <div class="orbit-dot"></div>
     </div>
+
+    <!-- Tech Icons Container -->
+    <div class="tech-icons-container" id="techIcons"></div>
 
     <div class="particles" id="particles"></div>
   </div>
@@ -464,6 +551,37 @@
   </div>
 
   <script>
+    // Tech icons data with emoji representations
+    const techIcons = [
+      { icon: '&lt;/&gt;', class: 'icon-code', positions: [] },
+      { icon: '⚡', class: 'icon-ai', positions: [] },
+      { icon: '⚙️', class: 'icon-circuit', positions: [] },
+      { icon: '🚀', class: 'icon-rocket', positions: [] },
+      { icon: '🗄️', class: 'icon-database', positions: [] },
+      { icon: '🔌', class: 'icon-chip', positions: [] },
+      { icon: '🌐', class: 'icon-network', positions: [] },
+      { icon: '⚡', class: 'icon-gear', positions: [] }
+    ];
+
+    const iconContainer = document.getElementById('techIcons');
+
+    techIcons.forEach((item, index) => {
+      const icon = document.createElement('div');
+      icon.className = `tech-icon ${item.class}`;
+
+      // Use actual symbols for better rendering
+      const symbols = ['</>', '⚡', '⚙️', '🚀', '🗄️', '🔌', '🌐', '⭐'];
+      icon.textContent = symbols[index] || item.icon;
+
+      // Random initial position
+      const randomX = Math.random() * 80 + 10; // 10% to 90% of width
+      const randomY = Math.random() * 80 + 10; // 10% to 90% of height
+      icon.style.left = randomX + '%';
+      icon.style.top = randomY + '%';
+
+      iconContainer.appendChild(icon);
+    });
+
     // Generate particles
     const particleContainer = document.getElementById('particles');
     const particleCount = 100;
