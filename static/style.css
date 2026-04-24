@@ -316,3 +316,9 @@ footer {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--accent-secondary);
 }
+
+/* Hide star emoji from post title */
+.post-title {
+      text-indent: -0.6em;
+      overflow: hidden;
+}
