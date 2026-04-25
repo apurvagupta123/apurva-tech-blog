@@ -441,7 +441,7 @@
       animation: fadeIn 1s ease-out 0.2s both;
     }
 
-    .post-card {
+    . {
       background: rgba(255, 255, 255, 0.05);
       backdrop-filter: blur(20px);
       border: 1px solid rgba(0, 255, 255, 0.3);
@@ -637,8 +637,7 @@
       <div class="posts-grid">
         {{ range .Site.RegularPages }}
           {{ if in .File.Path "posts" }}
-            <article class="post-card">
-              {{ if .Params.Image }}
+<article class="post-card" data-post-url="{{ .Permalink }}">              {{ if .Params.Image }}
                 <img src="{{ .Params.Image }}" alt="{{ .Title }}" class="post-image">
               {{ end }}
 
@@ -726,6 +725,32 @@
       }
     `;
     document.head.appendChild(style);
+
+
+    // Make blog cards clickable
+    document.querySelectorAll('.post-card').forEach(card => {
+        card.addEventListener('click', function(e) {
+              // Don't navigate if clicking the read-more link itself
+              if (e.target.closest('.read-more')) {
+                      return;
+              }
+              const url = this.getAttribute('data-post-url');
+              if (url) {
+                      window.location.href = url;
+              }
+        });
+
+        // Add keyboard support for accessibility
+        card.addEventListener('keypress', function(e) {
+              if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      const url = this.getAttribute('data-post-url');
+                      if (url) {
+                                window.location.href = url;
+                      }
+              }
+        });
+    });
   </script>
 </body>
 </html>
