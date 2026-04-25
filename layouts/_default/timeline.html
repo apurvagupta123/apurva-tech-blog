@@ -1,190 +1,248 @@
 {{ define "main" }}
-<main class="timeline-container">
-    <div class="timeline-header">
-          <h1>{{ .Title }}</h1>
-        <p class="timeline-description">{{ .Description }}</p>p>
-    </div>div>
+<main class="timeline-main">
+      <div class="timeline-header">
+              <h1>{{ .Title }}</h1>
+          <p>Blog posts organized by publication date</p>
+      </div>div>
 
-  <div class="timeline">
-      <!-- Timeline Item 1 -->
-      <div class="timeline-item">
-            <div class="timeline-date">January 2020</div>div>
-            <div class="timeline-content">
-                    <h3>Started Professional Journey</h3>
-                    <p>Began exploring web development and technology innovations.</p>
-            </div>div>
-      </div>div>
-  
-      <!-- Timeline Item 2 -->
-      <div class="timeline-item">
-            <div class="timeline-date">June 2021</div>div>
-            <div class="timeline-content">
-                    <h3>First Major Project</h3>
-                    <p>Completed and deployed my first full-stack application.</p>
-            </div>div>
-      </div>div>
-  
-      <!-- Timeline Item 3 -->
-      <div class="timeline-item">
-            <div class="timeline-date">December 2022</div>div>
-            <div class="timeline-content">
-                    <h3>Tech Blog Launch</h3>
-                    <p>Launched this tech blog to share insights and knowledge with the community.</p>
-            </div>div>
-      </div>div>
-  
-      <!-- Timeline Item 4 -->
-      <div class="timeline-item">
-            <div class="timeline-date">Present</div>div>
-            <div class="timeline-content">
-                    <h3>Continuous Learning</h3>
-                    <p>Actively contributing to tech community and building innovative solutions.</p>
-            </div>div>
-      </div>div>
+  <div class="blog-timeline">
+      {{ $posts := where .Site.RegularPages "Section" "posts" }}
+      {{ $grouped := dict }}
+      
+      {{ range $posts }}
+        {{ $yearMonth := .PublishDate.Format "January 2006" }}
+        {{ $grouped = merge $grouped (dict $yearMonth (append (index $grouped $yearMonth) .)) }}
+      {{ end }}
+      
+      {{ range $yearMonth := sort (keys $grouped) "desc" }}
+        {{ $monthPosts := index $grouped $yearMonth }}
+        <div class="timeline-month-group">
+                <button class="timeline-month-header" onclick="toggleMonth(this)">
+                          <span class="timeline-month-title">{{ $yearMonth }}</span>span>
+                          <span class="timeline-month-count">{{ len $monthPosts }} posts</span>span>
+                          <span class="timeline-toggle-icon">▼</span>span>
+                </button>button>
+                
+                <div class="timeline-month-content">
+                          {{ range sort $monthPosts "PublishDate" "desc" }}
+                            <div class="timeline-post-item">
+                                          <div class="timeline-post-date">
+                                                          <span class="post-date">{{ .PublishDate.Format "02 Jan" }}</span>span>
+                                          </div>div>
+                                          <div class="timeline-post-content">
+                                                          <h3><a href="{{ .Permalink }}">{{ .Title }}</a>a></h3>
+                                                          {{ if .Description }}
+                                                            <p class="post-description">{{ .Description }}</p>
+                                                          {{ end }}
+                                          </div>div>
+                            </div>div>
+                          {{ end }}
+                </div>div>
+        </div>div>
+      {{ end }}
   </div>div>
-
-  {{ .Content }}
 </main>main>
 
 <style>
-  .timeline-container {
-      max-width: 900px;
-      margin: 60px auto;
-      padding: 0 20px;
-  }
+    .timeline-main {
+          max-width: 900px;
+          margin: 60px auto;
+          padding: 0 20px;
+    }
 
-  .timeline-header {
-      text-align: center;
-      margin-bottom: 60px;
-  }
+    .timeline-header {
+          text-align: center;
+          margin-bottom: 60px;
+    }
 
-  .timeline-header h1 {
-      font-size: 2.5em;
-      margin-bottom: 15px;
-      color: #1a1a1a;
-  }
+    .timeline-header h1 {
+          font-size: 2.5em;
+          margin-bottom: 10px;
+          color: #1a1a1a;
+    }
 
-  .timeline-description {
-      font-size: 1.1em;
-      color: #666;
-      margin: 0;
-  }
+    .timeline-header p {
+          font-size: 1.1em;
+          color: #666;
+          margin: 0;
+    }
 
-  .timeline {
-      position: relative;
-      padding: 20px 0;
-  }
+    .blog-timeline {
+          position: relative;
+    }
 
-  .timeline::before {
-      content: '';
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 4px;
-      height: 100%;
-      background: linear-gradient(180deg, #007bff, #00d4ff);
-      border-radius: 2px;
-  }
+    .timeline-month-group {
+          margin-bottom: 30px;
+    }
 
-  .timeline-item {
-      margin-bottom: 50px;
-      position: relative;
-  }
+    .timeline-month-header {
+          width: 100%;
+          padding: 15px 20px;
+          background: linear-gradient(135deg, #007bff, #0056b3);
+          color: white;
+          border: none;
+          border-radius: 8px;
+          cursor: pointer;
+          font-size: 1.1em;
+          font-weight: 600;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          transition: all 0.3s ease;
+          box-shadow: 0 2px 8px rgba(0, 123, 255, 0.2);
+    }
 
-  .timeline-item:nth-child(odd) {
-      text-align: right;
-      padding-right: 52%;
-  }
+    .timeline-month-header:hover {
+          background: linear-gradient(135deg, #0056b3, #003d82);
+          box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+          transform: translateY(-2px);
+    }
 
-  .timeline-item:nth-child(even) {
-      text-align: left;
-      padding-left: 52%;
-  }
+    .timeline-month-title {
+          font-weight: bold;
+          flex: 1;
+          text-align: left;
+    }
 
-  .timeline-date {
-      font-size: 1.1em;
-      font-weight: bold;
-      color: #007bff;
-      margin-bottom: 10px;
-      position: absolute;
-      right: calc(50% - 200px);
-      width: 180px;
-      text-align: center;
-  }
+    .timeline-month-count {
+          font-size: 0.9em;
+          background: rgba(255, 255, 255, 0.2);
+          padding: 4px 12px;
+          border-radius: 20px;
+          margin: 0 15px;
+    }
 
-  .timeline-item:nth-child(even) .timeline-date {
-      right: auto;
-      left: calc(50% - 200px);
-  }
+    .timeline-toggle-icon {
+          font-size: 0.8em;
+          transition: transform 0.3s ease;
+    }
 
-  .timeline-content {
-      background: #f8f9fa;
-      padding: 20px;
-      border-radius: 8px;
-      border-left: 4px solid #007bff;
-      box-shadow: 0 2px 8px rgba(0, 123, 255, 0.1);
-      transition: all 0.3s ease;
-  }
+    .timeline-month-header.collapsed .timeline-toggle-icon {
+          transform: rotate(-90deg);
+    }
 
-  .timeline-item:nth-child(even) .timeline-content {
-      border-left: none;
-      border-right: 4px solid #007bff;
-  }
+    .timeline-month-content {
+          background: #f8f9fa;
+          padding: 20px;
+          border-radius: 0 0 8px 8px;
+          border-left: 4px solid #007bff;
+          max-height: 1000px;
+          overflow: hidden;
+          transition: max-height 0.3s ease, opacity 0.3s ease;
+          opacity: 1;
+    }
 
-  .timeline-content:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 4px 16px rgba(0, 123, 255, 0.2);
-  }
+    .timeline-month-header.collapsed + .timeline-month-content {
+          max-height: 0;
+          opacity: 0;
+          padding: 0 20px;
+          overflow: hidden;
+    }
 
-  .timeline-content h3 {
-      margin: 0 0 10px 0;
-      color: #1a1a1a;
-      font-size: 1.3em;
-  }
+    .timeline-post-item {
+          display: flex;
+          margin-bottom: 20px;
+          padding-bottom: 20px;
+          border-bottom: 1px solid #e0e0e0;
+    }
 
-  .timeline-content p {
-      margin: 0;
-      color: #555;
-      line-height: 1.6;
-  }
+    .timeline-post-item:last-child {
+          border-bottom: none;
+          margin-bottom: 0;
+          padding-bottom: 0;
+    }
 
-  /* Responsive Design */
-  @media (max-width: 768px) {
-      .timeline::before {
-            left: 30px;
-      }
+    .timeline-post-date {
+          min-width: 80px;
+          margin-right: 20px;
+          text-align: right;
+    }
 
-      .timeline-item,
-      .timeline-item:nth-child(odd),
-      .timeline-item:nth-child(even) {
-            padding-left: 100px;
-            padding-right: 0;
-            text-align: left;
-      }
+    .post-date {
+          display: inline-block;
+          background: #007bff;
+          color: white;
+          padding: 6px 12px;
+          border-radius: 6px;
+          font-size: 0.9em;
+          font-weight: 600;
+    }
 
-      .timeline-date {
-            position: absolute;
-            left: 0;
-            width: 80px;
-            font-size: 0.9em;
-            text-align: left;
-            right: auto;
-      }
+    .timeline-post-content {
+          flex: 1;
+    }
 
-      .timeline-item:nth-child(even) .timeline-date {
-            left: 0;
-      }
+    .timeline-post-content h3 {
+          margin: 0 0 8px 0;
+          font-size: 1.2em;
+          color: #1a1a1a;
+    }
 
-      .timeline-content {
-            border-left: 4px solid #007bff;
-            border-right: none;
-      }
+    .timeline-post-content h3 a {
+          color: #007bff;
+          text-decoration: none;
+          transition: color 0.3s ease;
+    }
 
-      .timeline-item:nth-child(even) .timeline-content {
-            border-left: 4px solid #007bff;
-            border-right: none;
-      }
-  }
-  </style>
+    .timeline-post-content h3 a:hover {
+          color: #0056b3;
+          text-decoration: underline;
+    }
+
+    .post-description {
+          margin: 8px 0 0 0;
+          color: #555;
+          font-size: 0.95em;
+          line-height: 1.6;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+          .timeline-main {
+                  margin: 40px auto;
+          }
+
+          .timeline-header h1 {
+                  font-size: 1.8em;
+          }
+
+          .timeline-month-header {
+                  flex-direction: column;
+                  align-items: flex-start;
+          }
+
+          .timeline-month-count {
+                  margin-top: 8px;
+                  margin-left: 0;
+          }
+
+          .timeline-post-item {
+                  flex-direction: column;
+          }
+
+          .timeline-post-date {
+                  min-width: auto;
+                  margin-right: 0;
+                  margin-bottom: 10px;
+                  text-align: left;
+          }
+    }
+    </style>
+
+<script>
+    function toggleMonth(button) {
+          button.classList.toggle('collapsed');
+    }
+
+    // Optional: Expand first month by default
+    window.addEventListener('load', function() {
+          const firstButton = document.querySelector('.timeline-month-header');
+          if (firstButton) {
+                  // Uncomment to expand first month on load
+                  // firstButton.classList.toggle('collapsed');
+          }
+    });
+</script>
 {{ end }}
-</style></p></p></h3></h1>
+</script>
+</style></p></h1>
