@@ -1,0 +1,31 @@
+<div class="timeline-item">
+  <div class="timeline-card">
+    <div class="timeline-card-inner">
+      {{ if .Params.Image }}
+        <img src="{{ .Params.Image }}" alt="{{ .Title }}" class="timeline-card-thumb">
+      {{ end }}
+      <div class="timeline-card-body">
+        <div class="timeline-card-toprow">
+          <span class="timeline-card-date">{{ .Date.Format "Jan 02" }}</span>
+          {{ if .Params.Author }}
+            <span class="timeline-card-author">· {{ .Params.Author }}</span>
+          {{ end }}
+        </div>
+        <a href="{{ .Permalink }}" class="timeline-card-title">{{ .Title }}</a>
+        {{ if .Description }}
+          <p class="timeline-card-desc">{{ .Description }}</p>
+        {{ end }}
+        <div class="timeline-card-footer">
+          {{ if .Params.Tags }}
+            <div class="timeline-card-tags">
+              {{ range .Params.Tags }}
+                <span class="timeline-tag">#{{ . }}</span>
+              {{ end }}
+            </div>
+          {{ end }}
+          <a href="{{ .Permalink }}" class="timeline-read-more">Read →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
