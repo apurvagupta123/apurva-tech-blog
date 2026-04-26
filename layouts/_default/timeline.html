@@ -430,7 +430,7 @@
                                             margin-top: 8px;
                                             margin-left: 0;
                               }
-
+{{ range $yearMonth, $posts := $grouped }}
                               .timeline-post-item {
                                             flex-direction: column;
                               }
@@ -460,7 +460,7 @@
                           {{ $grouped = merge $grouped (dict $yearMonth (append (index $grouped $yearMonth) .)) }}
                         {{ end }}
                         
-                        {{ range $yearMonth := sort (keys $grouped) "desc" }}
+				{{ range $yearMonth, $posts := $grouped }}
                           {{ $monthPosts := index $grouped $yearMonth }}
                           <div class="timeline-month-group">
                                     <button class="timeline-month-header" onclick="toggleMonth(event)">
