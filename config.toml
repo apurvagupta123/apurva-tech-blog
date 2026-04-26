@@ -1,19 +1,18 @@
-baseURL = "https://theapurva.com/"
+baseURL      = "https://theapurva.com/"
 languageCode = "en-us"
-title = "The Tech Lens"
-paginate = 10
+title        = "The Tech Lens"
+paginate     = 10
 enableRobotsTXT = true
-enableEmoji = true
+enableEmoji     = true
 
 [outputs]
   home = ["HTML", "RSS"]
 
 [params]
-description = "Making sense of tomorrow's tech"
-author = "Apurva Gupta"
-  keywords = ["tech", "ai", "technology", "blog", "machine learning"]
+  description = "Making sense of tomorrow's tech"
+  author      = "Apurva Gupta"
+  keywords    = ["tech", "ai", "technology", "blog", "machine learning"]
 
 [taxonomies]
   category = "categories"
-  tag = "tags"
-
+  tag      = "tags"
