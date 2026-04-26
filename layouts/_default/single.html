@@ -1,179 +1,40 @@
-<!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ .Title }} | {{ .Site.Title }}</title>
-  <meta name="description" content="{{ .Description }}">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html, body { height: 100%; }
+{{ define "container_class" }}container container--article{{ end }}
 
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-      line-height: 1.6;
-      color: #ffffff;
-      background: #0f0f0f;
-      overflow-x: hidden;
-    }
+{{ define "main" }}
+  <article>
+    <header class="article-header">
+      <h1>{{ .Title }}</h1>
+      <div class="article-meta">
+        {{ if .Params.Author }}<span>👤 {{ .Params.Author }}</span>{{ end }}
+        <span>📅 {{ .Date.Format "January 02, 2006" }}</span>
+        {{ if .ReadingTime }}<span>⏱️ {{ .ReadingTime }} min read</span>{{ end }}
+      </div>
+    </header>
 
-    /* Animated particle background */
-    .particle-bg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, #1a1f3a 0%, #0f1428 50%, #1a1f3a 100%);
-      z-index: 0;
-      overflow: hidden;
-    }
-
-    /* Tech Icons */
-    .tech-icons-container {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-    }
-
-    .tech-icon {
-      position: absolute;
-      font-size: 2.5rem;
-      opacity: 0.2;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #00ffff;
-      text-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
-    }
-
-    .tech-icon.icon-1 { animation: moveIcon1 25s ease-in-out infinite; }
-    .tech-icon.icon-2 { animation: moveIcon2 30s ease-in-out infinite; }
-    .tech-icon.icon-3 { animation: moveIcon3 28s ease-in-out infinite; }
-    .tech-icon.icon-4 { animation: moveIcon4 32s ease-in-out infinite; }
-    .tech-icon.icon-5 { animation: moveIcon5 26s ease-in-out infinite; }
-    .tech-icon.icon-6 { animation: moveIcon6 29s ease-in-out infinite; }
-    .tech-icon.icon-7 { animation: moveIcon7 27s ease-in-out infinite; }
-    .tech-icon.icon-8 { animation: moveIcon8 31s ease-in-out infinite; }
-    .tech-icon.icon-9 { animation: moveIcon9 24s ease-in-out infinite; }
-    .tech-icon.icon-10 { animation: moveIcon10 33s ease-in-out infinite; }
-    .tech-icon.icon-11 { animation: moveIcon11 35s ease-in-out infinite; }
-    .tech-icon.icon-12 { animation: moveIcon12 22s ease-in-out infinite; }
-    .tech-icon.icon-13 { animation: moveIcon13 28s ease-in-out infinite; }
-    .tech-icon.icon-14 { animation: moveIcon14 34s ease-in-out infinite; }
-    .tech-icon.icon-15 { animation: moveIcon15 26s ease-in-out infinite; }
-    .tech-icon.icon-16 { animation: moveIcon16 30s ease-in-out infinite; }
-    .tech-icon.icon-17 { animation: moveIcon17 29s ease-in-out infinite; }
-    .tech-icon.icon-18 { animation: moveIcon18 32s ease-in-out infinite; }
-    .tech-icon.icon-19 { animation: moveIcon19 27s ease-in-out infinite; }
-    .tech-icon.icon-20 { animation: moveIcon20 31s ease-in-out infinite; }
-    .tech-icon.icon-21 { animation: moveIcon21 25s ease-in-out infinite; }
-    .tech-icon.icon-22 { animation: moveIcon22 33s ease-in-out infinite; }
-    .tech-icon.icon-23 { animation: moveIcon23 28s ease-in-out infinite; }
-    .tech-icon.icon-24 { animation: moveIcon24 30s ease-in-out infinite; }
-    .tech-icon.icon-25 { animation: moveIcon25 35s ease-in-out infinite; }
-
-    @keyframes moveIcon1 { 0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 0.1; } 50% { transform: translate(100px, -150px) rotate(180deg) scale(1.2); opacity: 0.25; } 100% { transform: translate(0, 0) rotate(360deg) scale(1); opacity: 0.1; } }
-    @keyframes moveIcon2 { 0% { transform: translate(0, 0) rotate(360deg) scale(1); opacity: 0.15; } 50% { transform: translate(-120px, 100px) rotate(180deg) scale(1.1); opacity: 0.3; } 100% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 0.15; } }
-    @keyframes moveIcon3 { 0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 0.12; } 50% { transform: translate(150px, 80px) rotate(180deg) scale(1.15); opacity: 0.25; } 100% { transform: translate(0, 0) rotate(360deg) scale(1); opacity: 0.12; } }
-    @keyframes moveIcon4 { 0% { transform: translate(0, 0) rotate(180deg) scale(1); opacity: 0.1; } 50% { transform: translate(-100px, -120px) rotate(0deg) scale(1.2); opacity: 0.28; } 100% { transform: translate(0, 0) rotate(180deg) scale(1); opacity: 0.1; } }
-    @keyframes moveIcon5 { 0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 0.14; } 50% { transform: translate(110px, 110px) rotate(180deg) scale(1.1); opacity: 0.26; } 100% { transform: translate(0, 0) rotate(360deg) scale(1); opacity: 0.14; } }
-    @keyframes moveIcon6 { 0% { transform: translate(0, 0) rotate(360deg) scale(1); opacity: 0.13; } 50% { transform: translate(-130px, 90px) rotate(180deg) scale(1.15); opacity: 0.27; } 100% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 0.13; } }
-    @keyframes moveIcon7 { 0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 0.11; } 50% { transform: translate(120px, -100px) rotate(180deg) scale(1.12); opacity: 0.24; } 100% { transform: translate(0, 0) rotate(360deg) scale(1); opacity: 0.11; } }
-    @keyframes moveIcon8 { 0% { transform: translate(0, 0) rotate(180deg) scale(1); opacity: 0.15; } 50% { transform: translate(-110px, -130px) rotate(0deg) scale(1.18); opacity: 0.29; } 100% { transform: translate(0, 0) rotate(180deg) scale(1); opacity: 0.15; } }
-    @keyframes moveIcon9 { 0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 0.12; } 50% { transform: translate(140px, -100px) rotate(180deg) scale(1.15); opacity: 0.26; } 100% { transform: translate(0, 0) rotate(360deg) scale(1); opacity: 0.12; } }
-    @keyframes moveIcon10 { 0% { transform: translate(0, 0) rotate(180deg) scale(1); opacity: 0.14; } 50% { transform: translate(-130px, 120px) rotate(0deg) scale(1.12); opacity: 0.27; } 100% { transform: translate(0, 0) rotate(180deg) scale(1); opacity: 0.14; } }
-    @keyframes moveIcon11 { 0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 0.13; } 50% { transform: translate(120px, 140px) rotate(180deg) scale(1.2); opacity: 0.28; } 100% { transform: translate(0, 0) rotate(360deg) scale(1); opacity: 0.13; } }
-    @keyframes moveIcon12 { 0% { transform: translate(0, 0) rotate(180deg) scale(1); opacity: 0.11; } 50% { transform: translate(-150px, -90px) rotate(0deg) scale(1.14); opacity: 0.25; } 100% { transform: translate(0, 0) rotate(180deg) scale(1); opacity: 0.11; } }
-    @keyframes moveIcon13 { 0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 0.15; } 50% { transform: translate(100px, 130px) rotate(180deg) scale(1.13); opacity: 0.29; } 100% { transform: translate(0, 0) rotate(360deg) scale(1); opacity: 0.15; } }
-    @keyframes moveIcon14 { 0% { transform: translate(0, 0) rotate(180deg) scale(1); opacity: 0.12; } 50% { transform: translate(-110px, 100px) rotate(0deg) scale(1.16); opacity: 0.26; } 100% { transform: translate(0, 0) rotate(180deg) scale(1); opacity: 0.12; } }
-    @keyframes moveIcon15 { 0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 0.14; } 50% { transform: translate(130px, -110px) rotate(180deg) scale(1.11); opacity: 0.27; } 100% { transform: translate(0, 0) rotate(360deg) scale(1); opacity: 0.14; } }
-    @keyframes moveIcon16 { 0% { transform: translate(0, 0) rotate(180deg) scale(1); opacity: 0.13; } 50% { transform: translate(-140px, -80px) rotate(0deg) scale(1.17); opacity: 0.28; } 100% { transform: translate(0, 0) rotate(180deg) scale(1); opacity: 0.13; } }
-    @keyframes moveIcon17 { 0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 0.11; } 50% { transform: translate(110px, 120px) rotate(180deg) scale(1.14); opacity: 0.25; } 100% { transform: translate(0, 0) rotate(360deg) scale(1); opacity: 0.11; } }
-    @keyframes moveIcon18 { 0% { transform: translate(0, 0) rotate(180deg) scale(1); opacity: 0.15; } 50% { transform: translate(-120px, 110px) rotate(0deg) scale(1.12); opacity: 0.29; } 100% { transform: translate(0, 0) rotate(180deg) scale(1); opacity: 0.15; } }
-    @keyframes moveIcon19 { 0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 0.12; } 50% { transform: translate(140px, -120px) rotate(180deg) scale(1.18); opacity: 0.26; } 100% { transform: translate(0, 0) rotate(360deg) scale(1); opacity: 0.12; } }
-    @keyframes moveIcon20 { 0% { transform: translate(0, 0) rotate(180deg) scale(1); opacity: 0.14; } 50% { transform: translate(-100px, 130px) rotate(0deg) scale(1.15); opacity: 0.27; } 100% { transform: translate(0, 0) rotate(180deg) scale(1); opacity: 0.14; } }
-    @keyframes moveIcon21 { 0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 0.13; } 50% { transform: translate(125px, 100px) rotate(180deg) scale(1.1); opacity: 0.28; } 100% { transform: translate(0, 0) rotate(360deg) scale(1); opacity: 0.13; } }
-    @keyframes moveIcon22 { 0% { transform: translate(0, 0) rotate(180deg) scale(1); opacity: 0.11; } 50% { transform: translate(-125px, -110px) rotate(0deg) scale(1.19); opacity: 0.25; } 100% { transform: translate(0, 0) rotate(180deg) scale(1); opacity: 0.11; } }
-    @keyframes moveIcon23 { 0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 0.15; } 50% { transform: translate(115px, 95px) rotate(180deg) scale(1.13); opacity: 0.29; } 100% { transform: translate(0, 0) rotate(360deg) scale(1); opacity: 0.15; } }
-    @keyframes moveIcon24 { 0% { transform: translate(0, 0) rotate(180deg) scale(1); opacity: 0.12; } 50% { transform: translate(-135px, 95px) rotate(0deg) scale(1.16); opacity: 0.26; } 100% { transform: translate(0, 0) rotate(180deg) scale(1); opacity: 0.12; } }
-    @keyframes moveIcon25 { 0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 0.14; } 50% { transform: translate(105px, -115px) rotate(180deg) scale(1.14); opacity: 0.27; } 100% { transform: translate(0, 0) rotate(360deg) scale(1); opacity: 0.14; } }
-
-    .content { position: relative; z-index: 1; min-height: 100vh; padding: 80px 20px; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .article-header { margin-bottom: 60px; animation: fadeIn 0.8s ease-out; }
-    .article-header h1 { font-size: 2.8rem; margin-bottom: 20px; font-weight: 600; color: #ffffff; line-height: 1.2; }
-    .article-meta { display: flex; align-items: center; gap: 20px; font-size: 0.95rem; color: rgba(0, 255, 255, 0.7); margin-bottom: 30px; }
-    .article-meta span { display: flex; align-items: center; gap: 8px; }
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-    .article-content { background: rgba(15, 15, 15, 0.4); backdrop-filter: blur(20px); border: 1px solid rgba(0, 255, 255, 0.1); border-radius: 12px; padding: 50px; line-height: 1.8; animation: fadeIn 1s ease-out 0.2s both; }
-    .article-content h2 { font-size: 1.8rem; margin-top: 40px; margin-bottom: 20px; color: #00ffff; font-weight: 600; }
-    .article-content h3 { font-size: 1.4rem; margin-top: 30px; margin-bottom: 15px; color: #00dddd; font-weight: 600; }
-    .article-content p { margin-bottom: 20px; color: rgba(255, 255, 255, 0.85); }
-    .article-content ul, .article-content ol { margin-left: 20px; margin-bottom: 20px; color: rgba(255, 255, 255, 0.85); }
-    .article-content li { margin-bottom: 10px; }
-    .article-content a { color: #00ffff; text-decoration: none; border-bottom: 1px solid rgba(0, 255, 255, 0.3); transition: all 0.3s ease; }
-    .article-content a:hover { color: #00ffdd; border-bottom-color: rgba(0, 255, 221, 0.6); }
-    .article-content blockquote { border-left: 4px solid #00ffff; padding-left: 20px; margin: 30px 0; color: rgba(0, 255, 255, 0.8); font-style: italic; }
-    .article-content code { background: rgba(0, 255, 221, 0.1); color: #00ffdd; padding: 2px 6px; border-radius: 4px; font-family: 'Monaco', 'Courier New', monospace; font-size: 0.9rem; }
-    .article-content pre { background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(0, 255, 255, 0.2); border-radius: 8px; padding: 20px; margin: 20px 0; overflow-x: auto; }
-    .article-content pre code { background: none; color: #00ffdd; padding: 0; }
-    .article-content img { max-width: 100%; height: auto; border-radius: 8px; margin: 30px 0; border: 1px solid rgba(0, 255, 255, 0.2); }
-    .article-tags { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 40px; padding-top: 30px; border-top: 1px solid rgba(0, 255, 255, 0.1); }
-    .article-tag { display: inline-block; background: rgba(0, 255, 255, 0.05); color: rgba(0, 255, 255, 0.7); padding: 8px 16px; border-radius: 20px; font-size: 0.9rem; border: 1px solid rgba(0, 255, 255, 0.15); transition: all 0.3s ease; }
-    .article-tag:hover { background: rgba(0, 255, 255, 0.1); color: rgba(0, 255, 255, 0.95); border-color: rgba(0, 255, 255, 0.4); }
-    .article-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 60px; padding-top: 30px; border-top: 1px solid rgba(0, 255, 255, 0.1); animation: fadeIn 1.2s ease-out 0.4s both; }
-    .nav-link { color: #00ffff; text-decoration: none; font-weight: 500; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px; }
-    .nav-link:hover { color: #00ffdd; }
-    .nav-link.prev::before { content: '←'; }
-    .nav-link.next::after { content: '→'; }
-    @media (max-width: 768px) { .article-header h1 { font-size: 2rem; } .article-content { padding: 30px; } .content { padding: 60px 15px; } .article-header { margin-bottom: 40px; } .article-meta { flex-direction: column; align-items: flex-start; gap: 10px; } .tech-icon { font-size: 2rem; } }
-    @media (max-width: 480px) { .article-header h1 { font-size: 1.6rem; } .article-content { padding: 20px; } .article-content h2 { font-size: 1.4rem; } .article-content h3 { font-size: 1.1rem; } .content { padding: 40px 15px; } .tech-icon { font-size: 1.5rem; } }
-  </style>
-</head>
-<body>
-  <div class="particle-bg">
-    <div class="tech-icons-container" id="techIcons"></div>
-  </div>
-  <div class="content">
-    <div class="container">
-      <article>
-        <header class="article-header">
-          <h1>{{ .Title }}</h1>
-          <div class="article-meta">
-            {{ if .Params.Author }}<span>👤 {{ .Params.Author }}</span>{{ end }}
-            <span>📅 {{ .Date.Format "January 02, 2006" }}</span>
-            {{ if .ReadingTime }}<span>⏱️ {{ .ReadingTime }} min read</span>{{ end }}
-          </div>
-        </header>
-        <div class="article-content">
-          {{ .Content }}
-        </div>
-        {{ if .Params.Tags }}
-          <div class="article-tags">
-            {{ range .Params.Tags }}<span class="article-tag">#{{ . }}</span>{{ end }}
-          </div>
-        {{ end }}
-        <nav class="article-nav">
-          <div>{{ with .PrevInSection }}<a href="{{ .Permalink }}" class="nav-link prev">{{ .Title }}</a>{{ end }}</div>
-          <a href="/" class="nav-link">← Back to Home</a>
-          <div>{{ with .NextInSection }}<a href="{{ .Permalink }}" class="nav-link next">{{ .Title }}</a>{{ end }}</div>
-        </nav>
-      </article>
+    <div class="article-content">
+      {{ .Content }}
     </div>
-  </div>
-  <script>
-    const techSymbols = ['</>', '⚡', '⚙️', '🚀', '🗄️', '🔌', '🌐', '⭐', '💻', '🔗', '📊', '🧠', '🔐', '⚛️', '📱', '🎯', '🔍', '🛠️', '📡', '🎨', '💡', '📈', '🌀', '⏱️', '🔄'];
-    const iconContainer = document.getElementById('techIcons');
-    techSymbols.forEach((symbol, index) => {
-      const icon = document.createElement('div');
-      icon.className = `tech-icon icon-${index + 1}`;
-      icon.textContent = symbol;
-      icon.style.left = (Math.random() * 80 + 10) + '%';
-      icon.style.top = (Math.random() * 80 + 10) + '%';
-      iconContainer.appendChild(icon);
-    });
-  </script>
-</body>
-</html>
+
+    {{ if .Params.Tags }}
+      <div class="article-tags">
+        {{ range .Params.Tags }}
+          <span class="article-tag">#{{ . }}</span>
+        {{ end }}
+      </div>
+    {{ end }}
+
+    <nav class="article-nav">
+      <div>
+        {{ with .PrevInSection }}
+          <a href="{{ .Permalink }}" class="nav-link prev">{{ .Title }}</a>
+        {{ end }}
+      </div>
+      <a href="/" class="nav-link">← Back to Home</a>
+      <div>
+        {{ with .NextInSection }}
+          <a href="{{ .Permalink }}" class="nav-link next">{{ .Title }}</a>
+        {{ end }}
+      </div>
+    </nav>
+  </article>
+{{ end }}

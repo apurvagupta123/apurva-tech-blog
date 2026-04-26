@@ -2,6 +2,7 @@
 title: "Welcome to Apurva's Tech Blog"
 date: 2026-04-23
 draft: false
+author: "Apurva Gupta"
 tags: ["welcome", "tech", "ai"]
 categories: ["Blog"]
 description: "Welcome to my space for technology and AI insights. Let's explore the future together."

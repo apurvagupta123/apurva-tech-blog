@@ -5,7 +5,6 @@ draft = false
 tags = ["AI", "Robotics", "Sony", "Breakthrough", "Physical AI"]
 description = "Sony's Project Ace achieved something no machine had done before: becoming competitive with elite, professional-level table tennis players."
 author = "Apurva Gupta"
-image = "/images/sony-robot-banner.png"
 +++
 
 Imagine you've been practicing table tennis every single day for 20 years. You know the angles, the spin, the exact moment to adjust your paddle. You've beaten most people you play. Then one day, a robot walks up to the table and beats you — not just once, but consistently. Not because it's stronger or faster in some obvious way, but because it's *thinking* at a level you didn't know was possible.
