@@ -170,9 +170,15 @@
         <div class="blog-timeline">
             {{ $posts := where .Site.RegularPages "Section" "posts" }}
             {{ $grouped := dict }}
+            
             {{ range $posts }}
                 {{ $yearMonth := .PublishDate.Format "January 2006" }}
-                {{ $grouped = merge $grouped (dict $yearMonth (append (index $grouped $yearMonth) .)) }}
+                {{ $monthPosts := index $grouped $yearMonth }}
+                {{ if $monthPosts }}
+                    {{ $grouped = merge $grouped (dict $yearMonth (append $monthPosts .)) }}
+                {{ else }}
+                    {{ $grouped = merge $grouped (dict $yearMonth (slice .)) }}
+                {{ end }}
             {{ end }}
 
             {{ range $yearMonth, $monthPosts := $grouped }}
