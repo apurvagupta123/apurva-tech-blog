@@ -1,5 +1,4 @@
-<article class="post-card">
-  {{ if .Params.Image }}
+<article class="post-card" onclick="window.location.href='{{ .Permalink }}';" style="cursor: pointer;">  {{ if .Params.Image }}
     <img src="{{ .Params.Image }}" alt="{{ .Title }}" class="post-image">
   {{ end }}
 
