@@ -2,6 +2,12 @@
 
 {{ define "main" }}
   <article>
+    {{ if .Params.Image }}
+      <div class="article-image">
+        <img src="{{ .Params.Image }}" alt="{{ .Title }}" class="featured-image">
+      </div>
+    {{ end }}
+
     <header class="article-header">
       <h1>{{ .Title }}</h1>
       <div class="article-meta">
