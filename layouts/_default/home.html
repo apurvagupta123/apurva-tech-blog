@@ -1,7 +1,7 @@
 {{ define "main" }}
   <div class="page-header">
     <h1>{{ .Site.Title }}</h1>
-    <p>{{ .Site.Params.description }}</p>
+    <p><strong>{{ .Site.Params.description }}</strong></p>
   </div>
 
   {{ $allPosts := where .Site.RegularPages "Section" "posts" }}
