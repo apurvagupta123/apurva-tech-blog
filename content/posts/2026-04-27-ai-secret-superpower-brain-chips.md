@@ -6,6 +6,7 @@ tags = ["AI", "Technology", "Neuromorphic Computing", "Energy Efficiency", "Brea
 description = "Discover how brain-inspired neuromorphic chips are cutting AI energy consumption by 70-100x while making AI smarter and more accessible to everyone."
 author = "Apurva Gupta"
 categories = ["Technology", "AI Innovation"]
+image = "/images/brain-chips-banner.svg"
 +++
 
 Imagine you have a super smart robot that can do incredible things — write poems, solve math problems, even help doctors save lives. But there's a problem: this robot is *hungry*. It eats so much electricity that your power bill would be sky-high, it runs hotter than an oven, and you'd need half a city's worth of power plants just to keep one running 24/7.

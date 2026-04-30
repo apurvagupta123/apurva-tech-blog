@@ -6,6 +6,7 @@ author: "Apurva Gupta"
 tags: ["welcome", "tech", "ai"]
 categories: ["Blog"]
 description: "Welcome to my space for technology and AI insights. Let's explore the future together."
+image: "/images/welcome-banner.svg"
 ---
 
 # Welcome to Apurva's Tech Blog! 👋

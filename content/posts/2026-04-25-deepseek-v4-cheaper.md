@@ -3,7 +3,7 @@ title: "Your AI Just Got 7 Times Cheaper (And You Might Not Have Noticed)"
 date: 2026-04-25T07:25:00Z
 draft: false
 description: "DeepSeek released V4-Pro and V4-Flash models that match Claude and GPT performance at 1/7th the cost. Here's why this changes everything for developers and businesses."
-image: "/images/deepseek-banner.png"
+image: "/images/deepseek-banner.svg"
 tags: ["AI", "DeepSeek", "Claude", "GPT", "Pricing", "Open Source"]
 author: "Apurva Gupta"
 ---
