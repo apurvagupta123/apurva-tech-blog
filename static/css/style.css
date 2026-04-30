@@ -470,6 +470,57 @@ body {
 .post-card:hover .read-more::after { transform: translateX(5px); }
 
 
+/* ── 10.5 More Posts Section ────────────────────────────── */
+
+.more-posts-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  animation: fadeIn 1.2s ease-out 0.4s both;
+}
+
+.more-posts-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 40px;
+  background: rgba(0, 255, 255, 0.08);
+  border: 2px solid rgba(0, 255, 255, 0.4);
+  border-radius: 30px;
+  color: #00ffff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.more-posts-link:hover {
+  background: rgba(0, 255, 255, 0.15);
+  border-color: rgba(0, 255, 255, 0.7);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+  color: #00ffdd;
+  transform: translateY(-3px);
+}
+
+.more-posts-link .arrow {
+  display: inline-block;
+  font-size: 1.3rem;
+  transition: transform 0.3s ease;
+}
+
+.more-posts-link:hover .arrow {
+  transform: translateY(4px);
+  animation: bounce 0.6s ease infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+
 /* ── 11. Home / List — Section Badge ────────────────────── */
 
 .section-badge-row {

@@ -17,9 +17,19 @@
     {{ end }}
   </div>
 
+  {{/* ── More Posts Link ── */}}
+  {{ if gt (len $allPosts) 4 }}
+    <div class="more-posts-section">
+      <a href="#time-capsule" class="more-posts-link">
+        <span>Read More Stories</span>
+        <span class="arrow">↓</span>
+      </a>
+    </div>
+  {{ end }}
+
   {{/* ── Chronicle timeline ── */}}
   {{ if $allPosts }}
-    <div class="timeline-section">
+    <div class="timeline-section" id="time-capsule">
       <div class="timeline-section-header">
         <h2 class="timeline-section-title">⏳ Time Capsule</h2>
         <p class="timeline-section-subtitle">Journey through our tech stories archived over time</p>
