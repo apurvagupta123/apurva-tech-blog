@@ -1,7 +1,7 @@
-baseURL = "https://apurva.com/"
+baseURL = "https://theapurva.com/"
 languageCode = "en-us"
 title = "Apurva's Tech Blog"
-theme = "ananke"
+theme = "PaperMod"
 paginate = 10
 
 [params]
