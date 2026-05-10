@@ -2,7 +2,7 @@ baseURL = "https://theapurva.com/"
 languageCode = "en-us"
 title = "Apurva's Tech Blog"
 paginate = 10
-disableKinds = []
+ignoreFiles = [".gitignore"]
 
 [params]
   description = "Exploring AI, Technology, and Innovation"
