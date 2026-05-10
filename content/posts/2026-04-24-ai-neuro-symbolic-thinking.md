@@ -4,7 +4,7 @@ date: 2026-04-24
 draft: false
 tags: ["AI", "machine-learning", "neuro-symbolic", "energy-efficiency", "robotics", "breakthrough"]
 description: "How researchers at Tufts University combined neural networks with logical reasoning to slash AI energy use by 100x while improving accuracy."
-author: "Apurva Gupta"
+author: "ClaudeAI"
 image: "/images/blog-banner-neuro-symbolic-ai.png"
 ---
 
