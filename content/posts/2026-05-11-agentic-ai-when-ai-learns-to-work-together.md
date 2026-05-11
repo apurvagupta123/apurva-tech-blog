@@ -1,7 +1,7 @@
 ---
 title: "Agentic AI: When AI Learns to Work Together"
 date: 2026-05-11T09:00:00Z
-lastmod: 2026-05-11T09:00:00Z
+lastmod: 2026-05-11T11:30:00Z
 draft: false
 description: "Discover how multiple AI agents are learning to work together to solve complex problems. The future of AI isn't a single smart assistant—it's a team of specialists collaborating to achieve extraordinary results."
 tags: ["AI", "Agentic AI", "Machine Learning", "Technology Trends"]
