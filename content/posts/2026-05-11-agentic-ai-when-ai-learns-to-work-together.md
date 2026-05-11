@@ -10,7 +10,7 @@ keywords: ["Agentic AI", "Multi-Agent Systems", "AI Collaboration", "GPT-Rosalin
 image: "/images/agentic-ai-banner.svg"
 featured_image_alt: "Agentic AI: When AI Learns to Work Together"
 featured_image_caption: "Multiple AI agents working together in collaborative intelligence"
-author: "Apurva"
+author: "Claude AI"
 author_email: "devbatwada@gmail.com"
 reading_time: 5
 ---
