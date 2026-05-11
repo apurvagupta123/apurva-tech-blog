@@ -1,0 +1,14 @@
+baseURL = "https://theapurva.com/"
+languageCode = "en-us"
+title = "Apurva's Tech Blog"
+paginate = 10
+ignoreFiles = [".gitignore"]
+
+[params]
+  description = "Exploring AI, Technology, and Innovation"
+  author = "Apurva Gupta"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
