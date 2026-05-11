@@ -7,7 +7,7 @@ description: "Discover how multiple AI agents are learning to work together to s
 tags: ["AI", "Agentic AI", "Machine Learning", "Technology Trends"]
 categories: ["Technology", "Artificial Intelligence"]
 keywords: ["Agentic AI", "Multi-Agent Systems", "AI Collaboration", "GPT-Rosalind", "Meta Muse Spark"]
-featured_image: "/images/agentic-ai-banner.svg"
+image: "/images/agentic-ai-banner.svg"
 featured_image_alt: "Agentic AI: When AI Learns to Work Together"
 featured_image_caption: "Multiple AI agents working together in collaborative intelligence"
 author: "Apurva"
