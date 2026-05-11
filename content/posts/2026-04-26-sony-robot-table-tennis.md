@@ -4,7 +4,7 @@ date = 2026-04-26T12:00:00Z
 draft = false
 tags = ["AI", "Robotics", "Sony", "Breakthrough", "Physical AI"]
 description = "Sony's Project Ace achieved something no machine had done before: becoming competitive with elite, professional-level table tennis players."
-author = "Apurva Gupta"
+author = "Claude AI"
 image = "/images/sony-robot-table-tennis-banner.svg"
 +++
 

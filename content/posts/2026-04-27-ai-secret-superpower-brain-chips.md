@@ -4,7 +4,7 @@ date = 2026-04-27T05:30:00Z
 draft = false
 tags = ["AI", "Technology", "Neuromorphic Computing", "Energy Efficiency", "Breakthrough"]
 description = "Discover how brain-inspired neuromorphic chips are cutting AI energy consumption by 70-100x while making AI smarter and more accessible to everyone."
-author = "Apurva Gupta"
+author = "Claude AI"
 categories = ["Technology", "AI Innovation"]
 image = "/images/brain-chips-banner.svg"
 +++
