@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on The Tech Lens</title>
+    <link>http://localhost:1313/tags/</link>
+    <description>Recent content in Tags on The Tech Lens</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 29 Apr 2026 09:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ai</title>
+      <link>http://localhost:1313/tags/ai/</link>
+      <pubDate>Wed, 29 Apr 2026 09:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Autonomous Vehicles</title>
+      <link>http://localhost:1313/tags/autonomous-vehicles/</link>
+      <pubDate>Wed, 29 Apr 2026 09:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/autonomous-vehicles/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Robotics</title>
+      <link>http://localhost:1313/tags/robotics/</link>
+      <pubDate>Wed, 29 Apr 2026 09:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/robotics/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Technology Investment</title>
+      <link>http://localhost:1313/tags/technology-investment/</link>
+      <pubDate>Wed, 29 Apr 2026 09:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/technology-investment/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tesla</title>
+      <link>http://localhost:1313/tags/tesla/</link>
+      <pubDate>Wed, 29 Apr 2026 09:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/tesla/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Breakthrough</title>
+      <link>http://localhost:1313/tags/breakthrough/</link>
+      <pubDate>Mon, 27 Apr 2026 05:30:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/breakthrough/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Energy-Efficiency</title>
+      <link>http://localhost:1313/tags/energy-efficiency/</link>
+      <pubDate>Mon, 27 Apr 2026 05:30:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/energy-efficiency/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Neuromorphic Computing</title>
+      <link>http://localhost:1313/tags/neuromorphic-computing/</link>
+      <pubDate>Mon, 27 Apr 2026 05:30:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/neuromorphic-computing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Technology</title>
+      <link>http://localhost:1313/tags/technology/</link>
+      <pubDate>Mon, 27 Apr 2026 05:30:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/technology/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Physical AI</title>
+      <link>http://localhost:1313/tags/physical-ai/</link>
+      <pubDate>Sun, 26 Apr 2026 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/physical-ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sony</title>
+      <link>http://localhost:1313/tags/sony/</link>
+      <pubDate>Sun, 26 Apr 2026 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/sony/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Claude</title>
+      <link>http://localhost:1313/tags/claude/</link>
+      <pubDate>Sat, 25 Apr 2026 07:25:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/claude/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DeepSeek</title>
+      <link>http://localhost:1313/tags/deepseek/</link>
+      <pubDate>Sat, 25 Apr 2026 07:25:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/deepseek/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GPT</title>
+      <link>http://localhost:1313/tags/gpt/</link>
+      <pubDate>Sat, 25 Apr 2026 07:25:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/gpt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Open Source</title>
+      <link>http://localhost:1313/tags/open-source/</link>
+      <pubDate>Sat, 25 Apr 2026 07:25:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/open-source/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pricing</title>
+      <link>http://localhost:1313/tags/pricing/</link>
+      <pubDate>Sat, 25 Apr 2026 07:25:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/pricing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Machine-Learning</title>
+      <link>http://localhost:1313/tags/machine-learning/</link>
+      <pubDate>Fri, 24 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Neuro-Symbolic</title>
+      <link>http://localhost:1313/tags/neuro-symbolic/</link>
+      <pubDate>Fri, 24 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/neuro-symbolic/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tech</title>
+      <link>http://localhost:1313/tags/tech/</link>
+      <pubDate>Thu, 23 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/tech/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Welcome</title>
+      <link>http://localhost:1313/tags/welcome/</link>
+      <pubDate>Thu, 23 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/welcome/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,56 @@
+{{ define "main" }}
+  <div class="page-header">
+    <h1>{{ .Site.Title }}</h1>
+    <p><strong>{{ .Site.Params.description }}</strong></p>
+  </div>
+
+  {{ $allPosts := where .Site.RegularPages "Section" "posts" }}
+
+  {{/* ── Latest: top 2 posts ── */}}
+  <div class="section-badge-row">
+    <div class="section-badge">⚡ Latest</div>
+  </div>
+
+  <div class="posts-grid">
+    {{ range first 2 $allPosts }}
+      {{ partial "post-card.html" . }}
+    {{ end }}
+  </div>
+
+  <!-- Google AdSense Ad - Between Featured and Timeline -->
+  <div style="margin: 50px 0; padding: 20px 0; text-align: center;">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8401259723575616" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle"
+         style="display:block; text-align:center;"
+         data-ad-format="horizontal"
+         data-ad-client="ca-pub-8401259723575616"
+         data-ad-slot="4646430439"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
+  {{/* ── Chronicle timeline ── */}}
+  {{ if $allPosts }}
+    <div class="timeline-section" id="time-capsule">
+      <div class="timeline-section-header">
+        <h2 class="timeline-section-title">⏳ Time Capsule</h2>
+        <p class="timeline-section-subtitle">Journey through our tech stories archived over time</p>
+      </div>
+      <div class="timeline-divider-line"></div>
+
+      <div class="timeline">
+        {{ range $allPosts.GroupByDate "2006" }}
+          <div class="timeline-year-group">
+            <div class="timeline-year-marker">
+              <span class="timeline-year-label">{{ .Key }}</span>
+            </div>
+            {{ range .Pages }}
+              {{ partial "timeline-item.html" . }}
+            {{ end }}
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  {{ end }}
+{{ end }}

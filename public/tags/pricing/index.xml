@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pricing on The Tech Lens</title>
+    <link>http://localhost:1313/tags/pricing/</link>
+    <description>Recent content in Pricing on The Tech Lens</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 25 Apr 2026 07:25:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/pricing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Your AI Just Got 7 Times Cheaper (And You Might Not Have Noticed)</title>
+      <link>http://localhost:1313/posts/2026-04-25-deepseek-v4-cheaper/</link>
+      <pubDate>Sat, 25 Apr 2026 07:25:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-25-deepseek-v4-cheaper/</guid>
+      <description>&lt;h2 id=&#34;your-ai-just-got-7-times-cheaper-and-you-might-not-have-noticed&#34;&gt;Your AI Just Got 7 Times Cheaper (And You Might Not Have Noticed)&lt;/h2&gt;&#xA;&lt;p&gt;Imagine you walk into your favorite coffee shop. You order the same latte you always do. Today, the barista says: &amp;ldquo;Same great coffee—but we&amp;rsquo;re charging you one-seventh of what we usually charge. Same taste, same quality, same everything.&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;You&amp;rsquo;d think they were joking. You&amp;rsquo;d probably triple-check the receipt.&lt;/p&gt;&#xA;&lt;p&gt;Well, something just happened in the AI world that&amp;rsquo;s basically the coffee shop equivalent of that moment. And it happened so quietly that most people missed it entirely.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

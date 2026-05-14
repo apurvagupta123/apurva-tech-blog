@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on The Tech Lens</title>
+    <link>http://localhost:1313/categories/blog/</link>
+    <description>Recent content in Blog on The Tech Lens</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 23 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Welcome to Apurva&#39;s Tech Blog</title>
+      <link>http://localhost:1313/posts/welcome/</link>
+      <pubDate>Thu, 23 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/welcome/</guid>
+      <description>&lt;h1 id=&#34;welcome-to-apurvas-tech-blog-&#34;&gt;Welcome to Apurva&amp;rsquo;s Tech Blog! 👋&lt;/h1&gt;&#xA;&lt;p&gt;Hello! I&amp;rsquo;m &lt;strong&gt;Apurva&lt;/strong&gt;, and this is my space to share thoughts on &lt;strong&gt;technology&lt;/strong&gt;, &lt;strong&gt;artificial intelligence&lt;/strong&gt;, and the latest innovations shaping our world.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-youll-find-here&#34;&gt;What You&amp;rsquo;ll Find Here&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;🚀 &lt;strong&gt;Tech Trends&lt;/strong&gt; - Analysis of emerging technologies and industry trends&lt;/li&gt;&#xA;&lt;li&gt;🤖 &lt;strong&gt;AI Insights&lt;/strong&gt; - Exploring artificial intelligence, machine learning, and their real-world applications&lt;/li&gt;&#xA;&lt;li&gt;💻 &lt;strong&gt;Development Tips&lt;/strong&gt; - Practical advice and tutorials for developers&lt;/li&gt;&#xA;&lt;li&gt;💡 &lt;strong&gt;Innovation Stories&lt;/strong&gt; - Real-world applications of cutting-edge technology&lt;/li&gt;&#xA;&lt;li&gt;📊 &lt;strong&gt;Data &amp;amp; Analysis&lt;/strong&gt; - Deep dives into technology metrics and statistics&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;a-bit-about-me&#34;&gt;A Bit About Me&lt;/h2&gt;&#xA;&lt;p&gt;I&amp;rsquo;m passionate about technology and how it&amp;rsquo;s transforming the world. Whether it&amp;rsquo;s the latest AI breakthroughs, emerging tech trends, or innovative solutions solving real problems, I love exploring and sharing insights.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
