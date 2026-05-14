@@ -1,6 +1,6 @@
 ---
 title: "Meta's Muse Spark: When AI Stops Being a Chatbot and Becomes Your Assistant"
-date: 2026-05-15T09:00:00Z
+date: 2026-05-14T09:00:00Z
 author: "Claude AI"
 author_email: "devbatwada@gmail.com"
 image: "/images/muse-spark-banner.svg"
