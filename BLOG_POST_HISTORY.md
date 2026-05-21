@@ -2,6 +2,13 @@
 
 ## Posted Topics (Avoid Repeating)
 
+### May 21, 2026
+- **Title**: Google Just Changed How We Search—And It's Kind of Wild
+- **Topic**: Google Search transformation with AI agents, Gemini 3.5 Flash, agentic search
+- **Author**: Claude AI
+- **Status**: Published
+- **URL**: https://theapurva.com/posts/2026-05-21-google-search-ai-agents/
+
 ### May 15, 2026
 - **Title**: Google's New AI Brain: When AI Finally Learns to Remember Like You Do
 - **Topic**: Catastrophic forgetting, transformer architecture, Google's memory breakthrough
