@@ -1,0 +1,97 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1428;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1a2d4d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0d1f3c;stop-opacity:1" />
+    </linearGradient>
+
+    <radialGradient id="aiGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#00d9ff;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#00d9ff;stop-opacity:0" />
+    </radialGradient>
+
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+
+  <!-- Abstract autonomous network nodes -->
+  <g opacity="0.5">
+    <!-- Central node hub -->
+    <circle cx="600" cy="315" r="150" fill="url(#aiGlow)"/>
+
+    <!-- Connected nodes -->
+    <circle cx="250" cy="150" r="80" fill="url(#aiGlow)" opacity="0.6"/>
+    <circle cx="950" cy="150" r="80" fill="url(#aiGlow)" opacity="0.6"/>
+    <circle cx="200" cy="500" r="70" fill="url(#aiGlow)" opacity="0.5"/>
+    <circle cx="1000" cy="500" r="70" fill="url(#aiGlow)" opacity="0.5"/>
+  </g>
+
+  <!-- Connection lines (representing autonomous actions) -->
+  <g stroke="#00d9ff" stroke-width="2" opacity="0.3" fill="none">
+    <path d="M 250 150 Q 425 230 600 315"/>
+    <path d="M 950 150 Q 775 230 600 315"/>
+    <path d="M 200 500 Q 400 410 600 315"/>
+    <path d="M 1000 500 Q 800 410 600 315"/>
+  </g>
+
+  <!-- Action icons (small elements representing autonomous work) -->
+  <g opacity="0.7" filter="url(#glow)">
+    <!-- Email icon representation -->
+    <rect x="120" y="80" width="35" height="25" fill="none" stroke="#00d9ff" stroke-width="2" rx="2"/>
+    <path d="M 120 82 L 152.5 100 L 185 82" fill="none" stroke="#00d9ff" stroke-width="1.5"/>
+
+    <!-- Calendar icon representation -->
+    <rect x="1050" y="100" width="30" height="30" fill="none" stroke="#00d9ff" stroke-width="2" rx="2"/>
+    <line x1="1050" y1="115" x2="1080" y2="115" stroke="#00d9ff" stroke-width="1.5"/>
+
+    <!-- Task/checkmark representation -->
+    <circle cx="150" cy="480" r="18" fill="none" stroke="#00d9ff" stroke-width="2"/>
+    <path d="M 140 480 L 147 487 L 160 474" fill="none" stroke="#00d9ff" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Network/sync representation -->
+    <path d="M 1020 470 L 1050 490 L 1020 510 L 1050 470" fill="none" stroke="#00d9ff" stroke-width="2"/>
+  </g>
+
+  <!-- Left accent stripe -->
+  <rect x="0" y="0" width="6" height="630" fill="#00d9ff"/>
+
+  <!-- Main headline -->
+  <text x="600" y="140" font-family="Poppins, -apple-system, sans-serif" font-size="68" font-weight="700" text-anchor="middle" fill="#ffffff" letter-spacing="-1">
+    Muse Spark
+  </text>
+
+  <!-- Subheading -->
+  <text x="600" y="210" font-family="-apple-system, Segoe UI, sans-serif" font-size="32" font-weight="500" text-anchor="middle" fill="#00d9ff" opacity="0.95">
+    AI That Does, Not Just Talks
+  </text>
+
+  <!-- Supporting text -->
+  <text x="600" y="270" font-family="-apple-system, Segoe UI, sans-serif" font-size="22" font-weight="400" text-anchor="middle" fill="#a8d5ff" opacity="0.85">
+    The Next Generation of Autonomous Intelligence
+  </text>
+
+  <!-- Bottom stat text -->
+  <text x="600" y="540" font-family="-apple-system, Segoe UI, sans-serif" font-size="18" font-weight="500" text-anchor="middle" fill="#7dd4ff" opacity="0.8">
+    Meta's Autonomous AI • Operating Across Every Platform
+  </text>
+
+  <!-- Decorative accent dots -->
+  <g opacity="0.5">
+    <circle cx="100" cy="350" r="3" fill="#00d9ff"/>
+    <circle cx="1100" cy="300" r="3" fill="#00d9ff"/>
+    <circle cx="150" cy="580" r="2" fill="#00d9ff"/>
+    <circle cx="1050" cy="580" r="2" fill="#00d9ff"/>
+  </g>
+
+  <!-- Subtle gradient overlay for text readability -->
+  <rect x="0" y="420" width="1200" height="210" fill="url(#bgGradient)" opacity="0.2"/>
+</svg>

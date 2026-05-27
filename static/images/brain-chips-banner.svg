@@ -1,0 +1,23 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="brainGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0e27;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1a3e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="purpleAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#brainGrad)"/>
+  <circle cx="150" cy="150" r="90" fill="#7c3aed" opacity="0.12"/>
+  <circle cx="1050" cy="500" r="110" fill="#06b6d4" opacity="0.1"/>
+  <line x1="250" y1="350" x2="400" y2="300" stroke="#7c3aed" stroke-width="2" opacity="0.3"/>
+  <line x1="400" y1="300" x2="550" y2="350" stroke="#06b6d4" stroke-width="2" opacity="0.3"/>
+  <line x1="550" y1="350" x2="750" y2="280" stroke="#7c3aed" stroke-width="2" opacity="0.2"/>
+  <text x="600" y="210" font-size="68" font-weight="bold" text-anchor="middle" fill="white" font-family="Poppins, sans-serif">Brain-Like Chips</text>
+  <text x="600" y="300" font-size="40" text-anchor="middle" fill="#06b6d4" font-family="Poppins, sans-serif" font-weight="600">AI's Secret Superpower</text>
+  <text x="600" y="370" font-size="22" text-anchor="middle" fill="#d1d5db" font-family="Segoe UI, sans-serif">70-100x energy efficiency breakthrough</text>
+  <rect x="300" y="410" width="600" height="3" fill="url(#purpleAccent)"/>
+  <text x="600" y="500" font-size="18" text-anchor="middle" fill="#888888" font-family="Segoe UI, sans-serif">#Neuromorphic #EnergyEfficiency #AI #Breakthrough</text>
+</svg>
