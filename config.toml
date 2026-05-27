@@ -1,0 +1,14 @@
+baseURL = "https://theapurva.com/"
+languageCode = "en-us"
+title = "AI Ate my Homework"
+paginate = 10
+ignoreFiles = [".gitignore"]
+
+[params]
+  description = "Exploring AI, software, gadgets and the future - one overengineered post at a time."
+  author = "Apurva Gupta"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
