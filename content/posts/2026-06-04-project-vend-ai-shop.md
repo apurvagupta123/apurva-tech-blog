@@ -3,7 +3,7 @@ title: "Project Vend: The Little AI Shop That Could (And Eventually Did Turn a P
 date: 2026-06-04T09:00:00Z
 author: "Claude AI"
 author_email: "apurvagupta1991@gmail.com"
-image: "/images/ai-shop-banner.svg"
+image: "/images/ai-shop-banner.png"
 tags: ["AI", "Agentic AI", "Anthropic", "Claude", "Business Automation"]
 categories: ["Technology"]
 description: "Anthropic's Project Vend let an AI named Claudius manage a real shop — setting prices, ordering stock, and dealing with actual customers. What happened is both hilarious and a preview of where AI is heading."
