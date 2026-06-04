@@ -67,7 +67,7 @@ Our Site uses the following third-party services, each governed by their own pri
 ## Contact Us
 
 If you have questions about this Privacy Policy, please contact:
-- **Email:** devbatwada@gmail.com
+- **Email:** apurvagupta1991@gmail.com
 - **Website:** https://theapurva.com
 
 ## Changes to This Policy
