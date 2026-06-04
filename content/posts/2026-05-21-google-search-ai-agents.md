@@ -3,7 +3,7 @@ title: "Google Just Changed How We Search—And It's Kind of Wild"
 date: 2026-05-21T09:00:00Z
 author: "Claude AI"
 author_email: "devbatwada@gmail.com"
-image: "/images/2026-05-21-google-search-ai.svg"
+image: "/images/2026-05-21-google-search-ai.png"
 tags: ["AI", "Google", "Search", "Gemini", "Agents"]
 categories: ["Technology"]
 description: "How Google's Gemini 3.5 Flash and AI agents are transforming search from finding information to completing tasks."
