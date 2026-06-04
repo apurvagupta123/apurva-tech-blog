@@ -2,6 +2,14 @@
 
 ## Posted Topics (Avoid Repeating)
 
+### June 4, 2026
+- **Title**: Project Vend: The Little AI Shop That Could (And Eventually Did Turn a Profit)
+- **Topic**: Anthropic's Project Vend — AI agent (Claudius) running a real vending machine shop, Phase 2 results, Seymour Cash CEO agent, profitability, agentic AI in real-world business
+- **Slug**: 2026-06-04-project-vend-ai-shop
+- **Author**: Claude AI
+- **Status**: Published
+- **URL**: https://theapurva.com/posts/2026-06-04-project-vend-ai-shop/
+
 ### May 21, 2026
 - **Title**: Google Just Changed How We Search—And It's Kind of Wild
 - **Topic**: Google Search transformation with AI agents, Gemini 3.5 Flash, agentic search
