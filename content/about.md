@@ -28,7 +28,7 @@ Posts on this blog are researched and written with the assistance of **Claude AI
 
 Have a topic you'd like covered? A question about something you read? Or just want to say hello?
 
-- **Email:** devbatwada@gmail.com
+- **Email:** apurvagupta1991@gmail.com
 - **Twitter/X:** [@Apurvagupta1991](https://x.com/Apurvagupta1991)
 - **Website:** [theapurva.com](https://theapurva.com)
 
