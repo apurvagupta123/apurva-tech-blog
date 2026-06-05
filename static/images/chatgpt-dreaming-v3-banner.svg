@@ -1,0 +1,222 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" width="1200" height="630">
+  <defs>
+    <!-- Deep indigo-to-violet gradient background -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="50%" style="stop-color:#1a1060"/>
+      <stop offset="100%" style="stop-color:#24243e"/>
+    </linearGradient>
+
+    <!-- Glow effects -->
+    <radialGradient id="glowCyan" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:0.35"/>
+      <stop offset="100%" style="stop-color:#00d4ff;stop-opacity:0"/>
+    </radialGradient>
+    <radialGradient id="glowPurple" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#a855f7;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#a855f7;stop-opacity:0"/>
+    </radialGradient>
+    <radialGradient id="glowGold" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:0.25"/>
+      <stop offset="100%" style="stop-color:#fbbf24;stop-opacity:0"/>
+    </radialGradient>
+
+    <!-- Blur filter -->
+    <filter id="blur8">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <filter id="blur4">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+    <filter id="blur16">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+    <filter id="blur2">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+
+    <!-- Neural connection gradient line -->
+    <linearGradient id="lineGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:0"/>
+      <stop offset="50%" style="stop-color:#00d4ff;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#a855f7;stop-opacity:0"/>
+    </linearGradient>
+    <linearGradient id="lineGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a855f7;stop-opacity:0"/>
+      <stop offset="50%" style="stop-color:#a855f7;stop-opacity:0.6"/>
+      <stop offset="100%" style="stop-color:#00d4ff;stop-opacity:0"/>
+    </linearGradient>
+
+    <!-- Text gradient -->
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ffffff"/>
+      <stop offset="60%" style="stop-color:#e0e7ff"/>
+      <stop offset="100%" style="stop-color:#a5b4fc"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d4ff"/>
+      <stop offset="100%" style="stop-color:#a855f7"/>
+    </linearGradient>
+
+    <!-- Memory orb gradient -->
+    <radialGradient id="orbBlue" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" style="stop-color:#67e8f9"/>
+      <stop offset="40%" style="stop-color:#0ea5e9"/>
+      <stop offset="100%" style="stop-color:#0369a1"/>
+    </radialGradient>
+    <radialGradient id="orbPurple" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" style="stop-color:#d8b4fe"/>
+      <stop offset="40%" style="stop-color:#9333ea"/>
+      <stop offset="100%" style="stop-color:#581c87"/>
+    </radialGradient>
+    <radialGradient id="orbGold" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" style="stop-color:#fde68a"/>
+      <stop offset="40%" style="stop-color:#f59e0b"/>
+      <stop offset="100%" style="stop-color:#92400e"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+
+  <!-- Ambient glow blobs -->
+  <ellipse cx="200" cy="150" rx="280" ry="220" fill="url(#glowPurple)" filter="url(#blur16)"/>
+  <ellipse cx="980" cy="480" rx="300" ry="240" fill="url(#glowCyan)" filter="url(#blur16)"/>
+  <ellipse cx="700" cy="100" rx="200" ry="160" fill="url(#glowGold)" filter="url(#blur16)"/>
+
+  <!-- Subtle star field -->
+  <g opacity="0.6">
+    <circle cx="80" cy="40" r="1" fill="white"/>
+    <circle cx="150" cy="90" r="1.5" fill="white" opacity="0.7"/>
+    <circle cx="220" cy="30" r="1" fill="white"/>
+    <circle cx="310" cy="70" r="0.8" fill="white"/>
+    <circle cx="400" cy="20" r="1.2" fill="white" opacity="0.8"/>
+    <circle cx="530" cy="55" r="1" fill="white"/>
+    <circle cx="620" cy="35" r="1.5" fill="white" opacity="0.6"/>
+    <circle cx="730" cy="18" r="1" fill="white"/>
+    <circle cx="830" cy="65" r="0.8" fill="white"/>
+    <circle cx="940" cy="25" r="1.2" fill="white" opacity="0.9"/>
+    <circle cx="1050" cy="50" r="1" fill="white"/>
+    <circle cx="1140" cy="80" r="1.5" fill="white" opacity="0.7"/>
+    <circle cx="1170" cy="30" r="0.8" fill="white"/>
+    <circle cx="50" cy="560" r="1" fill="white" opacity="0.6"/>
+    <circle cx="120" cy="590" r="1.2" fill="white"/>
+    <circle cx="200" cy="610" r="0.8" fill="white" opacity="0.7"/>
+    <circle cx="1100" cy="580" r="1" fill="white"/>
+    <circle cx="1160" cy="555" r="1.5" fill="white" opacity="0.8"/>
+  </g>
+
+  <!-- Neural network connections (right side visual) -->
+  <g opacity="0.5">
+    <!-- Connecting lines between orbs -->
+    <line x1="910" y1="185" x2="1020" y2="280" stroke="url(#lineGrad1)" stroke-width="1.5"/>
+    <line x1="910" y1="185" x2="960" y2="380" stroke="url(#lineGrad2)" stroke-width="1"/>
+    <line x1="1020" y1="280" x2="960" y2="380" stroke="url(#lineGrad1)" stroke-width="1.5"/>
+    <line x1="910" y1="185" x2="840" y2="290" stroke="url(#lineGrad2)" stroke-width="1"/>
+    <line x1="840" y1="290" x2="960" y2="380" stroke="url(#lineGrad1)" stroke-width="1.5"/>
+    <line x1="840" y1="290" x2="1020" y2="280" stroke="url(#lineGrad2)" stroke-width="1"/>
+    <!-- Extended connections -->
+    <line x1="1020" y1="280" x2="1080" y2="180" stroke="url(#lineGrad1)" stroke-width="0.8"/>
+    <line x1="960" y1="380" x2="1050" y2="460" stroke="url(#lineGrad2)" stroke-width="0.8"/>
+    <line x1="840" y1="290" x2="780" y2="200" stroke="url(#lineGrad1)" stroke-width="0.8"/>
+    <line x1="840" y1="290" x2="770" y2="380" stroke="url(#lineGrad2)" stroke-width="0.8"/>
+    <line x1="1080" y1="180" x2="1130" y2="260" stroke="url(#lineGrad1)" stroke-width="0.6"/>
+    <line x1="1050" y1="460" x2="1130" y2="400" stroke="url(#lineGrad2)" stroke-width="0.6"/>
+    <line x1="1130" y1="260" x2="1130" y2="400" stroke="url(#lineGrad1)" stroke-width="0.8"/>
+  </g>
+
+  <!-- Outer glow for nodes -->
+  <circle cx="910" cy="185" r="22" fill="url(#glowCyan)" filter="url(#blur8)"/>
+  <circle cx="1020" cy="280" r="28" fill="url(#glowPurple)" filter="url(#blur8)"/>
+  <circle cx="960" cy="380" r="24" fill="url(#glowCyan)" filter="url(#blur8)"/>
+  <circle cx="840" cy="290" r="20" fill="url(#glowPurple)" filter="url(#blur8)"/>
+  <circle cx="1080" cy="180" r="16" fill="url(#glowGold)" filter="url(#blur4)"/>
+  <circle cx="1050" cy="460" r="16" fill="url(#glowCyan)" filter="url(#blur4)"/>
+  <circle cx="780" cy="200" r="14" fill="url(#glowPurple)" filter="url(#blur4)"/>
+  <circle cx="770" cy="380" r="14" fill="url(#glowGold)" filter="url(#blur4)"/>
+  <circle cx="1130" cy="260" r="12" fill="url(#glowCyan)" filter="url(#blur4)"/>
+  <circle cx="1130" cy="400" r="12" fill="url(#glowPurple)" filter="url(#blur4)"/>
+
+  <!-- Main neural nodes (memory orbs) -->
+  <!-- Central large node - blue -->
+  <circle cx="960" cy="315" r="55" fill="url(#glowCyan)" filter="url(#blur8)" opacity="0.5"/>
+  <circle cx="960" cy="315" r="32" fill="url(#orbBlue)" opacity="0.9"/>
+  <circle cx="960" cy="315" r="32" fill="none" stroke="#67e8f9" stroke-width="1.5" opacity="0.8"/>
+  <circle cx="950" cy="305" r="10" fill="white" opacity="0.25"/>
+
+  <!-- Node top - purple -->
+  <circle cx="910" cy="185" r="16" fill="url(#orbPurple)" opacity="0.9"/>
+  <circle cx="910" cy="185" r="16" fill="none" stroke="#d8b4fe" stroke-width="1" opacity="0.7"/>
+  <circle cx="905" cy="180" r="5" fill="white" opacity="0.2"/>
+
+  <!-- Node right - blue -->
+  <circle cx="1020" cy="280" r="22" fill="url(#orbBlue)" opacity="0.85"/>
+  <circle cx="1020" cy="280" r="22" fill="none" stroke="#67e8f9" stroke-width="1" opacity="0.7"/>
+  <circle cx="1014" cy="274" r="7" fill="white" opacity="0.2"/>
+
+  <!-- Node bottom -->
+  <circle cx="960" cy="380" r="18" fill="url(#orbGold)" opacity="0.85"/>
+  <circle cx="960" cy="380" r="18" fill="none" stroke="#fde68a" stroke-width="1" opacity="0.7"/>
+  <circle cx="954" cy="374" r="6" fill="white" opacity="0.2"/>
+
+  <!-- Node left -->
+  <circle cx="840" cy="290" r="14" fill="url(#orbPurple)" opacity="0.85"/>
+  <circle cx="840" cy="290" r="14" fill="none" stroke="#d8b4fe" stroke-width="1" opacity="0.7"/>
+
+  <!-- Smaller nodes -->
+  <circle cx="1080" cy="180" r="9" fill="url(#orbGold)" opacity="0.8"/>
+  <circle cx="1050" cy="460" r="9" fill="url(#orbBlue)" opacity="0.8"/>
+  <circle cx="780" cy="200" r="8" fill="url(#orbPurple)" opacity="0.8"/>
+  <circle cx="770" cy="380" r="8" fill="url(#orbGold)" opacity="0.8"/>
+  <circle cx="1130" cy="260" r="7" fill="url(#orbBlue)" opacity="0.8"/>
+  <circle cx="1130" cy="400" r="7" fill="url(#orbPurple)" opacity="0.8"/>
+
+  <!-- Subtle grid / circuit pattern (left background) -->
+  <g opacity="0.04" stroke="#a5b4fc" stroke-width="0.5">
+    <line x1="0" y1="105" x2="680" y2="105"/>
+    <line x1="0" y1="210" x2="680" y2="210"/>
+    <line x1="0" y1="315" x2="680" y2="315"/>
+    <line x1="0" y1="420" x2="680" y2="420"/>
+    <line x1="0" y1="525" x2="680" y2="525"/>
+    <line x1="85" y1="0" x2="85" y2="630"/>
+    <line x1="170" y1="0" x2="170" y2="630"/>
+    <line x1="255" y1="0" x2="255" y2="630"/>
+    <line x1="340" y1="0" x2="340" y2="630"/>
+    <line x1="425" y1="0" x2="425" y2="630"/>
+    <line x1="510" y1="0" x2="510" y2="630"/>
+    <line x1="595" y1="0" x2="595" y2="630"/>
+  </g>
+
+  <!-- Dividing line between text and visual -->
+  <line x1="720" y1="80" x2="720" y2="550" stroke="url(#accentGrad)" stroke-width="0.8" opacity="0.25"/>
+
+  <!-- === TEXT CONTENT (left side) === -->
+
+  <!-- Category pill -->
+  <rect x="70" y="85" width="210" height="36" rx="18" fill="none" stroke="url(#accentGrad)" stroke-width="1.5" opacity="0.8"/>
+  <rect x="71" y="86" width="208" height="34" rx="17" fill="#1e1b4b" opacity="0.6"/>
+  <text x="175" y="109" font-family="'Segoe UI', Arial, sans-serif" font-size="13" font-weight="600" fill="url(#accentGrad)" text-anchor="middle" letter-spacing="2">AI · MEMORY · CHATGPT</text>
+
+  <!-- Main headline - line 1 -->
+  <text x="70" y="195" font-family="'Segoe UI', Arial, sans-serif" font-size="62" font-weight="800" fill="url(#titleGrad)" letter-spacing="-1">Your AI Finally</text>
+
+  <!-- Main headline - line 2 (accent) -->
+  <text x="70" y="270" font-family="'Segoe UI', Arial, sans-serif" font-size="62" font-weight="800" fill="url(#accentGrad)" letter-spacing="-1">Has a Real Memory</text>
+
+  <!-- Subheading -->
+  <text x="70" y="330" font-family="'Segoe UI', Arial, sans-serif" font-size="22" font-weight="400" fill="#c7d2fe" opacity="0.9">ChatGPT's Dreaming V3 changes everything</text>
+  <text x="70" y="360" font-family="'Segoe UI', Arial, sans-serif" font-size="22" font-weight="400" fill="#c7d2fe" opacity="0.9">about how AI knows you.</text>
+
+  <!-- Stat callout pill -->
+  <rect x="70" y="400" width="320" height="64" rx="12" fill="#1e1b4b" opacity="0.7"/>
+  <rect x="70" y="400" width="320" height="64" rx="12" fill="none" stroke="#4f46e5" stroke-width="1" opacity="0.6"/>
+  <text x="90" y="424" font-family="'Segoe UI', Arial, sans-serif" font-size="12" font-weight="600" fill="#a5b4fc" letter-spacing="1.5">MEMORY ACCURACY</text>
+  <text x="90" y="452" font-family="'Segoe UI', Arial, sans-serif" font-size="13" font-weight="400" fill="#e0e7ff">41.5% → <tspan font-size="20" font-weight="700" fill="#00d4ff">82.8%</tspan>  in two years</text>
+
+  <!-- Author / date line -->
+  <text x="70" y="540" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="500" fill="#6366f1" opacity="0.9">Claude AI  ·  June 5, 2026  ·  theapurva.com</text>
+
+  <!-- Bottom accent line -->
+  <rect x="70" y="556" width="560" height="2" rx="1" fill="url(#accentGrad)" opacity="0.4"/>
+
+</svg>

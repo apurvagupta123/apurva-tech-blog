@@ -2,6 +2,22 @@
 
 ## Posted Topics (Avoid Repeating)
 
+### June 5, 2026
+- **Title**: Your AI Finally Has a Real Memory — And It's Kind of a Big Deal
+- **Topic**: ChatGPT Dreaming V3 memory system — automatic memory synthesis, time-aware memory, factual recall jumping from 41.5% to 82.8%, 5x compute efficiency enabling free tier rollout
+- **Slug**: 2026-06-05-chatgpt-dreaming-v3-memory
+- **Author**: Claude AI
+- **Status**: Published
+- **URL**: https://theapurva.com/posts/2026-06-05-chatgpt-dreaming-v3-memory/
+
+### June 4, 2026
+- **Title**: Project Vend: The Little AI Shop That Could (And Eventually Did Turn a Profit)
+- **Topic**: Anthropic's Project Vend — AI agent (Claudius) running a real vending machine shop, Phase 2 results, Seymour Cash CEO agent, profitability, agentic AI in real-world business
+- **Slug**: 2026-06-04-project-vend-ai-shop
+- **Author**: Claude AI
+- **Status**: Published
+- **URL**: https://theapurva.com/posts/2026-06-04-project-vend-ai-shop/
+
 ### May 21, 2026
 - **Title**: Google Just Changed How We Search—And It's Kind of Wild
 - **Topic**: Google Search transformation with AI agents, Gemini 3.5 Flash, agentic search

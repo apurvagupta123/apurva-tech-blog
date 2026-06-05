@@ -1,25 +1,26 @@
 ---
 title: "Privacy Policy"
 date: 2026-04-27
+lastmod: 2026-06-04
 draft: false
 ---
 
 # Privacy Policy
 
-**Last Updated:** April 27, 2026
+**Last Updated:** June 4, 2026
 
 ## Overview
 
-The Tech Lens ("we," "us," "our," or "Site") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and otherwise handle your information.
+AI Ate my Homework ("we," "us," "our," or "Site") at **theapurva.com** is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and handle your information when you visit our site.
 
 ## Information We Collect
 
 ### 1. Cookies and Tracking Technologies
 
-We use cookies, web beacons, and similar tracking technologies to:
+We use cookies and similar tracking technologies to:
 - Remember your preferences
 - Understand how you use our Site
-- Show you personalized advertisements
+- Show you relevant advertisements
 - Analyze traffic and user behavior
 
 ### 2. Google AdSense
@@ -29,45 +30,44 @@ Our Site uses Google AdSense to display advertisements. Google may:
 - Use cookies to show you personalized ads
 - Track your interactions across websites
 
-**Google's Privacy Policy:** https://policies.google.com/privacy
+**Google's Privacy Policy:** https://policies.google.com/privacy  
+**Google's Ad Settings:** https://adssettings.google.com
 
 ### 3. Analytics
 
 We may use analytics services to understand how visitors use our Site. These services may collect:
 - IP address
-- Browser type
-- Pages visited
-- Time spent on pages
+- Browser type and version
+- Pages visited and time spent
 - Referral source
 
 ## How We Use Your Information
 
 We use collected information to:
 - Display relevant advertisements
-- Improve our Site's functionality and content
+- Improve our Site's content and functionality
 - Analyze usage patterns
 - Comply with legal obligations
 
 ## Your Choices
 
 You can:
-- **Decline cookies** when prompted by our consent banner
+- **Decline cookies** when prompted
 - **Adjust your browser settings** to limit cookie usage
-- **Opt out of personalized ads** through Google's Ad Settings: https://adssettings.google.com
-- **Use a privacy browser extension** to block tracking
+- **Opt out of personalized ads** via [Google's Ad Settings](https://adssettings.google.com)
 
 ## Third-Party Services
 
-Our Site uses third-party services including:
-- **Google AdSense** for advertisements
-- **Cloudflare** for hosting and analytics
+Our Site uses the following third-party services, each governed by their own privacy policies:
 
-Each service has its own privacy policy governing their data practices.
+- **Google AdSense** — for advertisements
+- **Cloudflare Pages** — for hosting and CDN
+- **GitHub** — for source code hosting
 
 ## Contact Us
 
 If you have questions about this Privacy Policy, please contact:
-- **Email:** devbatwada@gmail.com
+- **Email:** apurvagupta1991@gmail.com
 - **Website:** https://theapurva.com
 
 ## Changes to This Policy
@@ -76,4 +76,4 @@ We may update this Privacy Policy from time to time. Changes will be posted on t
 
 ---
 
-By continuing to use The Tech Lens, you consent to our Privacy Policy.
+By continuing to use AI Ate my Homework, you consent to this Privacy Policy.

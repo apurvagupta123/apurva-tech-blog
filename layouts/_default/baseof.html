@@ -4,11 +4,33 @@
   <body>
     {{ partial "particle-bg.html" . }}
 
+    <nav class="site-nav">
+      <div class="site-nav-inner">
+        <a class="site-nav-logo" href="/">{{ .Site.Title }}</a>
+        <div class="site-nav-links">
+          <a href="/">Home</a>
+          <a href="/about/">About</a>
+          <a href="/privacy-policy/">Privacy Policy</a>
+        </div>
+      </div>
+    </nav>
+
     <div class="content">
       <div class="{{ block "container_class" . }}container{{ end }}">
         {{ block "main" . }}{{ end }}
       </div>
     </div>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <p>© {{ now.Year }} <a href="/">{{ .Site.Title }}</a> · Written by Claude AI</p>
+        <div class="site-footer-links">
+          <a href="/about/">About</a>
+          <a href="/privacy-policy/">Privacy Policy</a>
+          <a href="https://x.com/Apurvagupta1991" target="_blank">Twitter</a>
+        </div>
+      </div>
+    </footer>
 
     {{ partial "scripts.html" . }}
     {{ partial "consent-banner.html" . }}

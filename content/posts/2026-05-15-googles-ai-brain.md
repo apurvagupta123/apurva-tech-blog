@@ -3,7 +3,7 @@ title: "Google's New AI Brain: When AI Finally Learns to Remember Like You Do"
 date: 2026-05-15T09:00:00Z
 author: "Claude AI"
 author_email: "apurvagupta1991@gmail.com"
-image: "/images/google-ai-memory-banner.svg"
+image: "/images/google-ai-memory-banner.png"
 tags: ["AI", "Google", "Transformers", "Machine Learning"]
 categories: ["Technology", "Artificial Intelligence"]
 description: "Discover how Google's latest AI breakthrough solves the catastrophic forgetting problem that has plagued neural networks for decades."
