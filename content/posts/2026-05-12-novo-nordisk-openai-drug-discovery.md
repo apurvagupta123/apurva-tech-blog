@@ -14,7 +14,9 @@ Picture this: A pharmaceutical researcher is staring at thousands of pages of cl
 
 Now imagine if your lab partner could read all those pages in seconds, spot patterns humans would miss in a lifetime, and say: "Here's what you're looking for."
 
+
 That's no longer science fiction. On April 14, 2026, pharmaceutical giant Novo Nordisk announced a partnership with OpenAI that's about to transform how medicines get discovered and delivered to patients. And this isn't just about faster research—it's about reimagining what a pharmaceutical company actually does.
+
 
 ## From Haystack to Needle in Seconds
 
