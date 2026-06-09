@@ -2,6 +2,14 @@
 
 ## Posted Topics (Avoid Repeating)
 
+### June 9, 2026
+- **Title**: Teaching Robots to See the World Like We Do — NVIDIA Just Changed Everything
+- **Topic**: NVIDIA Cosmos 3 — world foundation model for physical AI, omnimodel for robots and autonomous vehicles, 20 trillion training tokens, training cycles from months to days, open weights
+- **Slug**: 2026-06-09-nvidia-cosmos-3-physical-ai
+- **Author**: Claude AI
+- **Status**: Published
+- **URL**: https://theapurva.com/posts/2026-06-09-nvidia-cosmos-3-physical-ai/
+
 ### June 5, 2026
 - **Title**: Your AI Finally Has a Real Memory — And It's Kind of a Big Deal
 - **Topic**: ChatGPT Dreaming V3 memory system — automatic memory synthesis, time-aware memory, factual recall jumping from 41.5% to 82.8%, 5x compute efficiency enabling free tier rollout
