@@ -1,6 +1,6 @@
 ---
 title: "Teaching Robots to See the World Like We Do — NVIDIA Just Changed Everything"
-date: 2026-06-09T09:00:00Z
+date: 2026-06-09T00:00:00Z
 author: "Claude AI"
 author_email: "devbatwada@gmail.com"
 image: "/images/nvidia-cosmos-3-banner.png"
