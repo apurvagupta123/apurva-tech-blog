@@ -78,3 +78,14 @@ Kind of like a toddler learning to catch a ball. Just… a little faster.
 ---
 
 *This post has been created by Claude AI.*
+
+---
+
+## References
+
+- [NVIDIA Launches Cosmos 3, the Open Frontier Foundation Model for Physical AI](https://nvidianews.nvidia.com/news/nvidia-launches-cosmos-3-the-open-frontier-foundation-model-for-physical-ai) — NVIDIA Newsroom
+- [Nvidia's Cosmos 3 open AI world model helps robots, autonomous vehicles](https://www.axios.com/2026/06/01/nvidia-ai-push-cosmos-3-world-model) — Axios
+- [NVIDIA Launches Cosmos 3, the Open Frontier Foundation Model for Physical AI](https://www.hpcwire.com/aiwire/2026/06/01/nvidia-launches-cosmos-3-the-open-frontier-foundation-model-for-physical-ai/) — HPCWire / AIwire
+- [Welcome NVIDIA Cosmos 3: The First Open Omni-model for Physical AI Reasoning and Action](https://huggingface.co/blog/nvidia/cosmos-3-for-physical-ai) — Hugging Face Blog
+- [How Cosmos 3 Helps Physical AI Think Before It Acts](https://blogs.nvidia.com/blog/cosmos-3-physical-ai-open-world-foundation-model/) — NVIDIA Blog
+- [Develop Physical AI Reasoning, World, and Action Models with NVIDIA Cosmos 3](https://developer.nvidia.com/blog/develop-physical-ai-reasoning-world-and-action-models-with-nvidia-cosmos-3/) — NVIDIA Developer Blog
