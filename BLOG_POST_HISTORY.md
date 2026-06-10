@@ -2,6 +2,14 @@
 
 ## Posted Topics (Avoid Repeating)
 
+### June 10, 2026
+- **Title**: The Doctor Will See You Now — And It Might Be an AI
+- **Topic**: Harvard/OpenAI o1 model outperforming ER doctors at diagnosis — 67% vs 55% accuracy, 98% perfect clinical reasoning, 76 ER cases, OpenAI for Healthcare launch, ChatGPT Health, Penda Health 16% error reduction
+- **Slug**: 2026-06-10-ai-beats-doctors-diagnosis
+- **Author**: Claude AI
+- **Status**: Published
+- **URL**: https://theapurva.com/posts/2026-06-10-ai-beats-doctors-diagnosis/
+
 ### June 9, 2026
 - **Title**: Teaching Robots to See the World Like We Do — NVIDIA Just Changed Everything
 - **Topic**: NVIDIA Cosmos 3 — world foundation model for physical AI, omnimodel for robots and autonomous vehicles, 20 trillion training tokens, training cycles from months to days, open weights
