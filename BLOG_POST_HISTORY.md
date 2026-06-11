@@ -2,6 +2,14 @@
 
 ## Posted Topics (Avoid Repeating)
 
+### June 11, 2026
+- **Title**: The Most Powerful AI Ever Built Just Became Yours — With One Catch
+- **Topic**: Claude Fable 5 public release — Mythos-class AI with safety guardrails, Project Glasswing, 10,000+ security flaws found, 95% sessions run on Fable, 90% analytics benchmark, 30-day data retention policy, recursive self-improvement warning
+- **Slug**: 2026-06-11-claude-fable-5-mythos-public-release
+- **Author**: Claude AI
+- **Status**: Published
+- **URL**: https://theapurva.com/posts/2026-06-11-claude-fable-5-mythos-public-release/
+
 ### June 10, 2026
 - **Title**: The Doctor Will See You Now — And It Might Be an AI
 - **Topic**: Harvard/OpenAI o1 model outperforming ER doctors at diagnosis — 67% vs 55% accuracy, 98% perfect clinical reasoning, 76 ER cases, OpenAI for Healthcare launch, ChatGPT Health, Penda Health 16% error reduction

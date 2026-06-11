@@ -1,0 +1,164 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <!-- Background gradient: deep dark purple to rich blue-black -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0620;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1a0a3a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#07111f;stop-opacity:1" />
+    </linearGradient>
+    <!-- Glow gradient for orb -->
+    <radialGradient id="orbGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#c084fc;stop-opacity:0.9" />
+      <stop offset="40%" style="stop-color:#7c3aed;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#4c1d95;stop-opacity:0" />
+    </radialGradient>
+    <!-- Secondary glow -->
+    <radialGradient id="glowGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#f0abfc;stop-opacity:0.5" />
+      <stop offset="60%" style="stop-color:#a855f7;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0" />
+    </radialGradient>
+    <!-- Lock icon gradient -->
+    <linearGradient id="lockGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f9a8d4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c026d3;stop-opacity:1" />
+    </linearGradient>
+    <!-- Text shimmer gradient -->
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e9d5ff;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#c4b5fd;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f0abfc;stop-opacity:1" />
+    </linearGradient>
+    <!-- Accent line gradient -->
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:0" />
+      <stop offset="30%" style="stop-color:#a855f7;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#c026d3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0" />
+    </linearGradient>
+    <!-- Blur filter for glows -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="20" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="bigBlur">
+      <feGaussianBlur stdDeviation="40"/>
+    </filter>
+    <filter id="medBlur">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)" />
+
+  <!-- Ambient glow blobs -->
+  <ellipse cx="900" cy="200" rx="320" ry="280" fill="#7c3aed" opacity="0.18" filter="url(#bigBlur)" />
+  <ellipse cx="200" cy="500" rx="200" ry="160" fill="#c026d3" opacity="0.12" filter="url(#bigBlur)" />
+  <ellipse cx="600" cy="315" rx="150" ry="120" fill="#6d28d9" opacity="0.10" filter="url(#bigBlur)" />
+
+  <!-- Grid lines (subtle tech grid) -->
+  <g opacity="0.06" stroke="#a855f7" stroke-width="0.8">
+    <!-- Vertical -->
+    <line x1="150" y1="0" x2="150" y2="630"/>
+    <line x1="300" y1="0" x2="300" y2="630"/>
+    <line x1="450" y1="0" x2="450" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="750" y1="0" x2="750" y2="630"/>
+    <line x1="900" y1="0" x2="900" y2="630"/>
+    <line x1="1050" y1="0" x2="1050" y2="630"/>
+    <!-- Horizontal -->
+    <line x1="0" y1="90" x2="1200" y2="90"/>
+    <line x1="0" y1="180" x2="1200" y2="180"/>
+    <line x1="0" y1="270" x2="1200" y2="270"/>
+    <line x1="0" y1="360" x2="1200" y2="360"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+    <line x1="0" y1="540" x2="1200" y2="540"/>
+  </g>
+
+  <!-- Right side: AI orb / power visual -->
+  <!-- Outer ring glow -->
+  <circle cx="920" cy="315" r="200" fill="url(#orbGrad)" filter="url(#bigBlur)" />
+  <!-- Mid glow -->
+  <circle cx="920" cy="315" r="155" fill="url(#glowGrad)" filter="url(#medBlur)" />
+  <!-- Outer ring -->
+  <circle cx="920" cy="315" r="148" fill="none" stroke="#7c3aed" stroke-width="1.5" opacity="0.5"/>
+  <circle cx="920" cy="315" r="130" fill="none" stroke="#a855f7" stroke-width="1" opacity="0.35"/>
+  <!-- Orbit rings -->
+  <ellipse cx="920" cy="315" rx="148" ry="60" fill="none" stroke="#c084fc" stroke-width="0.8" opacity="0.25" transform="rotate(-30, 920, 315)"/>
+  <ellipse cx="920" cy="315" rx="148" ry="60" fill="none" stroke="#c084fc" stroke-width="0.8" opacity="0.20" transform="rotate(40, 920, 315)"/>
+  <!-- Core sphere -->
+  <radialGradient id="coreSphere" cx="40%" cy="35%" r="60%">
+    <stop offset="0%" style="stop-color:#f9a8d4;stop-opacity:1" />
+    <stop offset="40%" style="stop-color:#a855f7;stop-opacity:1" />
+    <stop offset="100%" style="stop-color:#4c1d95;stop-opacity:1" />
+  </radialGradient>
+  <circle cx="920" cy="315" r="88" fill="url(#coreSphere)" filter="url(#softGlow)" />
+  <!-- Lock icon in center of sphere -->
+  <!-- Lock body -->
+  <rect x="896" y="318" width="48" height="38" rx="5" ry="5" fill="url(#lockGrad)" opacity="0.95"/>
+  <!-- Lock shackle -->
+  <path d="M904 318 L904 302 Q920 290 936 302 L936 318" fill="none" stroke="url(#lockGrad)" stroke-width="7" stroke-linecap="round"/>
+  <!-- Keyhole -->
+  <circle cx="920" cy="332" r="6" fill="#1a0a3a" opacity="0.8"/>
+  <rect x="917" y="332" width="6" height="10" rx="2" fill="#1a0a3a" opacity="0.8"/>
+
+  <!-- Floating data dots around orb -->
+  <circle cx="790" cy="220" r="4" fill="#c084fc" opacity="0.7" filter="url(#softGlow)"/>
+  <circle cx="1065" cy="240" r="3" fill="#f0abfc" opacity="0.6"/>
+  <circle cx="1075" cy="390" r="5" fill="#a855f7" opacity="0.5" filter="url(#softGlow)"/>
+  <circle cx="800" cy="430" r="3" fill="#c084fc" opacity="0.4"/>
+  <circle cx="850" cy="175" r="2.5" fill="#f9a8d4" opacity="0.6"/>
+  <circle cx="990" cy="190" r="3.5" fill="#e879f9" opacity="0.5"/>
+  <!-- Connection lines from dots to orb -->
+  <line x1="790" y1="220" x2="840" y2="265" stroke="#a855f7" stroke-width="0.8" opacity="0.3"/>
+  <line x1="1065" y1="240" x2="1010" y2="268" stroke="#a855f7" stroke-width="0.8" opacity="0.3"/>
+  <line x1="1075" y1="390" x2="1012" y2="363" stroke="#a855f7" stroke-width="0.8" opacity="0.3"/>
+
+  <!-- Left side: Content -->
+  <!-- Category pill -->
+  <rect x="64" y="80" width="195" height="34" rx="17" fill="#3b0764" opacity="0.85"/>
+  <rect x="64" y="80" width="195" height="34" rx="17" fill="none" stroke="#7c3aed" stroke-width="1.2" opacity="0.7"/>
+  <text x="161" y="103" font-family="'Segoe UI', Arial, sans-serif" font-size="13" font-weight="600" fill="#c084fc" text-anchor="middle" letter-spacing="1.5">ANTHROPIC • AI MODEL</text>
+
+  <!-- Main headline line 1 -->
+  <text x="64" y="200" font-family="'Segoe UI', Georgia, sans-serif" font-size="66" font-weight="800" fill="url(#titleGrad)" letter-spacing="-1">The Most</text>
+  <!-- Main headline line 2 -->
+  <text x="64" y="278" font-family="'Segoe UI', Georgia, sans-serif" font-size="66" font-weight="800" fill="url(#titleGrad)" letter-spacing="-1">Powerful AI</text>
+  <!-- Main headline line 3 -->
+  <text x="64" y="356" font-family="'Segoe UI', Georgia, sans-serif" font-size="66" font-weight="800" fill="url(#titleGrad)" letter-spacing="-1">Just Got</text>
+  <!-- Highlight word with glow -->
+  <text x="64" y="434" font-family="'Segoe UI', Georgia, sans-serif" font-size="56" font-weight="800" fill="#f0abfc" filter="url(#softGlow)" letter-spacing="-0.5">Public — With a Catch</text>
+
+  <!-- Accent line -->
+  <rect x="64" y="455" width="580" height="2.5" fill="url(#lineGrad)" rx="2"/>
+
+  <!-- Subheading -->
+  <text x="64" y="490" font-family="'Segoe UI', Arial, sans-serif" font-size="20" fill="#c4b5fd" opacity="0.85" letter-spacing="0.3">Claude Fable 5 — the safeguarded Mythos model — is now available to everyone</text>
+
+  <!-- Tag badges -->
+  <rect x="64" y="516" width="120" height="28" rx="6" fill="#4c1d95" opacity="0.7"/>
+  <text x="124" y="535" font-family="'Segoe UI', Arial, sans-serif" font-size="12" font-weight="600" fill="#c084fc" text-anchor="middle" letter-spacing="0.8">CLAUDE FABLE 5</text>
+
+  <rect x="196" y="516" width="100" height="28" rx="6" fill="#500724" opacity="0.7"/>
+  <text x="246" y="535" font-family="'Segoe UI', Arial, sans-serif" font-size="12" font-weight="600" fill="#f9a8d4" text-anchor="middle" letter-spacing="0.8">MYTHOS CLASS</text>
+
+  <rect x="308" y="516" width="85" height="28" rx="6" fill="#1e1b4b" opacity="0.7"/>
+  <text x="350" y="535" font-family="'Segoe UI', Arial, sans-serif" font-size="12" font-weight="600" fill="#a5b4fc" text-anchor="middle" letter-spacing="0.8">AI SAFETY</text>
+
+  <!-- Bottom bar -->
+  <rect x="0" y="598" width="1200" height="32" fill="#0d0620" opacity="0.6"/>
+  <text x="64" y="620" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#7c3aed" opacity="0.85" letter-spacing="1">THEAPURVA.COM</text>
+  <text x="1136" y="620" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#6d28d9" opacity="0.7" text-anchor="end" letter-spacing="0.5">Created by Claude AI</text>
+</svg>
