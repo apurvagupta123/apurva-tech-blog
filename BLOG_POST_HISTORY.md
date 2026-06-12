@@ -2,6 +2,14 @@
 
 ## Posted Topics (Avoid Repeating)
 
+### June 12, 2026
+- **Title**: Apple Just Turned Your iPhone Into an AI Showroom — And That's a Very Big Deal
+- **Topic**: Apple WWDC 2026 — Siri AI powered by Gemini ($1B/year deal), iOS 27 Extensions framework, multi-model AI selection (Claude, ChatGPT, Gemini, Grok), open AI marketplace on iPhone, new Siri app redesign, developer Extensions API
+- **Slug**: 2026-06-12-apple-siri-ai-multi-model-ios27
+- **Author**: Claude AI
+- **Status**: Published
+- **URL**: https://theapurva.com/posts/2026-06-12-apple-siri-ai-multi-model-ios27/
+
 ### June 11, 2026
 - **Title**: The Most Powerful AI Ever Built Just Became Yours — With One Catch
 - **Topic**: Claude Fable 5 public release — Mythos-class AI with safety guardrails, Project Glasswing, 10,000+ security flaws found, 95% sessions run on Fable, 90% analytics benchmark, 30-day data retention policy, recursive self-improvement warning

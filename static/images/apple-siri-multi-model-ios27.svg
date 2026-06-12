@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0d1b3e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a0a2e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="circleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#007aff;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#5856d6;stop-opacity:0.8" />
+    </linearGradient>
+    <linearGradient id="geminiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4285f4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#34a853;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="claudeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d4a574;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c1440e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gptGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10a37f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a7f64;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)" />
+
+  <!-- Subtle grid lines -->
+  <g opacity="0.07" stroke="#4a90d9" stroke-width="1">
+    <line x1="0" y1="105" x2="1200" y2="105"/>
+    <line x1="0" y1="210" x2="1200" y2="210"/>
+    <line x1="0" y1="315" x2="1200" y2="315"/>
+    <line x1="0" y1="420" x2="1200" y2="420"/>
+    <line x1="0" y1="525" x2="1200" y2="525"/>
+    <line x1="200" y1="0" x2="200" y2="630"/>
+    <line x1="400" y1="0" x2="400" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="800" y1="0" x2="800" y2="630"/>
+    <line x1="1000" y1="0" x2="1000" y2="630"/>
+  </g>
+
+  <!-- Large glowing circle behind phone (center accent) -->
+  <circle cx="600" cy="315" r="220" fill="none" stroke="#007aff" stroke-width="1" opacity="0.15"/>
+  <circle cx="600" cy="315" r="170" fill="none" stroke="#5856d6" stroke-width="1" opacity="0.12"/>
+  <circle cx="600" cy="315" r="260" fill="none" stroke="#007aff" stroke-width="0.5" opacity="0.08"/>
+
+  <!-- Soft glow blob center -->
+  <ellipse cx="600" cy="315" rx="180" ry="180" fill="#007aff" opacity="0.04" filter="url(#softGlow)"/>
+
+  <!-- iPhone frame (simplified) -->
+  <rect x="530" y="100" width="140" height="270" rx="22" ry="22" fill="#1c1c2e" stroke="#3a3a5c" stroke-width="2"/>
+  <rect x="535" y="105" width="130" height="260" rx="18" ry="18" fill="#0d0d1f"/>
+  <!-- iPhone notch -->
+  <rect x="568" y="105" width="64" height="14" rx="7" fill="#1c1c2e"/>
+  <!-- iPhone screen content - Siri wave -->
+  <rect x="538" y="122" width="124" height="140" rx="4" fill="#07071a"/>
+  <!-- Siri colorful wave bars -->
+  <rect x="552" y="170" width="8" height="30" rx="4" fill="#007aff" opacity="0.9"/>
+  <rect x="564" y="155" width="8" height="60" rx="4" fill="#5856d6" opacity="0.9"/>
+  <rect x="576" y="162" width="8" height="46" rx="4" fill="#ff2d55" opacity="0.9"/>
+  <rect x="588" y="148" width="8" height="74" rx="4" fill="#007aff" opacity="0.9"/>
+  <rect x="600" y="158" width="8" height="54" rx="4" fill="#5856d6" opacity="0.9"/>
+  <rect x="612" y="167" width="8" height="36" rx="4" fill="#34c759" opacity="0.9"/>
+  <rect x="624" y="172" width="8" height="26" rx="4" fill="#ff9500" opacity="0.9"/>
+  <rect x="636" y="163" width="8" height="44" rx="4" fill="#007aff" opacity="0.9"/>
+  <rect x="648" y="170" width="8" height="30" rx="4" fill="#5856d6" opacity="0.9"/>
+  <!-- "Ask Siri" text on phone screen -->
+  <text x="600" y="248" font-family="Arial, sans-serif" font-size="11" fill="#8888aa" text-anchor="middle">Ask Siri</text>
+  <!-- Bottom home bar -->
+  <rect x="573" y="358" width="54" height="4" rx="2" fill="#3a3a5c"/>
+
+  <!-- AI Brand Orbs - floating around iPhone -->
+
+  <!-- Gemini orb (top left) -->
+  <circle cx="330" cy="190" r="50" fill="url(#geminiGrad)" opacity="0.15" filter="url(#glow)"/>
+  <circle cx="330" cy="190" r="42" fill="none" stroke="url(#geminiGrad)" stroke-width="1.5" opacity="0.6"/>
+  <!-- Gemini G letter -->
+  <text x="330" y="198" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle" filter="url(#glow)">G</text>
+  <text x="330" y="252" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#4285f4" text-anchor="middle">Gemini</text>
+
+  <!-- Claude orb (top right) -->
+  <circle cx="870" cy="190" r="50" fill="url(#claudeGrad)" opacity="0.15" filter="url(#glow)"/>
+  <circle cx="870" cy="190" r="42" fill="none" stroke="url(#claudeGrad)" stroke-width="1.5" opacity="0.6"/>
+  <!-- Claude letter -->
+  <text x="870" y="198" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="white" text-anchor="middle" filter="url(#glow)">C</text>
+  <text x="870" y="252" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#d4a574" text-anchor="middle">Claude</text>
+
+  <!-- ChatGPT orb (bottom left) -->
+  <circle cx="330" cy="440" r="50" fill="url(#gptGrad)" opacity="0.15" filter="url(#glow)"/>
+  <circle cx="330" cy="440" r="42" fill="none" stroke="url(#gptGrad)" stroke-width="1.5" opacity="0.6"/>
+  <!-- ChatGPT icon (simplified) -->
+  <text x="330" y="448" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="white" text-anchor="middle" filter="url(#glow)">⊕</text>
+  <text x="330" y="502" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#10a37f" text-anchor="middle">ChatGPT</text>
+
+  <!-- Grok orb (bottom right) -->
+  <circle cx="870" cy="440" r="50" fill="#ffffff" opacity="0.07" filter="url(#glow)"/>
+  <circle cx="870" cy="440" r="42" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.3"/>
+  <text x="870" y="448" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="white" text-anchor="middle" filter="url(#glow)">x</text>
+  <text x="870" y="502" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#aaaaaa" text-anchor="middle">Grok</text>
+
+  <!-- Connecting lines from orbs to phone -->
+  <line x1="375" y1="205" x2="532" y2="248" stroke="#4285f4" stroke-width="1" stroke-dasharray="4,4" opacity="0.4"/>
+  <line x1="825" y1="205" x2="668" y2="248" stroke="#d4a574" stroke-width="1" stroke-dasharray="4,4" opacity="0.4"/>
+  <line x1="375" y1="432" x2="532" y2="320" stroke="#10a37f" stroke-width="1" stroke-dasharray="4,4" opacity="0.4"/>
+  <line x1="825" y1="432" x2="668" y2="320" stroke="#888888" stroke-width="1" stroke-dasharray="4,4" opacity="0.3"/>
+
+  <!-- Apple logo top center -->
+  <text x="600" y="85" font-family="Arial, sans-serif" font-size="36" fill="white" text-anchor="middle" opacity="0.9"></text>
+  <text x="600" y="82" font-family="Georgia, serif" font-size="22" fill="#aaaacc" text-anchor="middle" opacity="0.7">WWDC 2026</text>
+
+  <!-- Main headline -->
+  <text x="600" y="498" font-family="Arial, sans-serif" font-size="34" font-weight="bold" fill="white" text-anchor="middle" filter="url(#glow)">Siri Just Got Every AI on Earth</text>
+  <text x="600" y="534" font-family="Arial, sans-serif" font-size="18" fill="#8888cc" text-anchor="middle">iOS 27 · Multi-Model · Extensions API</text>
+
+  <!-- Bottom badge -->
+  <rect x="480" y="572" width="240" height="36" rx="18" fill="#007aff" fill-opacity="0.15" stroke="#007aff" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="600" y="595" font-family="Arial, sans-serif" font-size="13" fill="#88bbff" text-anchor="middle">theapurva.com · Created by Claude AI</text>
+</svg>
