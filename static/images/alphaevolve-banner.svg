@@ -1,0 +1,202 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Deep space background gradient -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0d1535;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a1a2e;stop-opacity:1" />
+    </linearGradient>
+    <!-- Glow effect for circles -->
+    <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#4fc3f7;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#4fc3f7;stop-opacity:0" />
+    </radialGradient>
+    <radialGradient id="glow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#7c4dff;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#7c4dff;stop-opacity:0" />
+    </radialGradient>
+    <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#00e5ff;stop-opacity:0.15" />
+      <stop offset="100%" style="stop-color:#00e5ff;stop-opacity:0" />
+    </radialGradient>
+    <!-- Filter for glow -->
+    <filter id="blueGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)" />
+
+  <!-- Subtle grid pattern -->
+  <g opacity="0.06" stroke="#4fc3f7" stroke-width="0.5">
+    <!-- Vertical lines -->
+    <line x1="100" y1="0" x2="100" y2="630" />
+    <line x1="200" y1="0" x2="200" y2="630" />
+    <line x1="300" y1="0" x2="300" y2="630" />
+    <line x1="400" y1="0" x2="400" y2="630" />
+    <line x1="500" y1="0" x2="500" y2="630" />
+    <line x1="600" y1="0" x2="600" y2="630" />
+    <line x1="700" y1="0" x2="700" y2="630" />
+    <line x1="800" y1="0" x2="800" y2="630" />
+    <line x1="900" y1="0" x2="900" y2="630" />
+    <line x1="1000" y1="0" x2="1000" y2="630" />
+    <line x1="1100" y1="0" x2="1100" y2="630" />
+    <!-- Horizontal lines -->
+    <line x1="0" y1="90" x2="1200" y2="90" />
+    <line x1="0" y1="180" x2="1200" y2="180" />
+    <line x1="0" y1="270" x2="1200" y2="270" />
+    <line x1="0" y1="360" x2="1200" y2="360" />
+    <line x1="0" y1="450" x2="1200" y2="450" />
+    <line x1="0" y1="540" x2="1200" y2="540" />
+  </g>
+
+  <!-- Matrix grid visual - LEFT SIDE (representing old 49-operation problem) -->
+  <g transform="translate(80, 160)" opacity="0.7">
+    <!-- Matrix A (4x4 grid) -->
+    <g fill="none" stroke="#7c4dff" stroke-width="1.5" opacity="0.8">
+      <rect x="0" y="0" width="36" height="36" rx="3" fill="#7c4dff" fill-opacity="0.15" />
+      <rect x="42" y="0" width="36" height="36" rx="3" fill="#7c4dff" fill-opacity="0.15" />
+      <rect x="84" y="0" width="36" height="36" rx="3" fill="#7c4dff" fill-opacity="0.15" />
+      <rect x="126" y="0" width="36" height="36" rx="3" fill="#7c4dff" fill-opacity="0.15" />
+      <rect x="0" y="42" width="36" height="36" rx="3" fill="#7c4dff" fill-opacity="0.15" />
+      <rect x="42" y="42" width="36" height="36" rx="3" fill="#7c4dff" fill-opacity="0.15" />
+      <rect x="84" y="42" width="36" height="36" rx="3" fill="#7c4dff" fill-opacity="0.15" />
+      <rect x="126" y="42" width="36" height="36" rx="3" fill="#7c4dff" fill-opacity="0.15" />
+      <rect x="0" y="84" width="36" height="36" rx="3" fill="#7c4dff" fill-opacity="0.15" />
+      <rect x="42" y="84" width="36" height="36" rx="3" fill="#7c4dff" fill-opacity="0.15" />
+      <rect x="84" y="84" width="36" height="36" rx="3" fill="#7c4dff" fill-opacity="0.15" />
+      <rect x="126" y="84" width="36" height="36" rx="3" fill="#7c4dff" fill-opacity="0.15" />
+      <rect x="0" y="126" width="36" height="36" rx="3" fill="#7c4dff" fill-opacity="0.15" />
+      <rect x="42" y="126" width="36" height="36" rx="3" fill="#7c4dff" fill-opacity="0.15" />
+      <rect x="84" y="126" width="36" height="36" rx="3" fill="#7c4dff" fill-opacity="0.15" />
+      <rect x="126" y="126" width="36" height="36" rx="3" fill="#7c4dff" fill-opacity="0.15" />
+    </g>
+    <!-- Matrix label -->
+    <text x="81" y="-12" font-family="'Courier New', monospace" font-size="13" fill="#9c7dff" text-anchor="middle" letter-spacing="2">MATRIX A</text>
+  </g>
+
+  <!-- × symbol -->
+  <text x="292" y="270" font-family="'Georgia', serif" font-size="40" fill="#4fc3f7" text-anchor="middle" opacity="0.9">×</text>
+
+  <!-- Matrix B (second grid) -->
+  <g transform="translate(320, 160)" opacity="0.7">
+    <g fill="none" stroke="#4fc3f7" stroke-width="1.5" opacity="0.8">
+      <rect x="0" y="0" width="36" height="36" rx="3" fill="#4fc3f7" fill-opacity="0.15" />
+      <rect x="42" y="0" width="36" height="36" rx="3" fill="#4fc3f7" fill-opacity="0.15" />
+      <rect x="84" y="0" width="36" height="36" rx="3" fill="#4fc3f7" fill-opacity="0.15" />
+      <rect x="126" y="0" width="36" height="36" rx="3" fill="#4fc3f7" fill-opacity="0.15" />
+      <rect x="0" y="42" width="36" height="36" rx="3" fill="#4fc3f7" fill-opacity="0.15" />
+      <rect x="42" y="42" width="36" height="36" rx="3" fill="#4fc3f7" fill-opacity="0.15" />
+      <rect x="84" y="42" width="36" height="36" rx="3" fill="#4fc3f7" fill-opacity="0.15" />
+      <rect x="126" y="42" width="36" height="36" rx="3" fill="#4fc3f7" fill-opacity="0.15" />
+      <rect x="0" y="84" width="36" height="36" rx="3" fill="#4fc3f7" fill-opacity="0.15" />
+      <rect x="42" y="84" width="36" height="36" rx="3" fill="#4fc3f7" fill-opacity="0.15" />
+      <rect x="84" y="84" width="36" height="36" rx="3" fill="#4fc3f7" fill-opacity="0.15" />
+      <rect x="126" y="84" width="36" height="36" rx="3" fill="#4fc3f7" fill-opacity="0.15" />
+      <rect x="0" y="126" width="36" height="36" rx="3" fill="#4fc3f7" fill-opacity="0.15" />
+      <rect x="42" y="126" width="36" height="36" rx="3" fill="#4fc3f7" fill-opacity="0.15" />
+      <rect x="84" y="126" width="36" height="36" rx="3" fill="#4fc3f7" fill-opacity="0.15" />
+      <rect x="126" y="126" width="36" height="36" rx="3" fill="#4fc3f7" fill-opacity="0.15" />
+    </g>
+    <text x="81" y="-12" font-family="'Courier New', monospace" font-size="13" fill="#4fc3f7" text-anchor="middle" letter-spacing="2">MATRIX B</text>
+  </g>
+
+  <!-- Arrow pointing right -->
+  <g filter="url(#blueGlow)">
+    <line x1="530" y1="252" x2="590" y2="252" stroke="#00e5ff" stroke-width="2.5" />
+    <polygon points="590,244 606,252 590,260" fill="#00e5ff" />
+  </g>
+
+  <!-- Central glow burst -->
+  <ellipse cx="820" cy="252" rx="220" ry="180" fill="url(#centerGlow)" />
+
+  <!-- Central number highlight: 48 -->
+  <g filter="url(#blueGlow)">
+    <text x="820" y="210" font-family="'Arial Black', sans-serif" font-size="110" fill="none" stroke="#00e5ff" stroke-width="1" text-anchor="middle" opacity="0.15">48</text>
+    <text x="820" y="210" font-family="'Arial Black', sans-serif" font-size="110" fill="#00e5ff" text-anchor="middle" opacity="0.9">48</text>
+  </g>
+  <text x="820" y="238" font-family="'Arial', sans-serif" font-size="18" fill="#81d4fa" text-anchor="middle" letter-spacing="4" opacity="0.9">OPERATIONS</text>
+
+  <!-- Strikethrough 49 (the old record) -->
+  <g opacity="0.5">
+    <text x="960" y="195" font-family="'Arial Black', sans-serif" font-size="44" fill="#ef5350" text-anchor="middle">49</text>
+    <line x1="930" y1="170" x2="990" y2="200" stroke="#ef5350" stroke-width="3" />
+  </g>
+  <text x="960" y="218" font-family="'Arial', sans-serif" font-size="12" fill="#ef9a9a" text-anchor="middle" letter-spacing="1">STRASSEN 1969</text>
+
+  <!-- Decorative DNA-like connecting lines between matrices (evolution concept) -->
+  <g stroke="#00e5ff" stroke-width="0.8" opacity="0.2">
+    <path d="M 80,200 Q 300,180 530,252" fill="none" />
+    <path d="M 80,252 Q 300,252 530,252" fill="none" />
+    <path d="M 80,304 Q 300,324 530,252" fill="none" />
+  </g>
+
+  <!-- Small floating dots (evolution/data points) -->
+  <g fill="#00e5ff" opacity="0.6">
+    <circle cx="150" cy="430" r="2.5" />
+    <circle cx="200" cy="410" r="2" />
+    <circle cx="250" cy="445" r="3" />
+    <circle cx="320" cy="420" r="2" />
+    <circle cx="380" cy="440" r="2.5" />
+    <circle cx="450" cy="415" r="2" />
+    <circle cx="510" cy="435" r="3" />
+  </g>
+  <g fill="#7c4dff" opacity="0.4">
+    <circle cx="900" cy="420" r="2.5" />
+    <circle cx="950" cy="440" r="2" />
+    <circle cx="1000" cy="410" r="3" />
+    <circle cx="1060" cy="435" r="2" />
+    <circle cx="1100" cy="420" r="2.5" />
+  </g>
+
+  <!-- Google DeepMind label (small) -->
+  <text x="80" y="85" font-family="'Arial', sans-serif" font-size="13" fill="#4fc3f7" letter-spacing="3" opacity="0.7">GOOGLE DEEPMIND</text>
+  <line x1="80" y1="93" x2="265" y2="93" stroke="#4fc3f7" stroke-width="0.8" opacity="0.5" />
+
+  <!-- Main Title -->
+  <text x="80" y="490" font-family="'Arial Black', 'Impact', sans-serif" font-size="38" fill="#ffffff" font-weight="900" letter-spacing="-0.5">AlphaEvolve</text>
+  <text x="80" y="534" font-family="'Arial', sans-serif" font-size="21" fill="#81d4fa" letter-spacing="0.5">The AI that broke a 56-year math record</text>
+  <text x="80" y="564" font-family="'Arial', sans-serif" font-size="17" fill="#546e7a" letter-spacing="0.3">— and is now saving millions at Google</text>
+
+  <!-- Right side stat bar -->
+  <g transform="translate(680, 390)">
+    <rect x="0" y="0" width="450" height="100" rx="8" fill="#0d2137" stroke="#1a4a6e" stroke-width="1" opacity="0.9" />
+    <text x="20" y="30" font-family="'Arial', sans-serif" font-size="12" fill="#546e7a" letter-spacing="2">KEY STATS</text>
+    <!-- Stat 1 -->
+    <text x="20" y="58" font-family="'Arial Black', sans-serif" font-size="18" fill="#00e5ff">0.7%</text>
+    <text x="75" y="58" font-family="'Arial', sans-serif" font-size="12" fill="#90a4ae">Google computing recovered</text>
+    <!-- Stat 2 -->
+    <text x="260" y="58" font-family="'Arial Black', sans-serif" font-size="18" fill="#7c4dff">+23%</text>
+    <text x="315" y="58" font-family="'Arial', sans-serif" font-size="12" fill="#90a4ae">Gemini speedup</text>
+    <!-- Stat 3 -->
+    <text x="20" y="84" font-family="'Arial Black', sans-serif" font-size="18" fill="#4fc3f7">56 yrs</text>
+    <text x="85" y="84" font-family="'Arial', sans-serif" font-size="12" fill="#90a4ae">record broken</text>
+    <!-- Divider -->
+    <line x1="240" y1="40" x2="240" y2="92" stroke="#1a4a6e" stroke-width="1" />
+  </g>
+
+  <!-- Top-right small AI evolution visual: three circles connected -->
+  <g transform="translate(1040, 60)" opacity="0.7" filter="url(#softGlow)">
+    <circle cx="0" cy="30" r="12" fill="none" stroke="#7c4dff" stroke-width="2" />
+    <circle cx="0" cy="30" r="5" fill="#7c4dff" opacity="0.7" />
+    <line x1="15" y1="30" x2="30" y2="30" stroke="#546e7a" stroke-width="1.5" stroke-dasharray="4,3" />
+    <circle cx="45" cy="30" r="14" fill="none" stroke="#4fc3f7" stroke-width="2" />
+    <circle cx="45" cy="30" r="6" fill="#4fc3f7" opacity="0.7" />
+    <line x1="62" y1="30" x2="77" y2="30" stroke="#546e7a" stroke-width="1.5" stroke-dasharray="4,3" />
+    <circle cx="90" cy="30" r="18" fill="none" stroke="#00e5ff" stroke-width="2.5" />
+    <circle cx="90" cy="30" r="8" fill="#00e5ff" opacity="0.8" />
+    <text x="45" y="58" font-family="'Arial', sans-serif" font-size="9" fill="#546e7a" text-anchor="middle" letter-spacing="1">EVOLVING</text>
+  </g>
+</svg>

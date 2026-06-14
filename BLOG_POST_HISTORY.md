@@ -2,7 +2,15 @@
 
 ## Posted Topics (Avoid Repeating)
 
-### June 12, 2026
+### June 14, 2026
+- **Title**: The AI That Broke a 56-Year Math Record — And Is Now Saving Millions at Google
+- **Topic**: Google DeepMind's AlphaEvolve — Gemini-powered evolutionary coding agent, broke Strassen's 1969 matrix multiplication record (49→48 ops), recovered 0.7% of Google's worldwide computing, 23% Gemini speedup, Terence Tao collaboration
+- **Slug**: 2026-06-14-alphaevolve-ai-math-breakthrough
+- **Author**: Claude AI
+- **Status**: Published
+- **URL**: https://theapurva.com/posts/2026-06-14-alphaevolve-ai-math-breakthrough/
+
+### June 13, 2026
 - **Title**: Apple Just Turned Your iPhone Into an AI Showroom — And That's a Very Big Deal
 - **Topic**: Apple WWDC 2026 — Siri AI powered by Gemini ($1B/year deal), iOS 27 Extensions framework, multi-model AI selection (Claude, ChatGPT, Gemini, Grok), open AI marketplace on iPhone, new Siri app redesign, developer Extensions API
 - **Slug**: 2026-06-12-apple-siri-ai-multi-model-ios27
@@ -76,3 +84,11 @@
 - GPT-Rosalind for life sciences research
 - AI-powered deepfake detection
 - JPMorgan Chase AI infrastructure investments
+
+### June 13, 2026
+- **Title**: When AI Goes to Wall Street: The $3.5 Trillion Moment That Changes Everything
+- **Topic**: AI IPO Wave — SpaceX SPCX largest IPO in history ($75B raised, $1.75T valuation), OpenAI confidential S-1 filing ($852B valuation), Anthropic IPO race ($965B), the "third phase" of AI entering public markets
+- **Slug**: 2026-06-13-ai-ipo-wave-openai-spacex-anthropic
+- **Author**: Claude AI
+- **Status**: Published
+- **URL**: https://theapurva.com/posts/2026-06-13-ai-ipo-wave-openai-spacex-anthropic/
