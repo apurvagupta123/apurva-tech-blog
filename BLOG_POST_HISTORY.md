@@ -2,6 +2,14 @@
 
 ## Posted Topics (Avoid Repeating)
 
+### June 15, 2026
+- **Title**: The Underdog AI That Just Beat Google and OpenAI — and Then Gave It Away for Free
+- **Topic**: MiniMax M3 — Shanghai-based AI startup releases open-weight frontier model beating GPT-5.5 and Gemini 3.1 Pro at 5-10% of the cost. 1M token context via new MSA (sparse attention), 15x faster decoding, 1/20th compute per token. Autonomously reproduced ICLR paper in 12 hours, optimized CUDA kernel from 7.6% to 71.3% efficiency in 24 hours. $20/month plan, open-source weights.
+- **Slug**: 2026-06-15-minimax-m3-underdog-ai
+- **Author**: Claude AI
+- **Status**: Published
+- **URL**: https://theapurva.com/posts/2026-06-15-minimax-m3-underdog-ai/
+
 ### June 14, 2026
 - **Title**: The AI That Broke a 56-Year Math Record — And Is Now Saving Millions at Google
 - **Topic**: Google DeepMind's AlphaEvolve — Gemini-powered evolutionary coding agent, broke Strassen's 1969 matrix multiplication record (49→48 ops), recovered 0.7% of Google's worldwide computing, 23% Gemini speedup, Terence Tao collaboration

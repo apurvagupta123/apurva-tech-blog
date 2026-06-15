@@ -1,0 +1,183 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" width="1200" height="630">
+  <defs>
+    <!-- Main background gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#050818;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0a0f2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0d1b3e;stop-opacity:1" />
+    </linearGradient>
+    <!-- Glow gradient for accent line -->
+    <linearGradient id="glowLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0" />
+      <stop offset="30%" style="stop-color:#818cf8;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:0" />
+    </linearGradient>
+    <!-- Card glow -->
+    <linearGradient id="cardGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0.15" />
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:0.08" />
+    </linearGradient>
+    <!-- Text gradient purple-gold -->
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#a5b4fc;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fcd34d;stop-opacity:1" />
+    </linearGradient>
+    <!-- Radial glow left -->
+    <radialGradient id="glowLeft" cx="20%" cy="50%" r="40%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#6366f1;stop-opacity:0" />
+    </radialGradient>
+    <!-- Radial glow right -->
+    <radialGradient id="glowRight" cx="80%" cy="50%" r="35%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:0.25" />
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:0" />
+    </radialGradient>
+    <!-- Grid pattern -->
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#1e2d5a" stroke-width="0.5" opacity="0.6"/>
+    </pattern>
+    <!-- Circle clip -->
+    <clipPath id="circleClip">
+      <circle cx="870" cy="315" r="180"/>
+    </clipPath>
+    <!-- Drop shadow filter -->
+    <filter id="textShadow" x="-5%" y="-5%" width="110%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="8" flood-color="#6366f1" flood-opacity="0.5"/>
+    </filter>
+    <filter id="goldShadow" x="-5%" y="-5%" width="110%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="6" flood-color="#f59e0b" flood-opacity="0.6"/>
+    </filter>
+    <filter id="subtleGlow">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+
+  <!-- Grid overlay -->
+  <rect width="1200" height="630" fill="url(#grid)" opacity="0.4"/>
+
+  <!-- Atmospheric glows -->
+  <rect width="1200" height="630" fill="url(#glowLeft)"/>
+  <rect width="1200" height="630" fill="url(#glowRight)"/>
+
+  <!-- Abstract circuit lines background left -->
+  <g opacity="0.12" stroke="#818cf8" stroke-width="1" fill="none">
+    <line x1="0" y1="200" x2="120" y2="200"/>
+    <line x1="120" y1="200" x2="120" y2="280"/>
+    <line x1="120" y1="280" x2="200" y2="280"/>
+    <circle cx="120" cy="200" r="3" fill="#818cf8"/>
+    <circle cx="120" cy="280" r="3" fill="#818cf8"/>
+    <line x1="0" y1="400" x2="80" y2="400"/>
+    <line x1="80" y1="400" x2="80" y2="340"/>
+    <line x1="80" y1="340" x2="160" y2="340"/>
+    <circle cx="80" cy="400" r="3" fill="#818cf8"/>
+    <circle cx="80" cy="340" r="3" fill="#818cf8"/>
+    <line x1="0" y1="520" x2="60" y2="520"/>
+    <line x1="60" y1="520" x2="60" y2="480"/>
+    <line x1="60" y1="480" x2="140" y2="480"/>
+    <circle cx="60" cy="520" r="3" fill="#818cf8"/>
+  </g>
+
+  <!-- Right visual: abstract ring/orbit for "AI challenger" theme -->
+  <g transform="translate(870, 315)">
+    <!-- Outer ring -->
+    <circle r="178" fill="none" stroke="#1e3a8a" stroke-width="1" opacity="0.5"/>
+    <circle r="140" fill="none" stroke="#312e81" stroke-width="0.8" opacity="0.5"/>
+    <!-- Inner glow circle -->
+    <circle r="100" fill="none" stroke="#6366f1" stroke-width="1.5" opacity="0.4"/>
+    <!-- Inner fill -->
+    <circle r="90" fill="#0a0f2e" opacity="0.7"/>
+    <!-- Orbit dots -->
+    <circle cx="178" cy="0" r="4" fill="#6366f1" opacity="0.8"/>
+    <circle cx="-178" cy="0" r="4" fill="#6366f1" opacity="0.8"/>
+    <circle cx="0" cy="-178" r="4" fill="#f59e0b" opacity="0.8"/>
+    <circle cx="0" cy="178" r="4" fill="#f59e0b" opacity="0.6"/>
+    <!-- Diagonal orbit arc -->
+    <path d="M 126 -126 A 178 178 0 0 1 126 126" fill="none" stroke="#f59e0b" stroke-width="1.5" opacity="0.35"/>
+    <path d="M -126 126 A 178 178 0 0 1 -126 -126" fill="none" stroke="#6366f1" stroke-width="1.5" opacity="0.35"/>
+    <!-- Center M3 badge -->
+    <circle r="55" fill="#0d1b3e" stroke="#6366f1" stroke-width="1.5" opacity="0.9"/>
+    <text x="0" y="-8" text-anchor="middle" font-family="'Arial Black', Arial, sans-serif" font-size="28" font-weight="900" fill="#ffffff" letter-spacing="1">M3</text>
+    <text x="0" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#a5b4fc" letter-spacing="3">MINIMAX</text>
+    <!-- Small gold star accent -->
+    <text x="0" y="38" text-anchor="middle" font-size="14" fill="#f59e0b">★</text>
+  </g>
+
+  <!-- VS indicators (small competitive badges) -->
+  <g opacity="0.6">
+    <!-- GPT-5.5 beat -->
+    <rect x="720" y="160" width="90" height="24" rx="12" fill="#1e3a8a" stroke="#6366f1" stroke-width="0.8"/>
+    <text x="765" y="176" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#a5b4fc" letter-spacing="1">BEATS GPT-5.5</text>
+    <!-- Gemini beat -->
+    <rect x="820" y="200" width="110" height="24" rx="12" fill="#1e3a8a" stroke="#6366f1" stroke-width="0.8"/>
+    <text x="875" y="216" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#a5b4fc" letter-spacing="1">BEATS GEMINI 3.1</text>
+    <!-- Cost badge -->
+    <rect x="740" y="430" width="120" height="24" rx="12" fill="#292114" stroke="#f59e0b" stroke-width="0.8"/>
+    <text x="800" y="446" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#fcd34d" letter-spacing="1">5-10% OF THE COST</text>
+    <!-- Open source badge -->
+    <rect x="755" y="466" width="90" height="24" rx="12" fill="#292114" stroke="#f59e0b" stroke-width="0.8"/>
+    <text x="800" y="482" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#fcd34d" letter-spacing="1">OPEN SOURCE</text>
+  </g>
+
+  <!-- Horizontal accent line top -->
+  <rect x="0" y="0" width="1200" height="3" fill="url(#glowLine)" opacity="0.9"/>
+
+  <!-- Horizontal accent line bottom -->
+  <rect x="0" y="627" width="1200" height="3" fill="url(#glowLine)" opacity="0.7"/>
+
+  <!-- Main content area separator -->
+  <line x1="670" y1="80" x2="670" y2="550" stroke="#1e2d5a" stroke-width="1" opacity="0.6"/>
+
+  <!-- LEFT CONTENT -->
+
+  <!-- Tag label -->
+  <rect x="60" y="82" width="130" height="26" rx="13" fill="#1e1b4b"/>
+  <rect x="60" y="82" width="130" height="26" rx="13" fill="none" stroke="#6366f1" stroke-width="1"/>
+  <text x="125" y="99" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#a5b4fc" letter-spacing="2" font-weight="600">AI BREAKTHROUGH</text>
+
+  <!-- Main headline line 1 -->
+  <text x="60" y="185" font-family="'Arial Black', 'Arial Bold', Arial, sans-serif" font-size="62" font-weight="900" fill="url(#titleGrad)" filter="url(#textShadow)" letter-spacing="-1">The</text>
+
+  <!-- Main headline line 2 -->
+  <text x="60" y="258" font-family="'Arial Black', 'Arial Bold', Arial, sans-serif" font-size="62" font-weight="900" fill="url(#titleGrad)" filter="url(#textShadow)" letter-spacing="-1">Underdog</text>
+
+  <!-- Main headline line 3 -->
+  <text x="60" y="331" font-family="'Arial Black', 'Arial Bold', Arial, sans-serif" font-size="62" font-weight="900" fill="url(#titleGrad)" filter="url(#textShadow)" letter-spacing="-1">AI</text>
+
+  <!-- Glowing accent bar under headline -->
+  <rect x="60" y="345" width="300" height="3" rx="2" fill="url(#glowLine)"/>
+
+  <!-- Subtitle -->
+  <text x="60" y="390" font-family="Arial, sans-serif" font-size="18" fill="#94a3b8" font-weight="400" letter-spacing="0.5">MiniMax M3 beat Google &amp; OpenAI</text>
+  <text x="60" y="416" font-family="Arial, sans-serif" font-size="18" fill="#94a3b8" font-weight="400" letter-spacing="0.5">— and gave it away for free.</text>
+
+  <!-- Stats row -->
+  <g transform="translate(60, 460)">
+    <!-- Stat 1 -->
+    <rect x="0" y="0" width="130" height="60" rx="8" fill="url(#cardGlow)" stroke="#1e3a8a" stroke-width="1"/>
+    <text x="65" y="24" text-anchor="middle" font-family="'Arial Black', Arial, sans-serif" font-size="22" font-weight="900" fill="#fcd34d" filter="url(#goldShadow)">1M</text>
+    <text x="65" y="42" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8" letter-spacing="1">TOKEN CONTEXT</text>
+    <!-- Stat 2 -->
+    <rect x="145" y="0" width="130" height="60" rx="8" fill="url(#cardGlow)" stroke="#1e3a8a" stroke-width="1"/>
+    <text x="210" y="24" text-anchor="middle" font-family="'Arial Black', Arial, sans-serif" font-size="22" font-weight="900" fill="#fcd34d" filter="url(#goldShadow)">15×</text>
+    <text x="210" y="42" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8" letter-spacing="1">FASTER DECODING</text>
+    <!-- Stat 3 -->
+    <rect x="290" y="0" width="130" height="60" rx="8" fill="url(#cardGlow)" stroke="#1e3a8a" stroke-width="1"/>
+    <text x="355" y="24" text-anchor="middle" font-family="'Arial Black', Arial, sans-serif" font-size="22" font-weight="900" fill="#fcd34d" filter="url(#goldShadow)">$20</text>
+    <text x="355" y="42" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8" letter-spacing="1">PER MONTH</text>
+  </g>
+
+  <!-- Bottom branding -->
+  <text x="60" y="600" font-family="Arial, sans-serif" font-size="12" fill="#475569" letter-spacing="2">THEAPURVA.COM</text>
+  <text x="1140" y="600" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#475569">Claude AI</text>
+  <!-- Bottom accent dot -->
+  <circle cx="52" cy="597" r="3" fill="#6366f1" opacity="0.7"/>
+</svg>
