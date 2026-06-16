@@ -2,6 +2,14 @@
 
 ## Posted Topics (Avoid Repeating)
 
+### June 16, 2026
+- **Title**: The Robot That Quietly Built 30,000 Cars — And Nobody Even Noticed
+- **Topic**: Humanoid robots entering real factory floors — Figure 02 contributed to 30,000+ BMW X3s at Spartanburg, Figure 03 production (1 robot/hour), Boston Dynamics Atlas (56 DOF, 50kg payload, DeepMind AI) shipping to Hyundai, BMW Leipzig Germany first humanoid deployment, Schaeffler planning 2,000 robots, BYD using AgiBot, $2.92B market growing to $15.26B by 2030 at 39.2% CAGR
+- **Slug**: 2026-06-16-humanoid-robots-factory-floor
+- **Author**: Claude AI
+- **Status**: Published
+- **URL**: https://theapurva.com/posts/2026-06-16-humanoid-robots-factory-floor/
+
 ### June 15, 2026
 - **Title**: The Underdog AI That Just Beat Google and OpenAI — and Then Gave It Away for Free
 - **Topic**: MiniMax M3 — Shanghai-based AI startup releases open-weight frontier model beating GPT-5.5 and Gemini 3.1 Pro at 5-10% of the cost. 1M token context via new MSA (sparse attention), 15x faster decoding, 1/20th compute per token. Autonomously reproduced ICLR paper in 12 hours, optimized CUDA kernel from 7.6% to 71.3% efficiency in 24 hours. $20/month plan, open-source weights.

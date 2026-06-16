@@ -1,0 +1,225 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0d1f3c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a0a2e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="robotGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a9eff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7b5ea7;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4a9eff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b44fff;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+
+  <!-- Factory floor grid lines -->
+  <g opacity="0.08" stroke="#4a9eff" stroke-width="1">
+    <!-- Horizontal lines -->
+    <line x1="0" y1="100" x2="1200" y2="100"/>
+    <line x1="0" y1="200" x2="1200" y2="200"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="400" x2="1200" y2="400"/>
+    <line x1="0" y1="500" x2="1200" y2="500"/>
+    <!-- Vertical lines -->
+    <line x1="120" y1="0" x2="120" y2="630"/>
+    <line x1="240" y1="0" x2="240" y2="630"/>
+    <line x1="360" y1="0" x2="360" y2="630"/>
+    <line x1="480" y1="0" x2="480" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="720" y1="0" x2="720" y2="630"/>
+    <line x1="840" y1="0" x2="840" y2="630"/>
+    <line x1="960" y1="0" x2="960" y2="630"/>
+    <line x1="1080" y1="0" x2="1080" y2="630"/>
+  </g>
+
+  <!-- Glowing orb background left -->
+  <circle cx="200" cy="315" r="180" fill="#4a9eff" opacity="0.04"/>
+  <circle cx="200" cy="315" r="120" fill="#4a9eff" opacity="0.05"/>
+
+  <!-- Glowing orb background right -->
+  <circle cx="980" cy="315" r="200" fill="#b44fff" opacity="0.04"/>
+  <circle cx="980" cy="315" r="130" fill="#b44fff" opacity="0.05"/>
+
+  <!-- HUMANOID ROBOT - Left side, large -->
+  <g transform="translate(140, 80)" filter="url(#glow)">
+    <!-- Robot glow aura -->
+    <ellipse cx="160" cy="300" rx="90" ry="320" fill="#4a9eff" opacity="0.06"/>
+
+    <!-- Head -->
+    <rect x="120" y="20" width="80" height="70" rx="12" fill="#1a3a6e" stroke="#4a9eff" stroke-width="2"/>
+    <!-- Visor / Eyes -->
+    <rect x="130" y="38" width="60" height="20" rx="4" fill="#4a9eff" opacity="0.9"/>
+    <!-- Eye lights -->
+    <circle cx="148" cy="48" r="6" fill="#00d4ff" filter="url(#glow)"/>
+    <circle cx="172" cy="48" r="6" fill="#00d4ff" filter="url(#glow)"/>
+    <!-- Antenna -->
+    <line x1="160" y1="20" x2="160" y2="5" stroke="#4a9eff" stroke-width="2"/>
+    <circle cx="160" cy="3" r="4" fill="#4a9eff" filter="url(#glow)"/>
+
+    <!-- Neck -->
+    <rect x="148" y="90" width="24" height="20" rx="4" fill="#1a3a6e" stroke="#4a9eff" stroke-width="1.5"/>
+
+    <!-- Torso -->
+    <rect x="95" y="110" width="130" height="150" rx="14" fill="#0d2347" stroke="#4a9eff" stroke-width="2"/>
+    <!-- Chest panel -->
+    <rect x="115" y="130" width="90" height="60" rx="8" fill="#0a1830" stroke="#4a9eff" stroke-width="1" opacity="0.8"/>
+    <!-- Chest lights -->
+    <circle cx="145" cy="155" r="8" fill="#4a9eff" opacity="0.7" filter="url(#glow)"/>
+    <circle cx="175" cy="155" r="8" fill="#b44fff" opacity="0.7" filter="url(#glow)"/>
+    <!-- Energy bar -->
+    <rect x="125" y="175" width="70" height="6" rx="3" fill="#1a3a6e"/>
+    <rect x="125" y="175" width="52" height="6" rx="3" fill="#4a9eff" filter="url(#glow)"/>
+
+    <!-- Left arm -->
+    <rect x="55" y="115" width="36" height="110" rx="14" fill="#0d2347" stroke="#4a9eff" stroke-width="1.5"/>
+    <rect x="62" y="225" width="22" height="35" rx="8" fill="#1a3a6e" stroke="#4a9eff" stroke-width="1.5"/>
+    <!-- Left hand fingers suggestion -->
+    <rect x="60" y="260" width="6" height="18" rx="3" fill="#0d2347" stroke="#4a9eff" stroke-width="1"/>
+    <rect x="69" y="260" width="6" height="20" rx="3" fill="#0d2347" stroke="#4a9eff" stroke-width="1"/>
+    <rect x="78" y="260" width="6" height="18" rx="3" fill="#0d2347" stroke="#4a9eff" stroke-width="1"/>
+
+    <!-- Right arm (extended, holding a tool/bolt) -->
+    <rect x="229" y="115" width="36" height="110" rx="14" fill="#0d2347" stroke="#4a9eff" stroke-width="1.5"/>
+    <rect x="236" y="225" width="22" height="35" rx="8" fill="#1a3a6e" stroke="#4a9eff" stroke-width="1.5"/>
+    <!-- Wrench/tool in right hand -->
+    <line x1="258" y1="260" x2="258" y2="300" stroke="#ffd700" stroke-width="4" stroke-linecap="round"/>
+    <ellipse cx="258" cy="305" rx="8" ry="5" fill="none" stroke="#ffd700" stroke-width="3"/>
+
+    <!-- Hips/pelvis -->
+    <rect x="108" y="260" width="104" height="30" rx="10" fill="#0d2347" stroke="#4a9eff" stroke-width="1.5"/>
+
+    <!-- Left leg -->
+    <rect x="112" y="290" width="40" height="120" rx="12" fill="#0d2347" stroke="#4a9eff" stroke-width="1.5"/>
+    <!-- Left foot -->
+    <ellipse cx="132" cy="415" rx="28" ry="10" fill="#1a3a6e" stroke="#4a9eff" stroke-width="1.5"/>
+    <!-- Wireless charging ring on foot -->
+    <ellipse cx="132" cy="415" rx="20" ry="7" fill="none" stroke="#4a9eff" stroke-width="1" opacity="0.5"/>
+
+    <!-- Right leg -->
+    <rect x="168" y="290" width="40" height="120" rx="12" fill="#0d2347" stroke="#4a9eff" stroke-width="1.5"/>
+    <!-- Right foot -->
+    <ellipse cx="188" cy="415" rx="28" ry="10" fill="#1a3a6e" stroke="#4a9eff" stroke-width="1.5"/>
+    <ellipse cx="188" cy="415" rx="20" ry="7" fill="none" stroke="#4a9eff" stroke-width="1" opacity="0.5"/>
+
+    <!-- Shadow -->
+    <ellipse cx="160" cy="435" rx="75" ry="12" fill="#000" opacity="0.4"/>
+  </g>
+
+  <!-- Car silhouette (what the robot builds) -->
+  <g transform="translate(480, 330)" opacity="0.3">
+    <!-- Car body -->
+    <rect x="0" y="60" width="280" height="80" rx="8" fill="#4a9eff"/>
+    <!-- Car roof -->
+    <path d="M 50 60 Q 80 20 130 15 L 200 15 Q 240 20 260 60 Z" fill="#4a9eff"/>
+    <!-- Wheels -->
+    <circle cx="55" cy="148" r="28" fill="#0a0a1a" stroke="#4a9eff" stroke-width="2"/>
+    <circle cx="225" cy="148" r="28" fill="#0a0a1a" stroke="#4a9eff" stroke-width="2"/>
+    <circle cx="55" cy="148" r="14" fill="#1a3a6e"/>
+    <circle cx="225" cy="148" r="14" fill="#1a3a6e"/>
+    <!-- Windows -->
+    <rect x="85" y="25" width="55" height="32" rx="4" fill="#0d1f3c" stroke="#4a9eff" stroke-width="1"/>
+    <rect x="148" y="25" width="55" height="32" rx="4" fill="#0d1f3c" stroke="#4a9eff" stroke-width="1"/>
+    <!-- Headlights -->
+    <rect x="5" y="85" width="30" height="15" rx="3" fill="#ffd700" opacity="0.8"/>
+    <rect x="245" y="85" width="30" height="15" rx="3" fill="#ff4444" opacity="0.6"/>
+  </g>
+
+  <!-- Stat bubbles -->
+  <!-- 30,000 CARS -->
+  <g transform="translate(490, 100)">
+    <rect x="0" y="0" width="175" height="75" rx="10" fill="#0d2347" stroke="#4a9eff" stroke-width="1.5" opacity="0.9"/>
+    <text x="88" y="28" font-family="Arial, sans-serif" font-size="11" fill="#4a9eff" text-anchor="middle" font-weight="bold">FIGURE 02 BUILT</text>
+    <text x="88" y="54" font-family="Arial, sans-serif" font-size="28" fill="#ffffff" text-anchor="middle" font-weight="bold">30,000</text>
+    <text x="88" y="68" font-family="Arial, sans-serif" font-size="10" fill="#a0b4d0" text-anchor="middle">BMW X3s at Spartanburg</text>
+  </g>
+
+  <!-- MARKET SIZE -->
+  <g transform="translate(700, 100)">
+    <rect x="0" y="0" width="175" height="75" rx="10" fill="#1a0a2e" stroke="#b44fff" stroke-width="1.5" opacity="0.9"/>
+    <text x="88" y="28" font-family="Arial, sans-serif" font-size="11" fill="#b44fff" text-anchor="middle" font-weight="bold">MARKET BY 2030</text>
+    <text x="88" y="54" font-family="Arial, sans-serif" font-size="28" fill="#ffffff" text-anchor="middle" font-weight="bold">$15.26B</text>
+    <text x="88" y="68" font-family="Arial, sans-serif" font-size="10" fill="#a0b4d0" text-anchor="middle">39.2% CAGR growth</text>
+  </g>
+
+  <!-- 2,000 ROBOTS Schaeffler -->
+  <g transform="translate(910, 100)">
+    <rect x="0" y="0" width="175" height="75" rx="10" fill="#0a1e0a" stroke="#44ff88" stroke-width="1.5" opacity="0.9"/>
+    <text x="88" y="28" font-family="Arial, sans-serif" font-size="11" fill="#44ff88" text-anchor="middle" font-weight="bold">SCHAEFFLER PLANS</text>
+    <text x="88" y="54" font-family="Arial, sans-serif" font-size="28" fill="#ffffff" text-anchor="middle" font-weight="bold">2,000</text>
+    <text x="88" y="68" font-family="Arial, sans-serif" font-size="10" fill="#a0b4d0" text-anchor="middle">humanoid robots deployed</text>
+  </g>
+
+  <!-- Company logos row -->
+  <g transform="translate(490, 210)">
+    <!-- BMW -->
+    <rect x="0" y="0" width="90" height="40" rx="6" fill="#0d2347" stroke="#4a9eff" stroke-width="1" opacity="0.8"/>
+    <text x="45" y="26" font-family="Arial, sans-serif" font-size="13" fill="#4a9eff" text-anchor="middle" font-weight="bold">BMW</text>
+
+    <!-- Figure AI -->
+    <rect x="100" y="0" width="90" height="40" rx="6" fill="#0d2347" stroke="#4a9eff" stroke-width="1" opacity="0.8"/>
+    <text x="145" y="22" font-family="Arial, sans-serif" font-size="11" fill="#4a9eff" text-anchor="middle" font-weight="bold">Figure</text>
+    <text x="145" y="35" font-family="Arial, sans-serif" font-size="9" fill="#7ab0ff" text-anchor="middle">AI</text>
+
+    <!-- Boston Dynamics -->
+    <rect x="200" y="0" width="90" height="40" rx="6" fill="#0d2347" stroke="#b44fff" stroke-width="1" opacity="0.8"/>
+    <text x="245" y="22" font-family="Arial, sans-serif" font-size="10" fill="#b44fff" text-anchor="middle" font-weight="bold">Boston</text>
+    <text x="245" y="35" font-family="Arial, sans-serif" font-size="10" fill="#b44fff" text-anchor="middle">Dynamics</text>
+
+    <!-- Hyundai -->
+    <rect x="300" y="0" width="90" height="40" rx="6" fill="#0d2347" stroke="#44ff88" stroke-width="1" opacity="0.8"/>
+    <text x="345" y="26" font-family="Arial, sans-serif" font-size="12" fill="#44ff88" text-anchor="middle" font-weight="bold">Hyundai</text>
+
+    <!-- DeepMind -->
+    <rect x="400" y="0" width="90" height="40" rx="6" fill="#0d2347" stroke="#ff9944" stroke-width="1" opacity="0.8"/>
+    <text x="445" y="26" font-family="Arial, sans-serif" font-size="11" fill="#ff9944" text-anchor="middle" font-weight="bold">DeepMind</text>
+  </g>
+
+  <!-- Main headline text -->
+  <text x="490" y="300" font-family="Arial Black, Arial, sans-serif" font-size="32" fill="#ffffff" font-weight="900" filter="url(#softGlow)">The Robot That Quietly</text>
+  <text x="490" y="340" font-family="Arial Black, Arial, sans-serif" font-size="32" fill="#ffffff" font-weight="900">Built 30,000 Cars</text>
+  <!-- Accent line -->
+  <rect x="490" y="352" width="400" height="3" rx="2" fill="url(#accentGrad)"/>
+  <text x="490" y="375" font-family="Arial, sans-serif" font-size="15" fill="#a0b4d0">Humanoid robots are no longer science fiction.</text>
+  <text x="490" y="396" font-family="Arial, sans-serif" font-size="15" fill="#a0b4d0">They already clocked in.</text>
+
+  <!-- Website badge -->
+  <g transform="translate(490, 420)">
+    <rect x="0" y="0" width="160" height="36" rx="18" fill="url(#accentGrad)" opacity="0.9"/>
+    <text x="80" y="24" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">theapurva.com</text>
+  </g>
+
+  <!-- Author badge -->
+  <g transform="translate(490, 470)">
+    <text x="0" y="16" font-family="Arial, sans-serif" font-size="12" fill="#6080a0">by Claude AI  ·  June 16, 2026</text>
+  </g>
+
+  <!-- Decorative tech circuit lines -->
+  <g stroke="#4a9eff" stroke-width="1" opacity="0.12" fill="none">
+    <path d="M 0 550 H 140 V 480 H 320 V 550 H 460"/>
+    <circle cx="140" cy="550" r="4" fill="#4a9eff" opacity="0.3"/>
+    <circle cx="320" cy="480" r="4" fill="#4a9eff" opacity="0.3"/>
+    <path d="M 1200 80 H 1080 V 150 H 950 V 80 H 820"/>
+    <circle cx="1080" cy="80" r="4" fill="#b44fff" opacity="0.3"/>
+    <circle cx="950" cy="150" r="4" fill="#b44fff" opacity="0.3"/>
+  </g>
+</svg>
