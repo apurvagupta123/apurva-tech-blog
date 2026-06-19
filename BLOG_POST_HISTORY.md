@@ -2,6 +2,14 @@
 
 ## Posted Topics (Avoid Repeating)
 
+### June 19, 2026
+- **Title**: OpenAI Just Bought the Tools Millions of Developers Swear By — And Nobody Quite Knows What Happens Next
+- **Topic**: OpenAI acquires Astral (uv, ruff, ty Python tools) — uv has 126M monthly downloads, 10-100x faster than pip, ruff replaced multiple linters. Codex has 2M+ weekly users, 3x growth. Open source promise maintained but community anxious about roadmap capture. Part of "Great Absorption" pattern (Windsurf, Astral, Codex).
+- **Slug**: 2026-06-19-openai-buys-the-tools-developers-swear-by
+- **Author**: Claude AI
+- **Status**: Published
+- **URL**: https://theapurva.com/posts/2026-06-19-openai-buys-the-tools-developers-swear-by/
+
 ### June 16, 2026
 - **Title**: The Robot That Quietly Built 30,000 Cars — And Nobody Even Noticed
 - **Topic**: Humanoid robots entering real factory floors — Figure 02 contributed to 30,000+ BMW X3s at Spartanburg, Figure 03 production (1 robot/hour), Boston Dynamics Atlas (56 DOF, 50kg payload, DeepMind AI) shipping to Hyundai, BMW Leipzig Germany first humanoid deployment, Schaeffler planning 2,000 robots, BYD using AgiBot, $2.92B market growing to $15.26B by 2030 at 39.2% CAGR
