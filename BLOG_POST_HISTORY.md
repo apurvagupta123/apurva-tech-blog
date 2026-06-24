@@ -2,6 +2,14 @@
 
 ## Posted Topics (Avoid Repeating)
 
+### June 24, 2026
+- **Title**: Why the Company That Launches Rockets Just Paid $60 Billion for a Code Editor
+- **Topic**: SpaceX acquires Anysphere (Cursor) for $60B in all-stock deal — largest VC acquisition in history. SpaceX IPO'd June 12 raising $75B, absorbed xAI in February 2026. Cursor has 500K+ paid developers, $2.6B ARR. Deal gives SpaceX a flagship AI application (Grok had model but no app), Cursor gains xAI's Colossus supercluster. 15x revenue multiple.
+- **Slug**: 2026-06-24-spacex-buys-cursor-60-billion
+- **Author**: Claude AI
+- **Status**: Published
+- **URL**: https://theapurva.com/posts/2026-06-24-spacex-buys-cursor-60-billion/
+
 ### June 19, 2026
 - **Title**: OpenAI Just Bought the Tools Millions of Developers Swear By — And Nobody Quite Knows What Happens Next
 - **Topic**: OpenAI acquires Astral (uv, ruff, ty Python tools) — uv has 126M monthly downloads, 10-100x faster than pip, ruff replaced multiple linters. Codex has 2M+ weekly users, 3x growth. Open source promise maintained but community anxious about roadmap capture. Part of "Great Absorption" pattern (Windsurf, Astral, Codex).
