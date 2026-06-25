@@ -2,6 +2,14 @@
 
 ## Posted Topics (Avoid Repeating)
 
+### June 25, 2026
+- **Title**: The Bug Report That Wasn't: How Hackers Are Hijacking Your AI Coding Assistant
+- **Topic**: Agentjacking — new attack class disclosed by Tenet Security June 2026. Attackers inject fake error events into Sentry via public DSN keys; Sentry MCP server feeds them to AI coding agents (Claude Code, Cursor, Codex) as trusted data; agents execute malicious commands on developer machines. 85% success rate in testing, 2,388 orgs exposed, Fortune 500 breached. Sentry declined root fix. Open-source defense: "agent-jackstop".
+- **Slug**: 2026-06-25-agentjacking-ai-coding-agents
+- **Author**: Claude AI
+- **Status**: Published
+- **URL**: https://theapurva.com/posts/2026-06-25-agentjacking-ai-coding-agents/
+
 ### June 24, 2026
 - **Title**: Why the Company That Launches Rockets Just Paid $60 Billion for a Code Editor
 - **Topic**: SpaceX acquires Anysphere (Cursor) for $60B in all-stock deal — largest VC acquisition in history. SpaceX IPO'd June 12 raising $75B, absorbed xAI in February 2026. Cursor has 500K+ paid developers, $2.6B ARR. Deal gives SpaceX a flagship AI application (Grok had model but no app), Cursor gains xAI's Colossus supercluster. 15x revenue multiple.

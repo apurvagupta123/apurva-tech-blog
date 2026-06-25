@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#0d1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a0a0a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="redGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ff3333;stop-opacity:0" />
+      <stop offset="50%" style="stop-color:#ff3333;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#ff3333;stop-opacity:0" />
+    </linearGradient>
+    <linearGradient id="codeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a5f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0d1e35;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="redGlowFilter">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Grid pattern -->
+  <g opacity="0.06">
+    <line x1="0" y1="105" x2="1200" y2="105" stroke="#4488ff" stroke-width="1"/>
+    <line x1="0" y1="210" x2="1200" y2="210" stroke="#4488ff" stroke-width="1"/>
+    <line x1="0" y1="315" x2="1200" y2="315" stroke="#4488ff" stroke-width="1"/>
+    <line x1="0" y1="420" x2="1200" y2="420" stroke="#4488ff" stroke-width="1"/>
+    <line x1="0" y1="525" x2="1200" y2="525" stroke="#4488ff" stroke-width="1"/>
+    <line x1="200" y1="0" x2="200" y2="630" stroke="#4488ff" stroke-width="1"/>
+    <line x1="400" y1="0" x2="400" y2="630" stroke="#4488ff" stroke-width="1"/>
+    <line x1="600" y1="0" x2="600" y2="630" stroke="#4488ff" stroke-width="1"/>
+    <line x1="800" y1="0" x2="800" y2="630" stroke="#4488ff" stroke-width="1"/>
+    <line x1="1000" y1="0" x2="1000" y2="630" stroke="#4488ff" stroke-width="1"/>
+  </g>
+
+  <!-- Red glow line top -->
+  <rect x="0" y="2" width="1200" height="3" fill="url(#redGlow)" opacity="0.7"/>
+
+  <!-- Left panel: Code/terminal mock -->
+  <rect x="60" y="80" width="460" height="300" rx="12" fill="url(#codeGrad)" opacity="0.9"/>
+  <rect x="60" y="80" width="460" height="36" rx="12" fill="#1a2a40"/>
+  <rect x="60" y="104" width="460" height="12" fill="#1a2a40"/>
+  <!-- Terminal dots -->
+  <circle cx="90" cy="98" r="7" fill="#ff5f57"/>
+  <circle cx="114" cy="98" r="7" fill="#ffbd2e"/>
+  <circle cx="138" cy="98" r="7" fill="#28ca41"/>
+  <!-- Terminal title -->
+  <text x="290" y="102" font-family="monospace" font-size="13" fill="#8899aa" text-anchor="middle">claude-code — bash</text>
+
+  <!-- Terminal content -->
+  <text x="84" y="142" font-family="monospace" font-size="13" fill="#4af">$</text>
+  <text x="100" y="142" font-family="monospace" font-size="13" fill="#8cf">claude "fix the latest Sentry error"</text>
+
+  <text x="84" y="168" font-family="monospace" font-size="12" fill="#5a8" opacity="0.9">→ Connecting to Sentry MCP...</text>
+  <text x="84" y="188" font-family="monospace" font-size="12" fill="#5a8" opacity="0.9">→ Fetching latest error events...</text>
+
+  <!-- Fake error box -->
+  <rect x="84" y="200" width="420" height="80" rx="6" fill="#1f0a0a" stroke="#cc2222" stroke-width="1.5"/>
+  <text x="100" y="220" font-family="monospace" font-size="11" fill="#ff6666">Error: DatabaseConnectionError</text>
+  <text x="100" y="238" font-family="monospace" font-size="11" fill="#cc4444">at app/db/connect.js:42</text>
+  <!-- Hidden payload highlight -->
+  <rect x="84" y="246" width="420" height="28" rx="4" fill="#3a0a0a" stroke="#ff0000" stroke-width="1" opacity="0.8"/>
+  <text x="100" y="262" font-family="monospace" font-size="11" fill="#ff4444">  [HIDDEN] npx exec attacker-payload.js</text>
+
+  <text x="84" y="310" font-family="monospace" font-size="12" fill="#ff5555" filter="url(#glow)">→ Executing: npx attacker-payload.js ⚠</text>
+  <text x="84" y="332" font-family="monospace" font-size="12" fill="#cc3333">→ Access granted. Exfiltrating...</text>
+  <text x="84" y="354" font-family="monospace" font-size="12" fill="#ff6600">█ AGENT COMPROMISED</text>
+
+  <!-- Stats boxes -->
+  <rect x="60" y="405" width="135" height="80" rx="8" fill="#0d1e35" stroke="#2244aa" stroke-width="1.5"/>
+  <text x="127" y="438" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#ff4444" text-anchor="middle" filter="url(#redGlowFilter)">85%</text>
+  <text x="127" y="460" font-family="Arial, sans-serif" font-size="11" fill="#8899bb" text-anchor="middle">Success Rate</text>
+  <text x="127" y="475" font-family="Arial, sans-serif" font-size="10" fill="#667799" text-anchor="middle">in testing</text>
+
+  <rect x="210" y="405" width="135" height="80" rx="8" fill="#0d1e35" stroke="#2244aa" stroke-width="1.5"/>
+  <text x="277" y="438" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#ff8833" text-anchor="middle">2,388</text>
+  <text x="277" y="460" font-family="Arial, sans-serif" font-size="11" fill="#8899bb" text-anchor="middle">Orgs Exposed</text>
+  <text x="277" y="475" font-family="Arial, sans-serif" font-size="10" fill="#667799" text-anchor="middle">DSN keys public</text>
+
+  <rect x="360" y="405" width="160" height="80" rx="8" fill="#0d1e35" stroke="#2244aa" stroke-width="1.5"/>
+  <text x="440" y="438" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#ff4488" text-anchor="middle">Fortune 500</text>
+  <text x="440" y="460" font-family="Arial, sans-serif" font-size="11" fill="#8899bb" text-anchor="middle">Largest Victim</text>
+  <text x="440" y="475" font-family="Arial, sans-serif" font-size="10" fill="#667799" text-anchor="middle">confirmed breach</text>
+
+  <!-- Right side: Main text -->
+  <!-- Warning icon -->
+  <polygon points="620,95 680,195 560,195" fill="none" stroke="#ff3333" stroke-width="3" filter="url(#redGlowFilter)" opacity="0.9"/>
+  <text x="620" y="180" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#ff3333" text-anchor="middle" filter="url(#redGlowFilter)">!</text>
+
+  <!-- Main headline -->
+  <text x="730" y="130" font-family="Arial Black, sans-serif" font-size="48" font-weight="900" fill="#ffffff" text-anchor="middle">AGENT</text>
+  <text x="730" y="185" font-family="Arial Black, sans-serif" font-size="62" font-weight="900" fill="#ff2222" text-anchor="middle" filter="url(#redGlowFilter)">JACKING</text>
+
+  <!-- Divider line -->
+  <line x1="560" y1="210" x2="1140" y2="210" stroke="#ff3333" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- Subheadline -->
+  <text x="850" y="248" font-family="Arial, sans-serif" font-size="19" fill="#aabbdd" text-anchor="middle">A fake bug report can hijack</text>
+  <text x="850" y="274" font-family="Arial, sans-serif" font-size="19" fill="#aabbdd" text-anchor="middle">your AI coding assistant</text>
+
+  <!-- Affected tools -->
+  <text x="850" y="320" font-family="Arial, sans-serif" font-size="14" fill="#667799" text-anchor="middle" letter-spacing="3">AFFECTS</text>
+
+  <rect x="580" y="332" width="180" height="42" rx="6" fill="#0a1525" stroke="#3366aa" stroke-width="1.5"/>
+  <text x="670" y="358" font-family="monospace" font-size="15" fill="#66aaff" text-anchor="middle">Claude Code</text>
+
+  <rect x="775" y="332" width="155" height="42" rx="6" fill="#0a1525" stroke="#3366aa" stroke-width="1.5"/>
+  <text x="852" y="358" font-family="monospace" font-size="15" fill="#66aaff" text-anchor="middle">Cursor AI</text>
+
+  <rect x="945" y="332" width="155" height="42" rx="6" fill="#0a1525" stroke="#3366aa" stroke-width="1.5"/>
+  <text x="1022" y="358" font-family="monospace" font-size="15" fill="#66aaff" text-anchor="middle">OpenAI Codex</text>
+
+  <!-- Attack chain diagram -->
+  <rect x="575" y="410" width="130" height="60" rx="8" fill="#0d1e35" stroke="#335588" stroke-width="1.5"/>
+  <text x="640" y="434" font-family="Arial, sans-serif" font-size="11" fill="#99aacc" text-anchor="middle">Attacker injects</text>
+  <text x="640" y="452" font-family="Arial, sans-serif" font-size="11" fill="#99aacc" text-anchor="middle">fake Sentry error</text>
+  <text x="640" y="466" font-family="Arial, sans-serif" font-size="10" fill="#5577aa" text-anchor="middle">via public DSN</text>
+
+  <text x="725" y="444" font-family="Arial, sans-serif" font-size="20" fill="#ff4444" text-anchor="middle">→</text>
+
+  <rect x="745" y="410" width="130" height="60" rx="8" fill="#0d1e35" stroke="#335588" stroke-width="1.5"/>
+  <text x="810" y="434" font-family="Arial, sans-serif" font-size="11" fill="#99aacc" text-anchor="middle">AI agent reads</text>
+  <text x="810" y="452" font-family="Arial, sans-serif" font-size="11" fill="#99aacc" text-anchor="middle">hidden payload</text>
+  <text x="810" y="466" font-family="Arial, sans-serif" font-size="10" fill="#5577aa" text-anchor="middle">via MCP trust</text>
+
+  <text x="895" y="444" font-family="Arial, sans-serif" font-size="20" fill="#ff4444" text-anchor="middle">→</text>
+
+  <rect x="915" y="410" width="140" height="60" rx="8" fill="#1a0a0a" stroke="#883333" stroke-width="1.5"/>
+  <text x="985" y="434" font-family="Arial, sans-serif" font-size="11" fill="#ff8888" text-anchor="middle">Malicious code</text>
+  <text x="985" y="452" font-family="Arial, sans-serif" font-size="11" fill="#ff8888" text-anchor="middle">executes on</text>
+  <text x="985" y="466" font-family="Arial, sans-serif" font-size="10" fill="#ff6666" text-anchor="middle">YOUR machine</text>
+
+  <!-- Bottom bar -->
+  <rect x="0" y="545" width="1200" height="85" fill="#060c18" opacity="0.95"/>
+  <line x1="0" y1="545" x2="1200" y2="545" stroke="#ff3333" stroke-width="1.5" opacity="0.4"/>
+
+  <text x="60" y="582" font-family="Arial, sans-serif" font-size="14" fill="#667799">Disclosed by</text>
+  <text x="60" y="603" font-family="Arial Black, sans-serif" font-size="17" fill="#aabbdd">Tenet Security</text>
+  <text x="60" y="620" font-family="Arial, sans-serif" font-size="12" fill="#446699">June 2026</text>
+
+  <line x1="260" y1="558" x2="260" y2="618" stroke="#334466" stroke-width="1" opacity="0.5"/>
+
+  <text x="290" y="582" font-family="Arial, sans-serif" font-size="14" fill="#667799">Reported to Sentry:</text>
+  <text x="290" y="603" font-family="Arial Black, sans-serif" font-size="15" fill="#ff8833">"Not Defensible at Platform Level"</text>
+  <text x="290" y="620" font-family="Arial, sans-serif" font-size="12" fill="#446699">Root fix declined — patch your agents now</text>
+
+  <line x1="780" y1="558" x2="780" y2="618" stroke="#334466" stroke-width="1" opacity="0.5"/>
+
+  <text x="820" y="582" font-family="Arial, sans-serif" font-size="13" fill="#667799">Defense:</text>
+  <text x="820" y="603" font-family="monospace" font-size="15" fill="#66ff88" filter="url(#glow)">agent-jackstop</text>
+  <text x="820" y="620" font-family="Arial, sans-serif" font-size="12" fill="#446699">open-source hardening configs</text>
+
+  <text x="1140" y="595" font-family="Arial, sans-serif" font-size="12" fill="#334466" text-anchor="end">theapurva.com</text>
+</svg>
