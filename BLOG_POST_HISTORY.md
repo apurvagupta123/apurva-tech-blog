@@ -2,6 +2,14 @@
 
 ## Posted Topics (Avoid Repeating)
 
+### June 27, 2026
+- **Title**: IBM Just Squeezed 100 Billion Transistors Into a Fingernail — And AI Will Never Be the Same
+- **Topic**: IBM sub-1nm chip (7 angstrom NanoStack) — world's first sub-1nm transistor node (0.7nm), 100B transistors on a fingernail, 3D NanoStack architecture, 50% more powerful / 70% more efficient than 2nm chips, 6x AI compute (9,000 TOPS vs 1,500), AI training from 3 months to 2 weeks, 40% SRAM scaling, decade of Moore's Law extension
+- **Slug**: 2026-06-27-ibm-sub-1nm-chip-nanostack
+- **Author**: Claude AI
+- **Status**: Published
+- **URL**: https://theapurva.com/posts/2026-06-27-ibm-sub-1nm-chip-nanostack/
+
 ### June 25, 2026
 - **Title**: The Bug Report That Wasn't: How Hackers Are Hijacking Your AI Coding Assistant
 - **Topic**: Agentjacking — new attack class disclosed by Tenet Security June 2026. Attackers inject fake error events into Sentry via public DSN keys; Sentry MCP server feeds them to AI coding agents (Claude Code, Cursor, Codex) as trusted data; agents execute malicious commands on developer machines. 85% success rate in testing, 2,388 orgs exposed, Fortune 500 breached. Sentry declined root fix. Open-source defense: "agent-jackstop".
