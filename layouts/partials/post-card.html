@@ -9,7 +9,7 @@
 
   <h2 class="post-title">{{ .Title }}</h2>
 
-  <p class="post-description">{{ .Description | default (substr .Content 0 200) }}</p>
+  <p class="post-description">{{ .Description | default (.Summary | plainify | truncate 200 "...") }}</p>
 
   {{ if .Params.Tags }}
     <div class="post-tags">
