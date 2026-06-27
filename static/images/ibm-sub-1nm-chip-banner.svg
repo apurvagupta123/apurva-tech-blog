@@ -1,12 +1,8 @@
 <svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0a0a1a;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#0d1530;stop-opacity:1" />
-    </linearGradient>
-    <linearGradient id="chipGlow" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:0.9" />
-      <stop offset="100%" style="stop-color:#0066cc;stop-opacity:0.7" />
+      <stop offset="0%" style="stop-color:#08081a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0b1428;stop-opacity:1" />
     </linearGradient>
     <linearGradient id="accentLine" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:0" />
@@ -16,185 +12,160 @@
     </linearGradient>
     <filter id="glow">
       <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
     <filter id="softGlow">
-      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+      <feGaussianBlur stdDeviation="12" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
   </defs>
 
   <!-- Background -->
   <rect width="1200" height="630" fill="url(#bg)"/>
 
-  <!-- Subtle grid pattern -->
-  <g opacity="0.07">
-    <line x1="0" y1="0" x2="0" y2="630" stroke="#00d4ff" stroke-width="0.5"/>
-    <line x1="100" y1="0" x2="100" y2="630" stroke="#00d4ff" stroke-width="0.5"/>
-    <line x1="200" y1="0" x2="200" y2="630" stroke="#00d4ff" stroke-width="0.5"/>
-    <line x1="300" y1="0" x2="300" y2="630" stroke="#00d4ff" stroke-width="0.5"/>
-    <line x1="400" y1="0" x2="400" y2="630" stroke="#00d4ff" stroke-width="0.5"/>
-    <line x1="500" y1="0" x2="500" y2="630" stroke="#00d4ff" stroke-width="0.5"/>
-    <line x1="600" y1="0" x2="600" y2="630" stroke="#00d4ff" stroke-width="0.5"/>
-    <line x1="700" y1="0" x2="700" y2="630" stroke="#00d4ff" stroke-width="0.5"/>
-    <line x1="800" y1="0" x2="800" y2="630" stroke="#00d4ff" stroke-width="0.5"/>
-    <line x1="900" y1="0" x2="900" y2="630" stroke="#00d4ff" stroke-width="0.5"/>
-    <line x1="1000" y1="0" x2="1000" y2="630" stroke="#00d4ff" stroke-width="0.5"/>
-    <line x1="1100" y1="0" x2="1100" y2="630" stroke="#00d4ff" stroke-width="0.5"/>
-    <line x1="0" y1="0" x2="1200" y2="0" stroke="#00d4ff" stroke-width="0.5"/>
-    <line x1="0" y1="70" x2="1200" y2="70" stroke="#00d4ff" stroke-width="0.5"/>
-    <line x1="0" y1="140" x2="1200" y2="140" stroke="#00d4ff" stroke-width="0.5"/>
-    <line x1="0" y1="210" x2="1200" y2="210" stroke="#00d4ff" stroke-width="0.5"/>
-    <line x1="0" y1="280" x2="1200" y2="280" stroke="#00d4ff" stroke-width="0.5"/>
-    <line x1="0" y1="350" x2="1200" y2="350" stroke="#00d4ff" stroke-width="0.5"/>
-    <line x1="0" y1="420" x2="1200" y2="420" stroke="#00d4ff" stroke-width="0.5"/>
-    <line x1="0" y1="490" x2="1200" y2="490" stroke="#00d4ff" stroke-width="0.5"/>
-    <line x1="0" y1="560" x2="1200" y2="560" stroke="#00d4ff" stroke-width="0.5"/>
-    <line x1="0" y1="630" x2="1200" y2="630" stroke="#00d4ff" stroke-width="0.5"/>
+  <!-- Subtle grid -->
+  <g opacity="0.05" stroke="#00d4ff" stroke-width="0.5">
+    <line x1="0" y1="90" x2="1200" y2="90"/>
+    <line x1="0" y1="180" x2="1200" y2="180"/>
+    <line x1="0" y1="270" x2="1200" y2="270"/>
+    <line x1="0" y1="360" x2="1200" y2="360"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+    <line x1="0" y1="540" x2="1200" y2="540"/>
+    <line x1="150" y1="0" x2="150" y2="630"/>
+    <line x1="300" y1="0" x2="300" y2="630"/>
+    <line x1="450" y1="0" x2="450" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="750" y1="0" x2="750" y2="630"/>
+    <line x1="900" y1="0" x2="900" y2="630"/>
+    <line x1="1050" y1="0" x2="1050" y2="630"/>
   </g>
 
-  <!-- Chip diagram on the right -->
-  <g transform="translate(820, 170)">
-    <!-- Outer chip body -->
-    <rect x="0" y="0" width="300" height="300" rx="8" ry="8" fill="#0a1a30" stroke="#00d4ff" stroke-width="2" opacity="0.9"/>
-    <!-- Inner chip surface -->
-    <rect x="40" y="40" width="220" height="220" rx="4" ry="4" fill="#061020" stroke="#0066cc" stroke-width="1.5"/>
+  <!-- Glow orb behind chip -->
+  <circle cx="960" cy="300" r="220" fill="#001a66" opacity="0.15" filter="url(#softGlow)"/>
 
-    <!-- Nanostack layers (3D stacking effect) -->
-    <g transform="translate(60,60)">
-      <!-- Layer 3 (top) -->
-      <rect x="10" y="0" width="160" height="48" rx="3" fill="#003366" stroke="#00d4ff" stroke-width="1.5" opacity="0.9" filter="url(#glow)"/>
-      <text x="80" y="20" text-anchor="middle" fill="#00d4ff" font-family="monospace" font-size="10" font-weight="bold">PFET CHANNEL</text>
-      <text x="80" y="36" text-anchor="middle" fill="#5599ff" font-family="monospace" font-size="9">optimized gate stack</text>
+  <!-- Chip diagram -->
+  <g transform="translate(795, 148)">
+    <rect x="0" y="0" width="310" height="310" rx="8" fill="#080e1e" stroke="#00d4ff" stroke-width="1.5" opacity="0.95"/>
+    <rect x="38" y="38" width="234" height="234" rx="4" fill="#040810" stroke="#0044aa" stroke-width="1"/>
 
-      <!-- Layer 2 (middle) -->
-      <rect x="10" y="56" width="160" height="48" rx="3" fill="#001a44" stroke="#3399ff" stroke-width="1.5" opacity="0.85"/>
-      <text x="80" y="76" text-anchor="middle" fill="#66aaff" font-family="monospace" font-size="10" font-weight="bold">NFET CHANNEL</text>
-      <text x="80" y="92" text-anchor="middle" fill="#5599ff" font-family="monospace" font-size="9">independent channel</text>
+    <!-- NanoStack layers -->
+    <g transform="translate(58,70)">
+      <rect x="0" y="0" width="174" height="48" rx="3" fill="#002255" stroke="#00d4ff" stroke-width="1.5" filter="url(#glow)"/>
+      <text x="87" y="19" text-anchor="middle" fill="#00d4ff" font-family="monospace" font-size="10" font-weight="bold">PFET CHANNEL</text>
+      <text x="87" y="33" text-anchor="middle" fill="#4488cc" font-family="monospace" font-size="9">floor 3 (the penthouse)</text>
 
-      <!-- Layer 1 (bottom) -->
-      <rect x="10" y="112" width="160" height="48" rx="3" fill="#001030" stroke="#2277cc" stroke-width="1.5" opacity="0.8"/>
-      <text x="80" y="132" text-anchor="middle" fill="#4488cc" font-family="monospace" font-size="10" font-weight="bold">BONDED WAFER</text>
-      <text x="80" y="148" text-anchor="middle" fill="#3366aa" font-family="monospace" font-size="9">ultra-thin dielectric</text>
+      <rect x="0" y="56" width="174" height="48" rx="3" fill="#001540" stroke="#3399ff" stroke-width="1.5"/>
+      <text x="87" y="75" text-anchor="middle" fill="#66aaff" font-family="monospace" font-size="10" font-weight="bold">NFET CHANNEL</text>
+      <text x="87" y="89" text-anchor="middle" fill="#3366aa" font-family="monospace" font-size="9">floor 2 (no elevator)</text>
 
-      <!-- Stack connector lines -->
-      <line x1="10" y1="48" x2="10" y2="56" stroke="#00d4ff" stroke-width="1.5" opacity="0.7"/>
-      <line x1="170" y1="48" x2="170" y2="56" stroke="#00d4ff" stroke-width="1.5" opacity="0.7"/>
-      <line x1="10" y1="104" x2="10" y2="112" stroke="#3399ff" stroke-width="1.5" opacity="0.7"/>
-      <line x1="170" y1="104" x2="170" y2="112" stroke="#3399ff" stroke-width="1.5" opacity="0.7"/>
+      <rect x="0" y="112" width="174" height="48" rx="3" fill="#000d2a" stroke="#1155aa" stroke-width="1.5"/>
+      <text x="87" y="131" text-anchor="middle" fill="#3377aa" font-family="monospace" font-size="10" font-weight="bold">BONDED WAFER</text>
+      <text x="87" y="145" text-anchor="middle" fill="#224466" font-family="monospace" font-size="9">floor 1 (load-bearing)</text>
 
-      <!-- Label -->
-      <text x="80" y="180" text-anchor="middle" fill="#00d4ff" font-family="Arial" font-size="12" font-weight="bold" filter="url(#glow)">NANOSTACK™</text>
-      <text x="80" y="196" text-anchor="middle" fill="#5599ff" font-family="monospace" font-size="10">3D Transistor Architecture</text>
+      <line x1="0" y1="48" x2="0" y2="56" stroke="#00d4ff" stroke-width="1.5" opacity="0.6"/>
+      <line x1="174" y1="48" x2="174" y2="56" stroke="#00d4ff" stroke-width="1.5" opacity="0.6"/>
+      <line x1="0" y1="104" x2="0" y2="112" stroke="#3399ff" stroke-width="1.5" opacity="0.6"/>
+      <line x1="174" y1="104" x2="174" y2="112" stroke="#3399ff" stroke-width="1.5" opacity="0.6"/>
+
+      <text x="87" y="182" text-anchor="middle" fill="#00d4ff" font-family="Arial" font-size="11" font-weight="bold" filter="url(#glow)">NANOSTACK™</text>
+      <text x="87" y="197" text-anchor="middle" fill="#446688" font-family="monospace" font-size="9">it's a skyscraper. for atoms.</text>
     </g>
 
-    <!-- Chip pins left -->
-    <g fill="#00d4ff" opacity="0.7">
-      <rect x="-12" y="70" width="12" height="8" rx="2"/>
-      <rect x="-12" y="90" width="12" height="8" rx="2"/>
-      <rect x="-12" y="110" width="12" height="8" rx="2"/>
-      <rect x="-12" y="130" width="12" height="8" rx="2"/>
-      <rect x="-12" y="150" width="12" height="8" rx="2"/>
-      <rect x="-12" y="170" width="12" height="8" rx="2"/>
-      <rect x="-12" y="190" width="12" height="8" rx="2"/>
-      <rect x="-12" y="210" width="12" height="8" rx="2"/>
-    </g>
-    <!-- Chip pins right -->
-    <g fill="#00d4ff" opacity="0.7">
-      <rect x="300" y="70" width="12" height="8" rx="2"/>
-      <rect x="300" y="90" width="12" height="8" rx="2"/>
-      <rect x="300" y="110" width="12" height="8" rx="2"/>
-      <rect x="300" y="130" width="12" height="8" rx="2"/>
-      <rect x="300" y="150" width="12" height="8" rx="2"/>
-      <rect x="300" y="170" width="12" height="8" rx="2"/>
-      <rect x="300" y="190" width="12" height="8" rx="2"/>
-      <rect x="300" y="210" width="12" height="8" rx="2"/>
-    </g>
-    <!-- Chip pins top -->
-    <g fill="#00d4ff" opacity="0.7">
-      <rect x="70" y="-12" width="8" height="12" rx="2"/>
-      <rect x="100" y="-12" width="8" height="12" rx="2"/>
-      <rect x="130" y="-12" width="8" height="12" rx="2"/>
-      <rect x="160" y="-12" width="8" height="12" rx="2"/>
-      <rect x="190" y="-12" width="8" height="12" rx="2"/>
-      <rect x="220" y="-12" width="8" height="12" rx="2"/>
-    </g>
-    <!-- Chip pins bottom -->
-    <g fill="#00d4ff" opacity="0.7">
-      <rect x="70" y="300" width="8" height="12" rx="2"/>
-      <rect x="100" y="300" width="8" height="12" rx="2"/>
-      <rect x="130" y="300" width="8" height="12" rx="2"/>
-      <rect x="160" y="300" width="8" height="12" rx="2"/>
-      <rect x="190" y="300" width="8" height="12" rx="2"/>
-      <rect x="220" y="300" width="8" height="12" rx="2"/>
+    <!-- Chip pins -->
+    <g fill="#00d4ff" opacity="0.6">
+      <rect x="-14" y="75" width="14" height="7" rx="2"/>
+      <rect x="-14" y="97" width="14" height="7" rx="2"/>
+      <rect x="-14" y="119" width="14" height="7" rx="2"/>
+      <rect x="-14" y="141" width="14" height="7" rx="2"/>
+      <rect x="-14" y="163" width="14" height="7" rx="2"/>
+      <rect x="-14" y="185" width="14" height="7" rx="2"/>
+      <rect x="-14" y="207" width="14" height="7" rx="2"/>
+      <rect x="310" y="75" width="14" height="7" rx="2"/>
+      <rect x="310" y="97" width="14" height="7" rx="2"/>
+      <rect x="310" y="119" width="14" height="7" rx="2"/>
+      <rect x="310" y="141" width="14" height="7" rx="2"/>
+      <rect x="310" y="163" width="14" height="7" rx="2"/>
+      <rect x="310" y="185" width="14" height="7" rx="2"/>
+      <rect x="310" y="207" width="14" height="7" rx="2"/>
+      <rect x="75" y="-14" width="7" height="14" rx="2"/>
+      <rect x="107" y="-14" width="7" height="14" rx="2"/>
+      <rect x="139" y="-14" width="7" height="14" rx="2"/>
+      <rect x="171" y="-14" width="7" height="14" rx="2"/>
+      <rect x="203" y="-14" width="7" height="14" rx="2"/>
+      <rect x="75" y="310" width="7" height="14" rx="2"/>
+      <rect x="107" y="310" width="7" height="14" rx="2"/>
+      <rect x="139" y="310" width="7" height="14" rx="2"/>
+      <rect x="171" y="310" width="7" height="14" rx="2"/>
+      <rect x="203" y="310" width="7" height="14" rx="2"/>
     </g>
 
-    <!-- IBM label on chip -->
-    <text x="150" y="280" text-anchor="middle" fill="#003399" font-family="Arial" font-size="18" font-weight="bold" opacity="0.5">IBM</text>
+    <!-- Meme callout corner -->
+    <text x="155" y="292" text-anchor="middle" fill="#003366" font-family="monospace" font-size="11" font-weight="bold">physics: 💀</text>
   </g>
-
-  <!-- Glowing orb behind chip -->
-  <circle cx="970" cy="315" r="200" fill="#003399" opacity="0.08" filter="url(#softGlow)"/>
 
   <!-- Top accent line -->
   <rect x="0" y="0" width="1200" height="4" fill="url(#accentLine)"/>
   <!-- Bottom accent line -->
   <rect x="0" y="626" width="1200" height="4" fill="url(#accentLine)"/>
 
-  <!-- IBM Badge -->
-  <rect x="60" y="52" width="88" height="32" rx="4" fill="#0530ad" opacity="0.9"/>
-  <text x="104" y="73" text-anchor="middle" fill="white" font-family="Arial" font-size="18" font-weight="bold" letter-spacing="3">IBM</text>
+  <!-- IBM badge -->
+  <rect x="60" y="50" width="90" height="34" rx="5" fill="#0530ad" opacity="0.95"/>
+  <text x="105" y="73" text-anchor="middle" fill="white" font-family="Arial" font-size="19" font-weight="bold" letter-spacing="3">IBM</text>
 
-  <!-- Tag line -->
-  <text x="60" y="115" fill="#00d4ff" font-family="Arial" font-size="14" font-weight="600" letter-spacing="4" opacity="0.8">HARDWARE BREAKTHROUGH</text>
+  <!-- Category tag -->
+  <text x="60" y="118" fill="#00d4ff" font-family="Arial" font-size="13" font-weight="700" letter-spacing="4" opacity="0.8">HARDWARE BREAKTHROUGH</text>
 
   <!-- Main headline -->
-  <text x="60" y="190" fill="white" font-family="Arial" font-size="46" font-weight="900" letter-spacing="-1">The World's Smallest</text>
-  <text x="60" y="248" fill="#00d4ff" font-family="Arial" font-size="46" font-weight="900" letter-spacing="-1" filter="url(#glow)">Chip Just Changed AI</text>
+  <text x="60" y="195" fill="white" font-family="Arial" font-size="48" font-weight="900" letter-spacing="-1">The World's Smallest</text>
+  <text x="60" y="253" fill="#00d4ff" font-family="Arial" font-size="48" font-weight="900" letter-spacing="-1" filter="url(#glow)">Chip Just Changed AI</text>
 
-  <!-- Accent divider -->
-  <rect x="60" y="270" width="300" height="3" fill="url(#accentLine)" opacity="0.8"/>
+  <!-- FUNNY TAGLINE -->
+  <text x="62" y="284" fill="#5599bb" font-family="Arial" font-size="17" font-style="italic">( your DNA called — it's nervous )</text>
 
-  <!-- Subtitle -->
-  <text x="60" y="310" fill="#aabbcc" font-family="Arial" font-size="18">IBM's 7 Angstrom NanoStack — a new era</text>
-  <text x="60" y="336" fill="#aabbcc" font-family="Arial" font-size="18">of computing begins at the sub-1nm frontier</text>
+  <!-- Divider -->
+  <rect x="60" y="302" width="280" height="2.5" fill="url(#accentLine)" opacity="0.7"/>
 
-  <!-- Stats row -->
+  <!-- Stat boxes row -->
   <!-- Stat 1 -->
-  <rect x="60" y="374" width="168" height="88" rx="8" fill="#001a3a" stroke="#00d4ff" stroke-width="1" opacity="0.9"/>
-  <text x="144" y="406" text-anchor="middle" fill="#00d4ff" font-family="Arial" font-size="28" font-weight="900" filter="url(#glow)">100B</text>
-  <text x="144" y="428" text-anchor="middle" fill="#7799bb" font-family="Arial" font-size="12">transistors per chip</text>
-  <text x="144" y="450" text-anchor="middle" fill="#445566" font-family="Arial" font-size="11">fingernail-sized</text>
+  <rect x="60" y="322" width="158" height="96" rx="8" fill="#001428" stroke="#00d4ff" stroke-width="1" opacity="0.9"/>
+  <text x="139" y="356" text-anchor="middle" fill="#00d4ff" font-family="Arial" font-size="30" font-weight="900" filter="url(#glow)">100B</text>
+  <text x="139" y="374" text-anchor="middle" fill="#7799bb" font-family="Arial" font-size="11">transistors per chip</text>
+  <text x="139" y="390" text-anchor="middle" fill="#334455" font-family="Arial" font-size="10" font-style="italic">(yes, billion. billion.)</text>
+  <text x="139" y="407" text-anchor="middle" fill="#223344" font-family="Arial" font-size="10">on a fingernail</text>
 
   <!-- Stat 2 -->
-  <rect x="244" y="374" width="168" height="88" rx="8" fill="#001a3a" stroke="#0066cc" stroke-width="1" opacity="0.9"/>
-  <text x="328" y="406" text-anchor="middle" fill="#3399ff" font-family="Arial" font-size="28" font-weight="900">0.7nm</text>
-  <text x="328" y="428" text-anchor="middle" fill="#7799bb" font-family="Arial" font-size="12">transistor node size</text>
-  <text x="328" y="450" text-anchor="middle" fill="#445566" font-family="Arial" font-size="11">7 angstroms wide</text>
+  <rect x="230" y="322" width="158" height="96" rx="8" fill="#001428" stroke="#0066cc" stroke-width="1" opacity="0.9"/>
+  <text x="309" y="356" text-anchor="middle" fill="#3399ff" font-family="Arial" font-size="30" font-weight="900">0.7nm</text>
+  <text x="309" y="374" text-anchor="middle" fill="#7799bb" font-family="Arial" font-size="11">transistor node</text>
+  <text x="309" y="390" text-anchor="middle" fill="#334455" font-family="Arial" font-size="10" font-style="italic">(DNA is 2nm. lol.)</text>
+  <text x="309" y="407" text-anchor="middle" fill="#223344" font-family="Arial" font-size="10">7 angstroms wide</text>
 
   <!-- Stat 3 -->
-  <rect x="428" y="374" width="168" height="88" rx="8" fill="#001a3a" stroke="#0044aa" stroke-width="1" opacity="0.9"/>
-  <text x="512" y="406" text-anchor="middle" fill="#5588ee" font-family="Arial" font-size="28" font-weight="900">6×</text>
-  <text x="512" y="428" text-anchor="middle" fill="#7799bb" font-family="Arial" font-size="12">more AI compute</text>
-  <text x="512" y="450" text-anchor="middle" fill="#445566" font-family="Arial" font-size="11">9,000 vs 1,500 TOPS</text>
+  <rect x="400" y="322" width="158" height="96" rx="8" fill="#001428" stroke="#0044aa" stroke-width="1" opacity="0.9"/>
+  <text x="479" y="356" text-anchor="middle" fill="#5588ee" font-family="Arial" font-size="30" font-weight="900">6×</text>
+  <text x="479" y="374" text-anchor="middle" fill="#7799bb" font-family="Arial" font-size="11">more AI compute</text>
+  <text x="479" y="390" text-anchor="middle" fill="#334455" font-family="Arial" font-size="10" font-style="italic">(Jensen, you there?)</text>
+  <text x="479" y="407" text-anchor="middle" fill="#223344" font-family="Arial" font-size="10">9,000 vs 1,500 TOPS</text>
 
   <!-- Stat 4 -->
-  <rect x="612" y="374" width="168" height="88" rx="8" fill="#001a3a" stroke="#003388" stroke-width="1" opacity="0.9"/>
-  <text x="696" y="406" text-anchor="middle" fill="#4477cc" font-family="Arial" font-size="28" font-weight="900">70%</text>
-  <text x="696" y="428" text-anchor="middle" fill="#7799bb" font-family="Arial" font-size="12">lower power usage</text>
-  <text x="696" y="450" text-anchor="middle" fill="#445566" font-family="Arial" font-size="11">vs. 2nm chips</text>
+  <rect x="570" y="322" width="158" height="96" rx="8" fill="#001428" stroke="#003388" stroke-width="1" opacity="0.9"/>
+  <text x="649" y="356" text-anchor="middle" fill="#4477cc" font-family="Arial" font-size="30" font-weight="900">70%</text>
+  <text x="649" y="374" text-anchor="middle" fill="#7799bb" font-family="Arial" font-size="11">less power</text>
+  <text x="649" y="390" text-anchor="middle" fill="#334455" font-family="Arial" font-size="10" font-style="italic">(charger is relieved)</text>
+  <text x="649" y="407" text-anchor="middle" fill="#223344" font-family="Arial" font-size="10">vs. 2nm chips</text>
 
-  <!-- Bottom tag -->
-  <text x="60" y="536" fill="#334455" font-family="Arial" font-size="13" letter-spacing="2">theapurva.com</text>
-  <text x="60" y="558" fill="#223344" font-family="Arial" font-size="12">June 27, 2026 · by Claude AI</text>
+  <!-- Moore's Law callout -->
+  <rect x="60" y="435" width="340" height="38" rx="6" fill="#001020" stroke="#003355" stroke-width="1" opacity="0.8"/>
+  <text x="80" y="449" fill="#336688" font-family="monospace" font-size="11">Moore's Law status:</text>
+  <text x="80" y="464" fill="#00d4ff" font-family="monospace" font-size="11" font-weight="bold">✅ Still alive (barely) · engineers 1 — physics 0</text>
 
-  <!-- Moore's Law note -->
-  <text x="60" y="596" fill="#223344" font-family="Arial" font-size="13" font-style="italic">"At least a decade of future silicon scaling ahead" — IBM Research</text>
+  <!-- Bottom bar -->
+  <text x="60" y="530" fill="#1a2a3a" font-family="Arial" font-size="12" letter-spacing="2">theapurva.com · by Claude AI · June 27, 2026</text>
+
+  <!-- Funny footnote -->
+  <text x="60" y="558" fill="#182030" font-family="monospace" font-size="11" font-style="italic">"No transistors were harmed in the making of this chip. Probably."</text>
+
+  <!-- Elon quote snippet -->
+  <text x="60" y="590" fill="#1a2535" font-family="monospace" font-size="10">@elonmusk: "we should name nodes by atom count" — yes elon, noted, thank you</text>
 
 </svg>
