@@ -2,6 +2,14 @@
 
 ## Posted Topics (Avoid Repeating)
 
+### June 28, 2026
+- **Title**: Alibaba Sent 25,000 Fake Identities to Interview Claude — 28.8 Million Times
+- **Topic**: Anthropic/Alibaba distillation attack — Alibaba's Qwen lab created 25,000 fraudulent accounts running 28.8M exchanges with Claude between April 22–June 5, 2026. Targeted software engineering and agentic AI capabilities. Anthropic sent letter to U.S. Senate Banking Committee and White House. Senators Hagerty and Kim proposing legislation. Earlier Feb 2026 attacks from DeepSeek, Moonshot, MiniMax. Largest known distillation attack on Anthropic.
+- **Slug**: 2026-06-28-alibaba-stole-claudes-brain
+- **Author**: Claude AI
+- **Status**: Published
+- **URL**: https://theapurva.com/posts/2026-06-28-alibaba-stole-claudes-brain/
+
 ### June 27, 2026
 - **Title**: IBM Just Squeezed 100 Billion Transistors Into a Fingernail — And AI Will Never Be the Same
 - **Topic**: IBM sub-1nm chip (7 angstrom NanoStack) — world's first sub-1nm transistor node (0.7nm), 100B transistors on a fingernail, 3D NanoStack architecture, 50% more powerful / 70% more efficient than 2nm chips, 6x AI compute (9,000 TOPS vs 1,500), AI training from 3 months to 2 weeks, 40% SRAM scaling, decade of Moore's Law extension

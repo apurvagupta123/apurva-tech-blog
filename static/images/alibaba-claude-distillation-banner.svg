@@ -1,0 +1,142 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" width="1200" height="630">
+  <defs>
+    <radialGradient id="bg" cx="30%" cy="50%" r="80%">
+      <stop offset="0%" stop-color="#0d1b3e"/>
+      <stop offset="60%" stop-color="#080f1f"/>
+      <stop offset="100%" stop-color="#020508"/>
+    </radialGradient>
+    <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f97316" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#f97316" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow-filter">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="text-glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Glow blobs -->
+  <ellipse cx="200" cy="315" rx="350" ry="280" fill="url(#glow1)"/>
+  <ellipse cx="950" cy="300" rx="300" ry="250" fill="url(#glow2)"/>
+
+  <!-- Grid lines (subtle) -->
+  <g stroke="#1e3a5f" stroke-width="0.5" opacity="0.3">
+    <line x1="0" y1="105" x2="1200" y2="105"/>
+    <line x1="0" y1="210" x2="1200" y2="210"/>
+    <line x1="0" y1="315" x2="1200" y2="315"/>
+    <line x1="0" y1="420" x2="1200" y2="420"/>
+    <line x1="0" y1="525" x2="1200" y2="525"/>
+    <line x1="200" y1="0" x2="200" y2="630"/>
+    <line x1="400" y1="0" x2="400" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="800" y1="0" x2="800" y2="630"/>
+    <line x1="1000" y1="0" x2="1000" y2="630"/>
+  </g>
+
+  <!-- Left side: Main text content -->
+  <!-- Tag pill -->
+  <rect x="40" y="48" width="220" height="36" rx="18" fill="#7c3aed" opacity="0.9"/>
+  <text x="150" y="71" font-family="'Helvetica Neue', Arial, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="600" letter-spacing="1.5">🚨 AI SECURITY ALERT</text>
+
+  <!-- Main headline -->
+  <text x="40" y="150" font-family="'Helvetica Neue', Arial, sans-serif" font-size="52" fill="white" font-weight="800" filter="url(#text-glow)">Alibaba Sent</text>
+  <text x="40" y="215" font-family="'Helvetica Neue', Arial, sans-serif" font-size="52" fill="white" font-weight="800">25,000 Fake Accounts</text>
+  <text x="40" y="280" font-family="'Helvetica Neue', Arial, sans-serif" font-size="52" fill="white" font-weight="800">to Copy Claude.</text>
+
+  <!-- Funny tagline -->
+  <text x="40" y="323" font-family="'Helvetica Neue', Arial, sans-serif" font-size="20" fill="#f97316" font-style="italic" font-weight="500">28.8 million times. your homework wasn't this thorough.</text>
+
+  <!-- Divider -->
+  <line x1="40" y1="348" x2="650" y2="348" stroke="#7c3aed" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- Stat boxes row -->
+  <!-- Stat 1 -->
+  <rect x="40" y="368" width="185" height="110" rx="12" fill="#0d1b3e" stroke="#7c3aed" stroke-width="1.5" opacity="0.95"/>
+  <text x="133" y="402" font-family="'Helvetica Neue', Arial, sans-serif" font-size="36" fill="#a78bfa" font-weight="800" text-anchor="middle" filter="url(#glow-filter)">25K</text>
+  <text x="133" y="426" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">Fake Accounts</text>
+  <text x="133" y="446" font-family="'Helvetica Neue', Arial, sans-serif" font-size="10" fill="#f97316" text-anchor="middle" font-style="italic">(all paid with fake cards)</text>
+  <text x="133" y="466" font-family="'Helvetica Neue', Arial, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">none named "Alibaba"</text>
+
+  <!-- Stat 2 -->
+  <rect x="240" y="368" width="185" height="110" rx="12" fill="#0d1b3e" stroke="#f97316" stroke-width="1.5" opacity="0.95"/>
+  <text x="333" y="402" font-family="'Helvetica Neue', Arial, sans-serif" font-size="36" fill="#fb923c" font-weight="800" text-anchor="middle" filter="url(#glow-filter)">28.8M</text>
+  <text x="333" y="426" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">Claude Exchanges</text>
+  <text x="333" y="446" font-family="'Helvetica Neue', Arial, sans-serif" font-size="10" fill="#f97316" text-anchor="middle" font-style="italic">(your therapist is jealous)</text>
+  <text x="333" y="466" font-family="'Helvetica Neue', Arial, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">≈ 547 years of chatting</text>
+
+  <!-- Stat 3 -->
+  <rect x="440" y="368" width="185" height="110" rx="12" fill="#0d1b3e" stroke="#06b6d4" stroke-width="1.5" opacity="0.95"/>
+  <text x="533" y="400" font-family="'Helvetica Neue', Arial, sans-serif" font-size="28" fill="#67e8f9" font-weight="800" text-anchor="middle" filter="url(#glow-filter)">45 DAYS</text>
+  <text x="533" y="424" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">Apr 22 — Jun 5</text>
+  <text x="533" y="444" font-family="'Helvetica Neue', Arial, sans-serif" font-size="10" fill="#f97316" text-anchor="middle" font-style="italic">(6 weeks of homework)</text>
+  <text x="533" y="464" font-family="'Helvetica Neue', Arial, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">targeted: code + agents</text>
+
+  <!-- Bottom text -->
+  <text x="40" y="515" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#94a3b8">Anthropic wrote to the U.S. Senate. The lawyers are eating <tspan fill="#f97316" font-weight="600">very</tspan> well.</text>
+
+  <!-- Meme corner callout -->
+  <rect x="40" y="538" width="280" height="32" rx="8" fill="#1e1b4b" opacity="0.8"/>
+  <text x="180" y="558" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#a78bfa" text-anchor="middle">AI Cold War: now with receipts 🧾</text>
+
+  <!-- Right side: Visual element — spy/heist graphic -->
+  <!-- Stylized "brain theft" visual: a lock being picked with code streams -->
+  <!-- Brain/Claude icon circle -->
+  <circle cx="960" cy="220" r="120" fill="none" stroke="#7c3aed" stroke-width="2" opacity="0.6"/>
+  <circle cx="960" cy="220" r="100" fill="#0d1b3e" stroke="#a78bfa" stroke-width="3" opacity="0.9"/>
+
+  <!-- C for Claude -->
+  <text x="960" y="245" font-family="'Helvetica Neue', Arial, sans-serif" font-size="90" fill="#a78bfa" font-weight="900" text-anchor="middle" filter="url(#text-glow)">C</text>
+  <text x="960" y="180" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#94a3b8" text-anchor="middle" letter-spacing="2">CLAUDE AI</text>
+
+  <!-- Orbiting fake account dots -->
+  <circle cx="960" cy="85" r="8" fill="#ef4444" opacity="0.9"/>
+  <circle cx="1075" cy="145" r="6" fill="#ef4444" opacity="0.7"/>
+  <circle cx="1090" cy="270" r="9" fill="#ef4444" opacity="0.8"/>
+  <circle cx="1015" cy="360" r="7" fill="#ef4444" opacity="0.6"/>
+  <circle cx="845" cy="340" r="8" fill="#ef4444" opacity="0.9"/>
+  <circle cx="840" cy="155" r="6" fill="#ef4444" opacity="0.7"/>
+  <circle cx="905" cy="78" r="5" fill="#ef4444" opacity="0.8"/>
+
+  <!-- Orbit ring (dashed) -->
+  <circle cx="960" cy="220" r="150" fill="none" stroke="#ef4444" stroke-width="1" stroke-dasharray="8 6" opacity="0.4"/>
+
+  <!-- Arrow lines from dots to center (incoming queries) -->
+  <line x1="960" y1="93" x2="960" y2="119" stroke="#ef4444" stroke-width="1.5" opacity="0.6"/>
+  <line x1="1069" y1="151" x2="1045" y2="164" stroke="#ef4444" stroke-width="1.5" opacity="0.5"/>
+  <line x1="848" y1="156" x2="878" y2="168" stroke="#ef4444" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- Qwen label below (receiving stolen data) -->
+  <rect x="880" y="380" width="160" height="50" rx="10" fill="#1a0505" stroke="#ef4444" stroke-width="2" opacity="0.9"/>
+  <text x="960" y="400" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">stolen outputs go to</text>
+  <text x="960" y="420" font-family="'Helvetica Neue', Arial, sans-serif" font-size="16" fill="#ef4444" font-weight="800" text-anchor="middle">QWEN ↓</text>
+
+  <!-- Data stream line from Claude to Qwen -->
+  <line x1="960" y1="320" x2="960" y2="378" stroke="#ef4444" stroke-width="2" stroke-dasharray="5 4" opacity="0.7"/>
+
+  <!-- Legend for red dots -->
+  <circle cx="840" cy="475" r="5" fill="#ef4444" opacity="0.9"/>
+  <text x="852" y="479" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#94a3b8">= 1 of 25,000 fake accounts</text>
+
+  <!-- Funny footnote bottom right -->
+  <text x="1160" y="610" font-family="'Helvetica Neue', Arial, sans-serif" font-size="10" fill="#334155" text-anchor="end" font-style="italic">No real Claude accounts were harmed. Fake ones: all banned.</text>
+
+  <!-- Author line bottom left -->
+  <text x="40" y="615" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#475569">theapurva.com · by Claude AI</text>
+</svg>
