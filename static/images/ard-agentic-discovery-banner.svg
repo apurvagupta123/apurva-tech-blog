@@ -1,0 +1,148 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0e1a"/>
+      <stop offset="50%" style="stop-color:#0d1426"/>
+      <stop offset="100%" style="stop-color:#080c18"/>
+    </linearGradient>
+    <linearGradient id="glow1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a6aff;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#00c8ff;stop-opacity:0"/>
+    </linearGradient>
+    <linearGradient id="glow2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6c00ff;stop-opacity:0.2"/>
+      <stop offset="100%" style="stop-color:#ff00aa;stop-opacity:0.1"/>
+    </linearGradient>
+    <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#1a6aff;stop-opacity:0.12"/>
+      <stop offset="100%" style="stop-color:#0a0e1a;stop-opacity:0"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#centerGlow)"/>
+  <ellipse cx="200" cy="200" rx="350" ry="250" fill="url(#glow1)" opacity="0.8"/>
+  <ellipse cx="1050" cy="430" rx="300" ry="220" fill="url(#glow2)" opacity="0.7"/>
+
+  <!-- Subtle grid lines -->
+  <g opacity="0.04" stroke="#4488ff" stroke-width="0.5">
+    <line x1="0" y1="105" x2="1200" y2="105"/>
+    <line x1="0" y1="210" x2="1200" y2="210"/>
+    <line x1="0" y1="315" x2="1200" y2="315"/>
+    <line x1="0" y1="420" x2="1200" y2="420"/>
+    <line x1="0" y1="525" x2="1200" y2="525"/>
+    <line x1="200" y1="0" x2="200" y2="630"/>
+    <line x1="400" y1="0" x2="400" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="800" y1="0" x2="800" y2="630"/>
+    <line x1="1000" y1="0" x2="1000" y2="630"/>
+  </g>
+
+  <!-- Left content area -->
+  <!-- ARD label -->
+  <rect x="52" y="52" width="90" height="32" rx="6" fill="#1a6aff" opacity="0.2"/>
+  <rect x="52" y="52" width="90" height="32" rx="6" fill="none" stroke="#1a6aff" stroke-width="1" opacity="0.6"/>
+  <text x="97" y="73" font-family="'Courier New', monospace" font-size="13" fill="#4da6ff" text-anchor="middle" font-weight="bold">ARD SPEC</text>
+
+  <!-- Main headline -->
+  <text x="52" y="145" font-family="'Arial Black', 'Arial', sans-serif" font-size="46" fill="#ffffff" font-weight="900" filter="url(#softGlow)">Big Tech Built a</text>
+  <text x="52" y="200" font-family="'Arial Black', 'Arial', sans-serif" font-size="46" fill="#ffffff" font-weight="900">Search Engine</text>
+  <text x="52" y="255" font-family="'Arial Black', 'Arial', sans-serif" font-size="46" fill="#1a9fff" font-weight="900" filter="url(#glow)">for AI Agents.</text>
+
+  <!-- Funny tagline -->
+  <text x="52" y="293" font-family="'Arial', sans-serif" font-size="18" fill="#ff6eb4" font-style="italic">OpenAI wasn't invited. Awkward.</text>
+
+  <!-- Divider -->
+  <line x1="52" y1="315" x2="620" y2="315" stroke="#1a6aff" stroke-width="1" opacity="0.4"/>
+
+  <!-- Stat boxes -->
+  <!-- Stat 1 -->
+  <rect x="52" y="335" width="165" height="90" rx="10" fill="#0d1a35" stroke="#1a6aff" stroke-width="1" opacity="0.9"/>
+  <text x="135" y="368" font-family="'Arial Black', 'Arial', sans-serif" font-size="30" fill="#1a9fff" text-anchor="middle" font-weight="900" filter="url(#glow)">11</text>
+  <text x="135" y="388" font-family="'Arial', sans-serif" font-size="12" fill="#8899bb" text-anchor="middle">launch partners</text>
+  <text x="135" y="408" font-family="'Arial', sans-serif" font-size="10" fill="#556677" text-anchor="middle" font-style="italic">(0 of them OpenAI)</text>
+
+  <!-- Stat 2 -->
+  <rect x="232" y="335" width="165" height="90" rx="10" fill="#0d1a35" stroke="#6c00ff" stroke-width="1" opacity="0.9"/>
+  <text x="315" y="368" font-family="'Arial Black', 'Arial', sans-serif" font-size="30" fill="#aa55ff" text-anchor="middle" font-weight="900" filter="url(#glow)">40</text>
+  <text x="315" y="388" font-family="'Arial', sans-serif" font-size="12" fill="#8899bb" text-anchor="middle">lines of Python</text>
+  <text x="315" y="408" font-family="'Arial', sans-serif" font-size="10" fill="#556677" text-anchor="middle" font-style="italic">(yes, seriously)</text>
+
+  <!-- Stat 3 -->
+  <rect x="412" y="335" width="190" height="90" rx="10" fill="#0d1a35" stroke="#00c8ff" stroke-width="1" opacity="0.9"/>
+  <text x="507" y="368" font-family="'Arial Black', 'Arial', sans-serif" font-size="24" fill="#00c8ff" text-anchor="middle" font-weight="900" filter="url(#glow)">ai-catalog</text>
+  <text x="507" y="388" font-family="'Courier New', monospace" font-size="11" fill="#8899bb" text-anchor="middle">.json on your domain</text>
+  <text x="507" y="408" font-family="'Arial', sans-serif" font-size="10" fill="#556677" text-anchor="middle" font-style="italic">(like robots.txt but cooler)</text>
+
+  <!-- Bottom company logos text -->
+  <text x="52" y="460" font-family="'Arial', sans-serif" font-size="12" fill="#445566">BACKED BY:</text>
+  <text x="52" y="480" font-family="'Arial', sans-serif" font-size="13" fill="#6688aa">Google · Microsoft · GitHub · NVIDIA · Salesforce · Hugging Face + 5 more</text>
+
+  <!-- Author line -->
+  <text x="52" y="510" font-family="'Arial', sans-serif" font-size="12" fill="#334455">theapurva.com · by Claude AI</text>
+
+  <!-- Funny footnote -->
+  <line x1="52" y1="535" x2="630" y2="535" stroke="#223344" stroke-width="0.5"/>
+  <text x="52" y="555" font-family="'Arial', sans-serif" font-size="11" fill="#334455" font-style="italic">*No AI agents were hardcoded in the making of this spec. Anthropic's MCP was, though. Somehow.</text>
+
+  <!-- Right side: Network visualization -->
+  <g transform="translate(680, 315)">
+    <!-- Central hub (Registry) -->
+    <circle cx="220" cy="0" r="55" fill="#0d1a35" stroke="#1a6aff" stroke-width="2" filter="url(#glow)"/>
+    <text x="220" y="-8" font-family="'Arial Black', 'Arial', sans-serif" font-size="13" fill="#4da6ff" text-anchor="middle" font-weight="bold">ARD</text>
+    <text x="220" y="10" font-family="'Arial', sans-serif" font-size="11" fill="#8899bb" text-anchor="middle">REGISTRY</text>
+
+    <!-- Connecting lines -->
+    <line x1="220" y1="-55" x2="220" y2="-145" stroke="#1a6aff" stroke-width="1" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="170" y1="-27" x2="80" y2="-120" stroke="#6c00ff" stroke-width="1" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="270" y1="-27" x2="360" y2="-120" stroke="#00c8ff" stroke-width="1" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="170" y1="27" x2="80" y2="120" stroke="#aa55ff" stroke-width="1" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="270" y1="27" x2="360" y2="120" stroke="#1a9fff" stroke-width="1" stroke-dasharray="4,3" opacity="0.6"/>
+    <line x1="165" y1="0" x2="20" y2="0" stroke="#ff6eb4" stroke-width="1" stroke-dasharray="4,3" opacity="0.6"/>
+
+    <!-- Tool nodes -->
+    <!-- Top -->
+    <circle cx="220" cy="-165" r="38" fill="#0d1a35" stroke="#1a6aff" stroke-width="1.5"/>
+    <text x="220" y="-170" font-family="'Arial', sans-serif" font-size="10" fill="#4da6ff" text-anchor="middle">GitHub</text>
+    <text x="220" y="-155" font-family="'Arial', sans-serif" font-size="9" fill="#556677" text-anchor="middle">Agent Finder</text>
+
+    <!-- Top-left -->
+    <circle cx="55" cy="-140" r="38" fill="#0d1a35" stroke="#6c00ff" stroke-width="1.5"/>
+    <text x="55" y="-145" font-family="'Arial', sans-serif" font-size="10" fill="#aa55ff" text-anchor="middle">MCP</text>
+    <text x="55" y="-130" font-family="'Arial', sans-serif" font-size="9" fill="#556677" text-anchor="middle">Servers</text>
+
+    <!-- Top-right -->
+    <circle cx="385" cy="-140" r="38" fill="#0d1a35" stroke="#00c8ff" stroke-width="1.5"/>
+    <text x="385" y="-145" font-family="'Arial', sans-serif" font-size="10" fill="#00c8ff" text-anchor="middle">HuggingFace</text>
+    <text x="385" y="-130" font-family="'Arial', sans-serif" font-size="9" fill="#556677" text-anchor="middle">Discover</text>
+
+    <!-- Bottom-left -->
+    <circle cx="55" cy="140" r="38" fill="#0d1a35" stroke="#aa55ff" stroke-width="1.5"/>
+    <text x="55" y="135" font-family="'Arial', sans-serif" font-size="10" fill="#aa55ff" text-anchor="middle">APIs</text>
+    <text x="55" y="150" font-family="'Arial', sans-serif" font-size="9" fill="#556677" text-anchor="middle">&amp; Tools</text>
+
+    <!-- Bottom-right -->
+    <circle cx="385" cy="140" r="38" fill="#0d1a35" stroke="#1a9fff" stroke-width="1.5"/>
+    <text x="385" y="135" font-family="'Arial', sans-serif" font-size="10" fill="#1a9fff" text-anchor="middle">Gemini</text>
+    <text x="385" y="150" font-family="'Arial', sans-serif" font-size="9" fill="#556677" text-anchor="middle">Enterprise</text>
+
+    <!-- Left -->
+    <circle cx="-10" cy="0" r="38" fill="#0d1a35" stroke="#ff6eb4" stroke-width="1.5"/>
+    <text x="-10" y="-5" font-family="'Arial', sans-serif" font-size="9" fill="#ff6eb4" text-anchor="middle">AI Agent</text>
+    <text x="-10" y="10" font-family="'Arial', sans-serif" font-size="8" fill="#556677" text-anchor="middle">(the user)</text>
+
+    <!-- Meme callout corner -->
+    <rect x="285" y="155" width="155" height="44" rx="8" fill="#1a0030" stroke="#6c00ff" stroke-width="1" opacity="0.9"/>
+    <text x="362" y="175" font-family="'Arial', sans-serif" font-size="11" fill="#aa55ff" text-anchor="middle">OpenAI: 👀</text>
+    <text x="362" y="192" font-family="'Arial', sans-serif" font-size="10" fill="#6644aa" text-anchor="middle">"we'll handle discovery ourselves"</text>
+  </g>
+</svg>

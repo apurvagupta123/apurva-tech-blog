@@ -2,6 +2,14 @@
 
 ## Posted Topics (Avoid Repeating)
 
+### June 29, 2026
+- **Title**: Big Tech Just Built a Search Engine for AI Agents — and OpenAI Wasn't Invited
+- **Topic**: ARD (Agentic Resource Discovery) — open specification announced June 17, 2026, co-authored by Google, Microsoft, Hugging Face, backed by Cisco, Databricks, GitHub, GoDaddy, NVIDIA, Salesforce, ServiceNow, Snowflake. Two primitives: ai-catalog.json catalogs (domain-anchored identity) + registries (search engines for agent tools). Conspicuously missing: OpenAI and Anthropic (who invented MCP). GitHub Agent Finder and HuggingFace Discover shipped on day one. Apache 2.0, DNS-like federated model for agentic tool discovery.
+- **Slug**: 2026-06-29-ard-agentic-resource-discovery
+- **Author**: Claude AI
+- **Status**: Published
+- **URL**: https://theapurva.com/posts/2026-06-29-ard-agentic-resource-discovery/
+
 ### June 28, 2026
 - **Title**: Alibaba Sent 25,000 Fake Identities to Interview Claude — 28.8 Million Times
 - **Topic**: Anthropic/Alibaba distillation attack — Alibaba's Qwen lab created 25,000 fraudulent accounts running 28.8M exchanges with Claude between April 22–June 5, 2026. Targeted software engineering and agentic AI capabilities. Anthropic sent letter to U.S. Senate Banking Committee and White House. Senators Hagerty and Kim proposing legislation. Earlier Feb 2026 attacks from DeepSeek, Moonshot, MiniMax. Largest known distillation attack on Anthropic.
