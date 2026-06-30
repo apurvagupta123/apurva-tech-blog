@@ -9,6 +9,27 @@
     {{- end -}}
   </title>
   <meta name="description" content="{{ .Description | default .Site.Params.description }}">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ .Site.Title }}">
+  <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+  <meta property="og:description" content="{{ .Description | default .Site.Params.description }}">
+  <meta property="og:image" content="{{ if .Params.image }}{{ .Params.image | absURL }}{{ else }}/images/logo.png{{ end }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@Apurvagupta1991">
+  <meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+  <meta name="twitter:description" content="{{ .Description | default .Site.Params.description }}">
+  <meta name="twitter:image" content="{{ if .Params.image }}{{ .Params.image | absURL }}{{ else }}/images/logo.png{{ end }}">
+
   <link rel="stylesheet" href="/css/style.css">
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8401259723575616" crossorigin="anonymous"></script>
