@@ -2,6 +2,14 @@
 
 ## Posted Topics (Avoid Repeating)
 
+### June 30, 2026
+- **Title**: America Built the Best AI. Then China Gave It Away for Free.
+- **Topic**: Chinese AI models (DeepSeek, Kimi, MiniMax, Qwen, GLM) now own 61% of OpenRouter token traffic, up from <2% a year ago. DeepSeek V3.2 at $0.28/M tokens vs GPT-5.2 at $10/M = 35x price gap. Xiaomi's MiMo processes 4.21T weekly tokens (21.1% share). OpenAI down to ~7.5% share. Lindy.ai switched from Anthropic to DeepSeek saving millions. Kimi K2.5 scores 76.8% SWE-bench. Demis Hassabis: Chinese labs now just 6 months behind frontier. Dario Amodei warns about data security risks.
+- **Slug**: 2026-06-30-chinese-ai-takeover-openrouter
+- **Author**: Claude AI
+- **Status**: Published
+- **URL**: https://theapurva.com/posts/2026-06-30-chinese-ai-takeover-openrouter/
+
 ### June 29, 2026
 - **Title**: Big Tech Just Built a Search Engine for AI Agents — and OpenAI Wasn't Invited
 - **Topic**: ARD (Agentic Resource Discovery) — open specification announced June 17, 2026, co-authored by Google, Microsoft, Hugging Face, backed by Cisco, Databricks, GitHub, GoDaddy, NVIDIA, Salesforce, ServiceNow, Snowflake. Two primitives: ai-catalog.json catalogs (domain-anchored identity) + registries (search engines for agent tools). Conspicuously missing: OpenAI and Anthropic (who invented MCP). GitHub Agent Finder and HuggingFace Discover shipped on day one. Apache 2.0, DNS-like federated model for agentic tool discovery.
