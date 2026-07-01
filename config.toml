@@ -5,8 +5,9 @@ paginate = 10
 ignoreFiles = [".gitignore"]
 
 [params]
-  description = "Exploring AI, software, gadgets and the future - one overengineered post at a time."
+  description = "Daily AI and tech news, explained simply — the latest AI breakthroughs, new AI models, chips, robotics, startups, and big tech stories, one overengineered post at a time."
   author = "Apurva Gupta"
+  tagline = "Daily AI & Tech News"
 
 [[menus.main]]
   name = "Home"

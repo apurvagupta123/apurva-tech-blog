@@ -3,12 +3,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>
     {{- if .IsHome -}}
-      {{ .Site.Title }}
+      {{ .Site.Title }} — {{ .Site.Params.tagline | default "Daily AI & Tech News" }}
     {{- else -}}
       {{ .Title }} · {{ .Site.Title }}
     {{- end -}}
   </title>
-  <meta name="description" content="{{ .Description | default .Site.Params.description }}">
+  {{ $metaDesc := .Site.Params.description }}
+  {{ if .IsPage }}
+    {{ if .Description }}
+      {{ $metaDesc = .Description }}
+    {{ else if .Summary }}
+      {{ $metaDesc = .Summary | plainify | htmlUnescape | truncate 160 }}
+    {{ end }}
+  {{ end }}
+  <meta name="description" content="{{ $metaDesc }}">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="{{ .Permalink }}">
 
   <!-- Favicon -->
   <link rel="icon" href="/favicon.ico" sizes="any">
@@ -16,19 +26,56 @@
   <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png">
 
   <!-- Open Graph / Social -->
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
   <meta property="og:site_name" content="{{ .Site.Title }}">
-  <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
-  <meta property="og:description" content="{{ .Description | default .Site.Params.description }}">
-  <meta property="og:image" content="{{ if .Params.image }}{{ .Params.image | absURL }}{{ else }}/images/logo.png{{ end }}">
+  <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }} — {{ .Site.Params.tagline | default "Daily AI & Tech News" }}{{ else }}{{ .Title }}{{ end }}">
+  <meta property="og:description" content="{{ $metaDesc }}">
+  <meta property="og:image" content="{{ if .Params.image }}{{ .Params.image | absURL }}{{ else }}{{ "/images/logo.png" | absURL }}{{ end }}">
   <meta property="og:url" content="{{ .Permalink }}">
+  {{ if .IsPage }}
+  <meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+  {{ if .Params.author }}<meta property="article:author" content="{{ .Params.author }}">{{ end }}
+  {{ range .Params.tags }}<meta property="article:tag" content="{{ . }}">{{ end }}
+  {{ end }}
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@Apurvagupta1991">
-  <meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
-  <meta name="twitter:description" content="{{ .Description | default .Site.Params.description }}">
-  <meta name="twitter:image" content="{{ if .Params.image }}{{ .Params.image | absURL }}{{ else }}/images/logo.png{{ end }}">
+  <meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }} — {{ .Site.Params.tagline | default "Daily AI & Tech News" }}{{ else }}{{ .Title }}{{ end }}">
+  <meta name="twitter:description" content="{{ $metaDesc }}">
+  <meta name="twitter:image" content="{{ if .Params.image }}{{ .Params.image | absURL }}{{ else }}{{ "/images/logo.png" | absURL }}{{ end }}">
+
+  <!-- Structured Data -->
+  {{ if .IsHome }}
+  {{ $ld := dict
+      "@context" "https://schema.org"
+      "@type" "WebSite"
+      "name" .Site.Title
+      "url" .Site.BaseURL
+      "description" .Site.Params.description
+  }}
+  <script type="application/ld+json">{{ $ld | jsonify | safeJS }}</script>
+  {{ else if .IsPage }}
+  {{ $image := .Site.BaseURL | absURL }}
+  {{ if .Params.image }}{{ $image = .Params.image | absURL }}{{ else }}{{ $image = "/images/logo.png" | absURL }}{{ end }}
+  {{ $ld := dict
+      "@context" "https://schema.org"
+      "@type" "NewsArticle"
+      "headline" .Title
+      "description" $metaDesc
+      "image" (slice $image)
+      "datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00")
+      "dateModified" (.Lastmod.Format "2006-01-02T15:04:05Z07:00")
+      "author" (dict "@type" "Person" "name" (.Params.author | default "Claude AI"))
+      "publisher" (dict
+        "@type" "Organization"
+        "name" .Site.Title
+        "logo" (dict "@type" "ImageObject" "url" ("/images/logo.png" | absURL))
+      )
+      "mainEntityOfPage" (dict "@type" "WebPage" "@id" .Permalink)
+  }}
+  <script type="application/ld+json">{{ $ld | jsonify | safeJS }}</script>
+  {{ end }}
 
   <link rel="stylesheet" href="/css/style.css">
   <!-- Google AdSense -->
