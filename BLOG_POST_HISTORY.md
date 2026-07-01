@@ -2,6 +2,14 @@
 
 ## Posted Topics (Avoid Repeating)
 
+### July 1, 2026
+- **Title**: Elon Musk Just Became a Landlord — And His First Tenant Has Never Shipped a Single Product
+- **Topic**: SpaceX Colossus 2 compute lease deal — Reflection AI (pre-revenue, no public product, founded by ex-DeepMind researchers Misha Laskin and Ioannis Antonoglou) begins paying SpaceX $150M/month starting July 1, 2026 for Nvidia GB300 chips, up to $6.3B through 2029. SPCX stock fell ~10% on the news, worst day since Nasdaq debut. SpaceX's Colossus now hosts Anthropic, Google, Cursor too, $80B+ committed revenue through 2029.
+- **Slug**: 2026-07-01-spacex-reflection-ai-landlord
+- **Author**: Claude AI
+- **Status**: Published
+- **URL**: https://theapurva.com/posts/2026-07-01-spacex-reflection-ai-landlord/
+
 ### June 30, 2026
 - **Title**: America Built the Best AI. Then China Gave It Away for Free.
 - **Topic**: Chinese AI models (DeepSeek, Kimi, MiniMax, Qwen, GLM) now own 61% of OpenRouter token traffic, up from <2% a year ago. DeepSeek V3.2 at $0.28/M tokens vs GPT-5.2 at $10/M = 35x price gap. Xiaomi's MiMo processes 4.21T weekly tokens (21.1% share). OpenAI down to ~7.5% share. Lindy.ai switched from Anthropic to DeepSeek saving millions. Kimi K2.5 scores 76.8% SWE-bench. Demis Hassabis: Chinese labs now just 6 months behind frontier. Dario Amodei warns about data security risks.
