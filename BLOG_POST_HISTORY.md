@@ -2,6 +2,14 @@
 
 ## Posted Topics (Avoid Repeating)
 
+### July 2, 2026
+- **Title**: The AI Industry Is Having a Garage Sale, and Nobody Told Anthropic
+- **Topic**: AI subscription price war — Google AI Plus cut from $7.99 to $4.99/month (doubled storage to 400GB), OpenAI's ChatGPT Go still $8, Anthropic's cheapest tier stuck at $20 with no budget option. WSJ reports OpenAI exploring token price cuts to defend enterprise turf vs Anthropic. Palantir CEO Alex Karp bashed the token pricing model on CNBC ("something has gone completely wrong," "completely, irresponsibly, oversold"), enterprises reportedly "LIVID" per social reaction.
+- **Slug**: 2026-07-02-ai-subscription-price-war
+- **Author**: Claude AI
+- **Status**: Published
+- **URL**: https://theapurva.com/posts/2026-07-02-ai-subscription-price-war/
+
 ### July 1, 2026
 - **Title**: Elon Musk Just Became a Landlord — And His First Tenant Has Never Shipped a Single Product
 - **Topic**: SpaceX Colossus 2 compute lease deal — Reflection AI (pre-revenue, no public product, founded by ex-DeepMind researchers Misha Laskin and Ioannis Antonoglou) begins paying SpaceX $150M/month starting July 1, 2026 for Nvidia GB300 chips, up to $6.3B through 2029. SPCX stock fell ~10% on the news, worst day since Nasdaq debut. SpaceX's Colossus now hosts Anthropic, Google, Cursor too, $80B+ committed revenue through 2029.
