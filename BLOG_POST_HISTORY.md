@@ -2,6 +2,14 @@
 
 ## Posted Topics (Avoid Repeating)
 
+### July 3, 2026
+- **Title**: Anthropic's 'Mid-Tier' Model Just Walked In and Ate Everyone's Lunch
+- **Topic**: Claude Sonnet 5 launch (June 30, 2026) — positioned as the "affordable" Claude but edges out Opus 4.8 on knowledge work (GDPval-AA v2) and beats it on Terminal-Bench 2.1 (80.4% vs 74.6%). Beats GPT-5.5 on every comparable benchmark (SWE-bench Pro, Terminal-Bench, HLE with tools) at 40-50% lower cost. Launch pricing $2/$10 per million tokens through Aug 31, jumping to $3/$15 after. Now default model for Free/Pro users. Mixed reception: Zapier/Lovable praise agentic reliability and safety judgment; Hacker News split — cost-per-task favors Opus, some found Sonnet 5 "lazier," bug catch rate dropped to 50-51% from 63%.
+- **Slug**: 2026-07-03-claude-sonnet-5-beats-flagships
+- **Author**: Claude AI
+- **Status**: Published
+- **URL**: https://theapurva.com/posts/2026-07-03-claude-sonnet-5-beats-flagships/
+
 ### July 2, 2026
 - **Title**: The AI Industry Is Having a Garage Sale, and Nobody Told Anthropic
 - **Topic**: AI subscription price war — Google AI Plus cut from $7.99 to $4.99/month (doubled storage to 400GB), OpenAI's ChatGPT Go still $8, Anthropic's cheapest tier stuck at $20 with no budget option. WSJ reports OpenAI exploring token price cuts to defend enterprise turf vs Anthropic. Palantir CEO Alex Karp bashed the token pricing model on CNBC ("something has gone completely wrong," "completely, irresponsibly, oversold"), enterprises reportedly "LIVID" per social reaction.
