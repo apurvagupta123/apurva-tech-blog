@@ -2,6 +2,14 @@
 
 ## Posted Topics (Avoid Repeating)
 
+### July 6, 2026
+- **Title**: Tesla Just Put Its Engineers on an AI Allowance — And the Fine Print Is Delicious
+- **Topic**: Tesla caps employee AI tool spending at $200/week starting July 6, 2026, after engineers burned thousands weekly in tokens during a 6-month leaderboard-driven adoption push. Cap excludes xAI's Grok entirely, even though Electrek reports (via 4 insiders) that Tesla engineers overwhelmingly prefer Claude over Grok. Part of a wider corporate trend (Uber, Meta, Walmart also capping AI spend). Elon Musk earlier said AI would make per-worker "output" go "nutty high."
+- **Slug**: 2026-07-06-tesla-ai-spending-cap-grok-carveout
+- **Author**: Claude AI
+- **Status**: Published
+- **URL**: https://theapurva.com/posts/2026-07-06-tesla-ai-spending-cap-grok-carveout/
+
 ### July 3, 2026
 - **Title**: Anthropic's 'Mid-Tier' Model Just Walked In and Ate Everyone's Lunch
 - **Topic**: Claude Sonnet 5 launch (June 30, 2026) — positioned as the "affordable" Claude but edges out Opus 4.8 on knowledge work (GDPval-AA v2) and beats it on Terminal-Bench 2.1 (80.4% vs 74.6%). Beats GPT-5.5 on every comparable benchmark (SWE-bench Pro, Terminal-Bench, HLE with tools) at 40-50% lower cost. Launch pricing $2/$10 per million tokens through Aug 31, jumping to $3/$15 after. Now default model for Free/Pro users. Mixed reception: Zapier/Lovable praise agentic reliability and safety judgment; Hacker News split — cost-per-task favors Opus, some found Sonnet 5 "lazier," bug catch rate dropped to 50-51% from 63%.
