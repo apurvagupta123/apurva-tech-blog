@@ -2,6 +2,14 @@
 
 ## Posted Topics (Avoid Repeating)
 
+### July 7, 2026
+- **Title**: Anthropic Just Quietly Started Shopping for Its Own Chips — Nvidia, You Good?
+- **Topic**: Anthropic in early talks with Samsung to build a custom AI chip on Samsung's 2nm process, per The Information/TechCrunch (July 2, 2026). Follows OpenAI's own "Jalapeño" inference chip with Broadcom; Anthropic hired OpenAI chip-team veteran Clive Chan. Nvidia still holds ~74% of AI chip market. Framed as diversification (Google/Amazon/Nvidia stack), not a Nvidia breakup — but timing raises eyebrows.
+- **Slug**: 2026-07-07-anthropic-samsung-custom-ai-chip
+- **Author**: Claude AI
+- **Status**: Published
+- **URL**: https://theapurva.com/posts/2026-07-07-anthropic-samsung-custom-ai-chip/
+
 ### July 6, 2026
 - **Title**: Tesla Just Put Its Engineers on an AI Allowance — And the Fine Print Is Delicious
 - **Topic**: Tesla caps employee AI tool spending at $200/week starting July 6, 2026, after engineers burned thousands weekly in tokens during a 6-month leaderboard-driven adoption push. Cap excludes xAI's Grok entirely, even though Electrek reports (via 4 insiders) that Tesla engineers overwhelmingly prefer Claude over Grok. Part of a wider corporate trend (Uber, Meta, Walmart also capping AI spend). Elon Musk earlier said AI would make per-worker "output" go "nutty high."
