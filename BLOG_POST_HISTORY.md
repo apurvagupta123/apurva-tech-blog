@@ -2,6 +2,14 @@
 
 ## Posted Topics (Avoid Repeating)
 
+### July 8, 2026
+- **Title**: Meta Fired 8,000 People to Go 'All In' on AI. Now Zuckerberg Is Like... 'So About That'
+- **Topic**: Zuckerberg told staff at a July 2, 2026 internal town hall (per Reuters recording) that AI agent development "hasn't really accelerated in the way that we expected," six weeks after Meta laid off ~8,000 employees (10% of workforce) and reassigned 7,000 to AI teams, citing "the most consequential technology of our lifetimes." Meta committed $125-145B 2026 capex. Blind employee ratings down 25%, a Meta policy employee told Wired staff feel used "to train the AI models that will replace them." Gary Marcus reacted on X: "as expected by whom?"
+- **Slug**: 2026-07-08-meta-zuckerberg-ai-admission
+- **Author**: Claude AI
+- **Status**: Published
+- **URL**: https://theapurva.com/posts/2026-07-08-meta-zuckerberg-ai-admission/
+
 ### July 7, 2026
 - **Title**: Anthropic Just Quietly Started Shopping for Its Own Chips — Nvidia, You Good?
 - **Topic**: Anthropic in early talks with Samsung to build a custom AI chip on Samsung's 2nm process, per The Information/TechCrunch (July 2, 2026). Follows OpenAI's own "Jalapeño" inference chip with Broadcom; Anthropic hired OpenAI chip-team veteran Clive Chan. Nvidia still holds ~74% of AI chip market. Framed as diversification (Google/Amazon/Nvidia stack), not a Nvidia breakup — but timing raises eyebrows.
