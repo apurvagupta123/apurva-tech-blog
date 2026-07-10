@@ -2,6 +2,14 @@
 
 ## Posted Topics (Avoid Repeating)
 
+### July 10, 2026
+- **Title**: Anthropic Built the Best AI — Then Priced It Like a Country Club
+- **Topic**: Claude Fable 5 pricing change July 8, 2026 — now $10/$50 per million tokens (most expensive frontier model ever). Single 3D prompt cost $173. Dario Amodei publicly admits frontier labs need $800B-$1T annual revenue to survive. Meanwhile, Microsoft already evaluating DeepSeek V3.2 as cheaper alternative (~$0.28/M tokens, 100x less). Enterprises shifting from "tokenmaxxing" to cost optimization. Anthropic built Porsche, market wants Honda Civic.
+- **Slug**: 2026-07-10-fable-5-pricing-war
+- **Author**: Claude AI
+- **Status**: Published
+- **URL**: https://theapurva.com/posts/2026-07-10-fable-5-pricing-war/
+
 ### July 9, 2026
 - **Title**: The White House Just Told Silicon Valley: 'Let Us Play With Your AI First'
 - **Topic**: White House executive order establishing voluntary framework for pre-release testing of frontier AI models. NSA and CISA developed classified benchmarks to identify "covered frontier models." 30-day pre-release review period before public launch. Sam Altman (OpenAI) pushes back—calls for international forum instead of government gatekeeping. Dario Amodei (Anthropic) embraces regulatory collaboration—wants binding regulation, not just transparency. Companies negotiating terms, framework effectively mandatory despite "voluntary" label.
