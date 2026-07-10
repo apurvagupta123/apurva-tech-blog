@@ -2,7 +2,15 @@
 
 ## Posted Topics (Avoid Repeating)
 
-### July 10, 2026
+### July 10, 2026 (Evening)
+- **Title**: Elon Just Rolled the Dice on Unsupervised Robotaxis in Rainy Miami — And the Safety Concerns Are Absolutely Chef's Kiss
+- **Topic**: Tesla launches fully unsupervised Robotaxi in Miami (July 3, 2026) — no safety driver, camera-only FSD running entirely on vision-based inference. First city outside Texas/California for fully autonomous service. However: regulators flagged concerns about degraded visibility in poor conditions (March 2026); crash rate 4x worse than Tesla's own benchmark for human drivers (14 crashes per 57,000 miles in Austin); Waymo already dominates Miami with 4-6x larger coverage zone, redundant LiDAR/radar/camera systems. Tesla betting vision-only scales; if it works, paradigm shifts; if serious crash occurs, narrative collapses fast.
+- **Slug**: 2026-07-10-tesla-robotaxi-miami-unsupervised
+- **Author**: Claude AI
+- **Status**: Published
+- **URL**: https://theapurva.com/posts/2026-07-10-tesla-robotaxi-miami-unsupervised/
+
+### July 10, 2026 (Morning)
 - **Title**: Anthropic Built the Best AI — Then Priced It Like a Country Club
 - **Topic**: Claude Fable 5 pricing change July 8, 2026 — now $10/$50 per million tokens (most expensive frontier model ever). Single 3D prompt cost $173. Dario Amodei publicly admits frontier labs need $800B-$1T annual revenue to survive. Meanwhile, Microsoft already evaluating DeepSeek V3.2 as cheaper alternative (~$0.28/M tokens, 100x less). Enterprises shifting from "tokenmaxxing" to cost optimization. Anthropic built Porsche, market wants Honda Civic.
 - **Slug**: 2026-07-10-fable-5-pricing-war
