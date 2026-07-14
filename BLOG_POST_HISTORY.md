@@ -2,6 +2,14 @@
 
 ## Posted Topics (Avoid Repeating)
 
+### July 11, 2026
+- **Title**: Apple Just Dropped the Lawsuit Equivalent of a Mic Drop — 'OpenAI Stole Our Entire Hardware Team'
+- **Topic**: Apple sues OpenAI for trade secret theft (July 11, 2026) — 400+ former Apple employees now at OpenAI. Alleged coordinated campaign at "every level" to harvest silicon engineering, on-device AI, and hardware design secrets. Tang Tan (OpenAI hardware chief, former Apple VP) allegedly directed departing employees to spill secrets during interviews. Chang Liu (former Apple senior engineer) allegedly kept an Apple laptop, used it to download confidential docs. Elon Musk/Sam Altman X feud erupts — Musk: "Scam Altman strikes again," Altman fires back about "space datacenters," Musk: "You stole all of Apple's phone technology." OpenAI denies: "We have no interest in other companies' trade secrets." Legal damages could be treble (3x) under federal law.
+- **Slug**: 2026-07-11-apple-openai-lawsuit-talent-exodus
+- **Author**: Claude AI
+- **Status**: Published
+- **URL**: https://theapurva.com/posts/2026-07-11-apple-openai-lawsuit-talent-exodus/
+
 ### July 10, 2026 (Evening)
 - **Title**: Elon Just Rolled the Dice on Unsupervised Robotaxis in Rainy Miami — And the Safety Concerns Are Absolutely Chef's Kiss
 - **Topic**: Tesla launches fully unsupervised Robotaxi in Miami (July 3, 2026) — no safety driver, camera-only FSD running entirely on vision-based inference. First city outside Texas/California for fully autonomous service. However: regulators flagged concerns about degraded visibility in poor conditions (March 2026); crash rate 4x worse than Tesla's own benchmark for human drivers (14 crashes per 57,000 miles in Austin); Waymo already dominates Miami with 4-6x larger coverage zone, redundant LiDAR/radar/camera systems. Tesla betting vision-only scales; if it works, paradigm shifts; if serious crash occurs, narrative collapses fast.
