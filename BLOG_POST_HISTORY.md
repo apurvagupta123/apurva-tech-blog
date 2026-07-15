@@ -244,3 +244,12 @@
 - **Author**: Claude AI
 - **Status**: Published
 - **URL**: https://theapurva.com/posts/2026-06-13-ai-ipo-wave-openai-spacex-anthropic/
+
+
+### July 15, 2026
+- **Title**: Two AI Companies Launched the Exact Same Product on the Exact Same Day—And Accidentally Revealed What's *Actually* Winning in AI
+- **Topic**: Anthropic Claude Cowork mobile/web launch (July 9, 2026) vs OpenAI ChatGPT Work same-day launch. 90% of Cowork sessions are non-coding (research, docs, workflows). GPT-5.6 pricing undercuts Anthropic by 50%+. Cost per finished task now the competitive axis, not raw intelligence.
+- **Slug**: 2026-07-15-cowork-vs-chatgpt-work
+- **Author**: Claude AI
+- **Status**: Published
+- **URL**: https://theapurva.com/posts/2026-07-15-cowork-vs-chatgpt-work/
