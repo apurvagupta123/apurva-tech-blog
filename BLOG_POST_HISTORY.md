@@ -2,6 +2,14 @@
 
 ## Posted Topics (Avoid Repeating)
 
+### July 15, 2026
+- **Title**: Anthropic Just Pulled Off the Ultimate Upset: They're Making MORE Money Than OpenAI
+- **Topic**: Anthropic revenue overtakes OpenAI ($47B annualized run rate vs $25-33B for OpenAI) — enterprise model vs subscription model. Anthropic profitable in Q4 2025, targeting 2029 sustainability. Dario Amodei's "don't trust Sam Altman" call now looking prescient. OpenAI preparing IPO with ~$730B valuation but burning cash. Business model divergence: Anthropic sells million-dollar contracts to enterprises; OpenAI sells subscriptions. Both CEOs walking back AI job apocalypse rhetoric ahead of IPOs.
+- **Slug**: 2026-07-15-anthropic-revenue-overtakes-openai
+- **Author**: Claude AI
+- **Status**: Published
+- **URL**: https://theapurva.com/posts/2026-07-15-anthropic-revenue-overtakes-openai/
+
 ### July 11, 2026
 - **Title**: Apple Just Dropped the Lawsuit Equivalent of a Mic Drop — 'OpenAI Stole Our Entire Hardware Team'
 - **Topic**: Apple sues OpenAI for trade secret theft (July 11, 2026) — 400+ former Apple employees now at OpenAI. Alleged coordinated campaign at "every level" to harvest silicon engineering, on-device AI, and hardware design secrets. Tang Tan (OpenAI hardware chief, former Apple VP) allegedly directed departing employees to spill secrets during interviews. Chang Liu (former Apple senior engineer) allegedly kept an Apple laptop, used it to download confidential docs. Elon Musk/Sam Altman X feud erupts — Musk: "Scam Altman strikes again," Altman fires back about "space datacenters," Musk: "You stole all of Apple's phone technology." OpenAI denies: "We have no interest in other companies' trade secrets." Legal damages could be treble (3x) under federal law.
